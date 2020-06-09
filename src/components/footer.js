@@ -1,8 +1,6 @@
 import React from 'react';
-import useSiteMetadata from '../hooks/use-sitemetadata';
 
 const Footer = () => {
-	const { title, description } = useSiteMetadata();
 	const date = new Date();
 
 	return (

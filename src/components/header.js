@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import useSiteMetadata from '../hooks/use-sitemetadata';
 
 const Header = () => {
-	const { title, description } = useSiteMetadata();
+	const { description } = useSiteMetadata();
 
 	return (
 		<header>
