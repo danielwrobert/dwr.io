@@ -5,6 +5,10 @@
  */
 
 module.exports = {
-  /* Your site config here */
-  plugins: [],
-}
+	/* Your site config here */
+	siteMetadata: {
+		title: `dwr.io`,
+		description: `My Digital Garden`,
+	},
+	plugins: [],
+};
