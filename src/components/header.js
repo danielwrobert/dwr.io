@@ -1,18 +1,12 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import useSiteMetadata from '../hooks/use-sitemetadata';
 
 const Header = () => {
-	const { description } = useSiteMetadata();
-
 	return (
 		<header>
 			<h1>
 				<Link to={`/`}>Bonjour</Link>
 			</h1>
-			<p>
-				<em>{description}</em>
-			</p>
 			<nav>
 				<ul>
 					<li>
@@ -21,8 +15,8 @@ const Header = () => {
 						</Link>
 					</li>
 					<li>
-						<Link to={'/about'} activeClassName="active">
-							About
+						<Link to={'/digital-garden'} activeClassName="active">
+							Digital Garden
 						</Link>
 					</li>
 				</ul>
