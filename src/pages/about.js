@@ -1,9 +1,15 @@
 import React from 'react';
+import styled from '@emotion/styled';
 import Layout from '../components/layout';
+
+const Heading = styled.h1`
+	color: var(--highlight-color--3);
+	font-size: 4.5rem;
+`;
 
 const About = () => (
 	<Layout>
-		<h1>About Me</h1>
+		<Heading>About Me</Heading>
 		<p>
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 			incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud

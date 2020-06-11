@@ -10,5 +10,5 @@ module.exports = {
 		title: `dwr.io`,
 		description: `My Digital Garden`,
 	},
-	plugins: [],
+	plugins: [`gatsby-plugin-emotion`],
 };

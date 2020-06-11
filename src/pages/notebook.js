@@ -1,9 +1,15 @@
 import React from 'react';
+import styled from '@emotion/styled';
 import Layout from '../components/layout';
 
-const Garden = () => (
+const Heading = styled.h1`
+	color: var(--highlight-color--4);
+	font-size: 4.5rem;
+`;
+
+const Notebook = () => (
 	<Layout>
-		<h1>About My Digital Garden</h1>
+		<Heading>Notebook</Heading>
 		<p>
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 			incididunt ut labore et dolore magna aliqua. Ipsum a arcu cursus vitae. Congue nisi
@@ -20,4 +26,4 @@ const Garden = () => (
 	</Layout>
 );
 
-export default Garden;
+export default Notebook;

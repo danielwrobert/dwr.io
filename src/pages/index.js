@@ -1,10 +1,29 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import styled from '@emotion/styled';
 import Layout from '../components/layout';
+
+const Button = styled((props) => <Link {...props} />)`
+	background-color: var(--highlight-color--4);
+	border-radius: 0.4rem;
+	color: var(--background-color) !important;
+	opacity: 0.8;
+	padding: 1rem 1.5rem;
+	transition: opacity 0.5s !important;
+
+	&:hover {
+		opacity: 1;
+	}
+`;
+
+const Heading = styled.h1`
+	color: var(--highlight-color--1);
+	font-size: 4.5rem;
+`;
 
 const Home = () => (
 	<Layout>
-		<h1>Daniel W. Robert</h1>
+		<Heading>Daniel W. Robert</Heading>
 		<h2>Front-End Engineer at Automattic, Inc.</h2>
 		<p>
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -28,9 +47,9 @@ const Home = () => (
 			<li>item</li>
 		</ul>
 
-		<Link to={'/digital-garden'} activeClassName="active">
-			Browse the digital garden
-		</Link>
+		<Button to={'/notebook'} activeClassName="active">
+			View the notebook
+		</Button>
 	</Layout>
 );
 
