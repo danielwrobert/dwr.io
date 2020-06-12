@@ -17,7 +17,7 @@ const Button = styled((props) => <Link {...props} />)`
 `;
 
 const Heading = styled.h1`
-	color: var(--highlight-color--2);
+	color: var(--highlight-color--3);
 	font-size: 4.5rem;
 `;
 

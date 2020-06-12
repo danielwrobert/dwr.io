@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import Layout from '../components/layout';
 
 const Heading = styled.h1`
-	color: var(--highlight-color--3);
+	color: var(--highlight-color--4);
 	font-size: 4.5rem;
 `;
 

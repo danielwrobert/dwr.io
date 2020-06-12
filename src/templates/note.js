@@ -5,7 +5,7 @@ import styled from '@emotion/styled';
 import Layout from '../components/layout';
 
 const Heading = styled.h1`
-	color: var(--highlight-color--4);
+	color: var(--highlight-color--3);
 	font-size: 4.5rem;
 `;
 
@@ -14,6 +14,7 @@ export const postQuery = graphql`
 		mdx(frontmatter: { slug: { eq: $slug } }) {
 			frontmatter {
 				title
+				date(formatString: "MM/DD/YYYY")
 			}
 			body
 		}
@@ -21,7 +22,7 @@ export const postQuery = graphql`
 `;
 
 export default ({ data }) => {
-	const { title } = data.mdx.frontmatter;
+	const { title, date } = data.mdx.frontmatter;
 	const { body } = data.mdx;
 
 	return (
@@ -30,6 +31,7 @@ export default ({ data }) => {
 				<Link to={'/notebook'}>&larr; Back to all notes</Link>
 			</p>
 			<Heading>{title}</Heading>
+			<h5>Last updated on {date}</h5>
 			<MDXRenderer>{body}</MDXRenderer>
 		</Layout>
 	);

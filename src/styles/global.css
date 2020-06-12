@@ -46,6 +46,12 @@ h6 {
 	font-family: 'ovo', serif;
 }
 
+h1,
+h2,
+h3 {
+	color: var(--highlight-color--1);
+}
+
 a,
 a:link,
 a:visited {

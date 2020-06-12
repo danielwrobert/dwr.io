@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 import Layout from '../components/layout';
 
 const Heading = styled.h1`
-	color: var(--highlight-color--4);
+	color: var(--highlight-color--5);
 	font-size: 4.5rem;
 `;
 
@@ -17,7 +17,7 @@ const Notebook = () => {
 						slug
 						title
 						excerpt
-						date(formatString: "MM.DD.YY")
+						date(formatString: "MM/DD/YYYY")
 					}
 				}
 			}
@@ -30,14 +30,13 @@ const Notebook = () => {
 		<Layout>
 			<Heading>Notebook</Heading>
 
-			{posts.map(({ id, frontmatter: { title, excerpt, slug, date } }) => (
+			{posts.map(({ id, frontmatter: { title, excerpt, slug } }) => (
 				<article key={id}>
-					<h3>
-						<Link to={`/${slug}`}>{title}</Link>
-					</h3>
-					<p>
-						<small>Posted On {date}</small>
-					</p>
+					<h2>
+						<Link style={{ color: 'var(--highlight-color--1' }} to={`/${slug}`}>
+							{title}
+						</Link>
+					</h2>
 					<p>{excerpt}</p>
 					<Link to={`/${slug}`}>Read the full note &rarr;</Link>
 				</article>
