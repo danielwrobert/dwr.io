@@ -39,7 +39,7 @@ const Notebook = () => {
 						<small>Posted On {date}</small>
 					</p>
 					<p>{excerpt}</p>
-					<Link to={`/${slug}`}>Read the full note</Link>
+					<Link to={`/${slug}`}>Read the full note &rarr;</Link>
 				</article>
 			))}
 		</Layout>

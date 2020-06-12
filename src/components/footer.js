@@ -20,6 +20,6 @@ const date = new Date();
 
 export default () => (
 	<Footer>
-		<p>Copyright © {date.getFullYear()} Dan Robert. All rights reserved.</p>
+		<p>Copyright © {date.getFullYear()} Daniel W. Robert. All rights reserved.</p>
 	</Footer>
 );
