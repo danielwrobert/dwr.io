@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 import Layout from '../components/layout';
 
 const Button = styled((props) => <Link {...props} />)`
-	background-color: var(--highlight-color--4);
+	background-color: var(--highlight-color--2);
 	border-radius: 0.4rem;
 	color: var(--background-color) !important;
 	opacity: 0.8;
@@ -17,7 +17,7 @@ const Button = styled((props) => <Link {...props} />)`
 `;
 
 const Heading = styled.h1`
-	color: var(--highlight-color--1);
+	color: var(--highlight-color--2);
 	font-size: 4.5rem;
 `;
 
