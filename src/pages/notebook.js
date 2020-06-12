@@ -10,7 +10,7 @@ const Heading = styled.h1`
 
 const Notebook = () => {
 	const data = useStaticQuery(graphql`
-		query PostsQuery {
+		query NotesQuery {
 			allMdx(sort: { fields: frontmatter___date, order: DESC }) {
 				nodes {
 					frontmatter {
@@ -24,13 +24,13 @@ const Notebook = () => {
 		}
 	`);
 
-	const posts = data.allMdx.nodes;
+	const notes = data.allMdx.nodes;
 
 	return (
 		<Layout>
 			<Heading>Notebook</Heading>
 
-			{posts.map(({ id, frontmatter: { title, excerpt, slug } }) => (
+			{notes.map(({ id, frontmatter: { title, excerpt, slug } }) => (
 				<article key={id}>
 					<h2>
 						<Link style={{ color: 'var(--highlight-color--1' }} to={`/${slug}`}>
