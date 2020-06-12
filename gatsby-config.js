@@ -10,5 +10,20 @@ module.exports = {
 		title: `dwr.io`,
 		description: `My Digital Garden`,
 	},
-	plugins: [`gatsby-plugin-emotion`],
+	plugins: [
+		`gatsby-plugin-emotion`,
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				name: `post`,
+				path: `${__dirname}/content/blog`,
+			},
+		},
+		{
+			resolve: `gatsby-plugin-mdx`,
+			options: {
+				extensions: ['.mdx', '.md'],
+			},
+		},
+	],
 };
