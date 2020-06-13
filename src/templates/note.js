@@ -7,6 +7,8 @@ import Layout from '../components/layout';
 const Heading = styled.h1`
 	color: var(--highlight-color--3);
 	font-size: 4.5rem;
+	margin: 0;
+	text-align: center;
 `;
 
 export const postQuery = graphql`
@@ -31,7 +33,9 @@ export default ({ data }) => {
 				<Link to={'/notebook'}>&larr; Back to all notes</Link>
 			</p>
 			<Heading>{title}</Heading>
-			<h5>Last updated on {date}</h5>
+			<h5 style={{ textAlign: 'center', margin: '0 0 5rem', fontStyle: 'italic' }}>
+				Last updated on {date}
+			</h5>
 			<MDXRenderer>{body}</MDXRenderer>
 		</Layout>
 	);

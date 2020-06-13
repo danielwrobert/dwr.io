@@ -5,6 +5,8 @@ import Layout from '../components/layout';
 const Heading = styled.h1`
 	color: var(--highlight-color--4);
 	font-size: 4.5rem;
+	margin: 0;
+	text-align: center;
 `;
 
 const About = () => (

@@ -1,7 +1,7 @@
 ---
-title: Second Post
-date: "2020-01-02"
-slug: second-post
+title: Third Post
+date: "2020-02-02"
+slug: third-post
 excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin maximus 
 vulputate erat vel euismod. Mauris vitae bibendum tortor."
 ---

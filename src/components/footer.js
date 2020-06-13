@@ -11,7 +11,7 @@ const Footer = styled.footer`
 		padding: 0 4rem;
 
 		@media screen and (min-width: 880px) {
-			max-width: 88rem;
+			max-width: 74rem;
 		}
 	}
 `;

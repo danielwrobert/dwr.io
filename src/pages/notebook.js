@@ -6,6 +6,8 @@ import Layout from '../components/layout';
 const Heading = styled.h1`
 	color: var(--highlight-color--5);
 	font-size: 4.5rem;
+	margin: 0;
+	text-align: center;
 `;
 
 const Notebook = () => {
@@ -38,7 +40,7 @@ const Notebook = () => {
 						</Link>
 					</h2>
 					<p>{excerpt}</p>
-					<Link to={`/${slug}`}>Read the full note &rarr;</Link>
+					<Link to={`/${slug}`}>Read more &rarr;</Link>
 				</article>
 			))}
 		</Layout>

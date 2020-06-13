@@ -19,6 +19,13 @@ const Button = styled((props) => <Link {...props} />)`
 const Heading = styled.h1`
 	color: var(--highlight-color--3);
 	font-size: 4.5rem;
+	margin: 0;
+	text-align: center;
+`;
+const Subheading = styled.h3`
+	font-style: italic;
+	text-align: center;
+	margin: 0 0 5rem;
 `;
 
 const Home = () => {
@@ -29,6 +36,7 @@ const Home = () => {
 					frontmatter {
 						slug
 						title
+						excerpt
 					}
 				}
 			}
@@ -40,7 +48,7 @@ const Home = () => {
 	return (
 		<Layout>
 			<Heading>Daniel W. Robert</Heading>
-			<h2>Front-End Engineer at Automattic, Inc.</h2>
+			<Subheading>Front-End Engineer. Always a student.</Subheading>
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 				incididunt ut labore et dolore magna aliqua. Ipsum a arcu cursus vitae. Congue nisi
@@ -48,11 +56,13 @@ const Home = () => {
 			</p>
 
 			<h2>Latest Notes:</h2>
-			{notes.map(({ id, frontmatter: { title, slug } }) => (
+			{notes.map(({ id, frontmatter: { title, slug, excerpt } }) => (
 				<article key={id}>
 					<h3>
 						<Link to={`/${slug}`}>{title}</Link>
 					</h3>
+					<p>{excerpt}</p>
+					<Link to={`/${slug}`}>Read more &rarr;</Link>
 				</article>
 			))}
 

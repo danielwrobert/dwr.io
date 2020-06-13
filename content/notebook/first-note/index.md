@@ -2,7 +2,9 @@
 title: First Post
 date: "2020-01-01"
 slug: first-post
-excerpt: New Year's resolution blog post!
+excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin maximus 
+vulputate erat vel euismod. Mauris vitae bibendum tortor. Praesent elit 
+velit, venenatis quis elementum non, congue mollis lacus."
 ---
 
 ## Header
