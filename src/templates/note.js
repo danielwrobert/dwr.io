@@ -3,11 +3,11 @@ import { Link, graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import styled from '@emotion/styled';
 import Layout from '../components/layout';
+import Stitch from '../components/stitch';
 
 const Heading = styled.h1`
 	color: var(--highlight-color--3);
 	font-size: 4.5rem;
-	margin: 0;
 	text-align: center;
 `;
 
@@ -33,9 +33,8 @@ export default ({ data }) => {
 				<Link to={'/notebook'}>&larr; Back to all notes</Link>
 			</p>
 			<Heading>{title}</Heading>
-			<h5 style={{ textAlign: 'center', margin: '0 0 5rem', fontStyle: 'italic' }}>
-				Last updated on {date}
-			</h5>
+			<h5 style={{ textAlign: 'center', fontStyle: 'italic' }}>Last updated on {date}</h5>
+			<Stitch margin="1.5rem auto 4.5rem" />
 			<MDXRenderer>{body}</MDXRenderer>
 		</Layout>
 	);

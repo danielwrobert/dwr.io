@@ -2,11 +2,11 @@ import React from 'react';
 import { Link, graphql, useStaticQuery } from 'gatsby';
 import styled from '@emotion/styled';
 import Layout from '../components/layout';
+import Stitch from '../components/stitch';
 
 const Heading = styled.h1`
 	color: var(--highlight-color--5);
 	font-size: 4.5rem;
-	margin: 0;
 	text-align: center;
 `;
 
@@ -31,9 +31,9 @@ const Notebook = () => {
 	return (
 		<Layout>
 			<Heading>Notebook</Heading>
-
+			<Stitch margin="0 auto 4.5rem" />
 			{notes.map(({ id, frontmatter: { title, excerpt, slug } }) => (
-				<article key={id}>
+				<article className="note" key={id}>
 					<h2>
 						<Link style={{ color: 'var(--highlight-color--1' }} to={`/${slug}`}>
 							{title}

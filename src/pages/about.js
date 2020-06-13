@@ -1,17 +1,18 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import Layout from '../components/layout';
+import Stitch from '../components/stitch';
 
 const Heading = styled.h1`
 	color: var(--highlight-color--4);
 	font-size: 4.5rem;
-	margin: 0;
 	text-align: center;
 `;
 
 const About = () => (
 	<Layout>
 		<Heading>About</Heading>
+		<Stitch margin="0 auto 4.5rem" />
 		<h2 style={{ color: 'var(--highlight-color--1)' }}>About Me</h2>
 		<p>
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor

@@ -44,6 +44,7 @@ h5,
 h6 {
 	color: var(--link-color);
 	font-family: 'ovo', serif;
+	margin: 0;
 }
 
 h1,
@@ -63,6 +64,18 @@ a:visited {
 a:hover {
 	color: var(--highlight-color--2);
 }
+
+.note:not(:last-of-type) {
+	margin-bottom: 5.5rem;
+}
+/* .note:not(:last-of-type):after {
+	background-color: var(--link-color);
+	content: '';
+	display: block;
+	height: 0.1rem;
+	max-width: 25%;
+	margin: 2.5rem auto;
+} */
 
 /* Generated Elements */
 #gatsby-focus-wrapper {
