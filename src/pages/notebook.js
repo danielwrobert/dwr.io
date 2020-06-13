@@ -35,12 +35,15 @@ const Notebook = () => {
 			{notes.map(({ id, frontmatter: { title, excerpt, slug } }) => (
 				<article className="note" key={id}>
 					<h2>
-						<Link style={{ color: 'var(--highlight-color--1' }} to={`/${slug}`}>
+						<Link
+							style={{ color: 'var(--highlight-color--1' }}
+							to={`/notebook/${slug}`}
+						>
 							{title}
 						</Link>
 					</h2>
 					<p>{excerpt}</p>
-					<Link to={`/${slug}`}>Read more &rarr;</Link>
+					<Link to={`/notebook/${slug}`}>Read more &rarr;</Link>
 				</article>
 			))}
 		</Layout>
