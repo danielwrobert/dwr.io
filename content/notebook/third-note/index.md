@@ -51,3 +51,29 @@ Vestibulum molestie sollicitudin felis consectetur viverra. Proin non
 nibh ullamcorper, dignissim nunc quis, consequat enim. Vivamus suscipit 
 ante nunc, non dictum odio ullamcorper non. Etiam eu lorem eu diam 
 pulvinar porta vel nec lorem. Suspendisse at neque lectus.
+
+JavaScript code block example:
+
+```js
+// JavaScript
+const sos = () => {
+	console.log('HELP MEEEE!');
+	return 11;
+}
+```
+
+Bash code block example:
+
+```bash
+# Bash
+$ wp plugin list
+```
+
+PHP code block example:
+
+```php
+// PHP
+function test() {
+	return;
+}
+```
