@@ -9,6 +9,7 @@ const Button = styled(Link)`
 	border-radius: 0.4rem;
 	color: var(--background-color) !important;
 	display: inline-block;
+	font-weight: 700;
 	margin-top: 5.5rem;
 	opacity: 0.8;
 	padding: 1rem 1.5rem;
@@ -78,7 +79,7 @@ const Home = () => {
 			))}
 
 			<Button to={'/notebook'} activeClassName="active">
-				View the notebook
+				View all notes
 			</Button>
 		</Layout>
 	);
