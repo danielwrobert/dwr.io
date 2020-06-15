@@ -34,10 +34,16 @@ body {
 	font-family: 'muli', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial,
 		sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 	font-size: 1.8rem;
+	-webkit-font-smoothing: antialiased;
 }
 
 p {
 	margin: 0 0 2rem;
+}
+
+pre {
+	border-radius: 0.5rem;
+	padding: 1.5rem;
 }
 
 /* Headings */
