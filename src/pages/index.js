@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 import Layout from '../components/layout';
 import Stitch from '../components/stitch';
 
-const Button = styled((props) => <Link {...props} />)`
+const Button = styled(Link)`
 	background-color: var(--highlight-color--2);
 	border-radius: 0.4rem;
 	color: var(--background-color) !important;
@@ -21,12 +21,21 @@ const Button = styled((props) => <Link {...props} />)`
 
 const Heading = styled.h1`
 	color: var(--highlight-color--3);
-	font-size: 4.5rem;
+`;
+const Tagline = styled.h3`
+	font-style: italic;
+	margin-bottom: 1.5rem;
 	text-align: center;
 `;
-const Subheading = styled.h3`
-	font-style: italic;
-	text-align: center;
+
+const Subheading = styled.h2`
+	margin-bottom: 1.8rem;
+`;
+
+const NoteTitle = styled.h3`
+	a {
+		color: var(--highlight-color--5);
+	}
 `;
 
 const Home = () => {
@@ -48,26 +57,21 @@ const Home = () => {
 
 	return (
 		<Layout>
-			<Heading>Daniel W. Robert</Heading>
-			<Subheading>Front-End Engineer. Always a student.</Subheading>
-			<Stitch margin="1.5rem auto 4.5rem" />
+			<Heading className="entry-title">Daniel W. Robert</Heading>
+			<Tagline>Front-End Engineer. Always a student.</Tagline>
+			<Stitch />
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 				incididunt ut labore et dolore magna aliqua. Ipsum a arcu cursus vitae. Congue nisi
 				vitae suscipit tellus mauris a diam maecenas.
 			</p>
 
-			<h2 style={{ marginBottom: '1.8rem' }}>Latest Notes:</h2>
+			<Subheading>Latest Notes:</Subheading>
 			{notes.map(({ id, frontmatter: { title, slug, excerpt } }) => (
 				<article className="note" key={id}>
-					<h3>
-						<Link
-							style={{ color: 'var(--highlight-color--5)' }}
-							to={`/notebook/${slug}`}
-						>
-							{title}
-						</Link>
-					</h3>
+					<NoteTitle>
+						<Link to={`/notebook/${slug}`}>{title}</Link>
+					</NoteTitle>
 					<p>{excerpt}</p>
 					<Link to={`/notebook/${slug}`}>Read more &rarr;</Link>
 				</article>

@@ -1,13 +1,18 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-const Stitch = ({ color, strokeWidth, width, margin }) => {
+const Stitch = ({
+	color = 'var(--link-color)',
+	strokeWidth = '4',
+	width = '4.5rem',
+	margin = '0 auto 4.5rem',
+}) => {
 	const SVG = styled.svg(() => ({
 		display: 'block',
-		margin: margin || '2.5rem auto',
-		stroke: color || 'var(--link-color)',
-		strokeWidth: strokeWidth || '4',
-		width: width || '4.5rem',
+		margin,
+		stroke: color,
+		strokeWidth,
+		width,
 	}));
 
 	return (

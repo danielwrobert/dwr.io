@@ -6,8 +6,6 @@ import Stitch from '../components/stitch';
 
 const Heading = styled.h1`
 	color: var(--highlight-color--5);
-	font-size: 4.5rem;
-	text-align: center;
 `;
 
 const Notebook = () => {
@@ -30,8 +28,8 @@ const Notebook = () => {
 
 	return (
 		<Layout>
-			<Heading>Notebook</Heading>
-			<Stitch margin="0 auto 4.5rem" />
+			<Heading className="entry-title">Notebook</Heading>
+			<Stitch />
 			{notes.map(({ id, frontmatter: { title, excerpt, slug } }) => (
 				<article className="note" key={id}>
 					<h2>

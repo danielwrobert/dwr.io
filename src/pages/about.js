@@ -5,15 +5,17 @@ import Stitch from '../components/stitch';
 
 const Heading = styled.h1`
 	color: var(--highlight-color--4);
-	font-size: 4.5rem;
-	text-align: center;
+`;
+
+const Subheading = styled.h2`
+	color: var(--highlight-color--1);
 `;
 
 const About = () => (
 	<Layout>
-		<Heading>About</Heading>
-		<Stitch margin="0 auto 4.5rem" />
-		<h2 style={{ color: 'var(--highlight-color--1)' }}>About Me</h2>
+		<Heading className="entry-title">About</Heading>
+		<Stitch />
+		<Subheading>About Me</Subheading>
 		<p>
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 			incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
@@ -22,7 +24,12 @@ const About = () => (
 			Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
 			mollit anim id est laborum.
 		</p>
-		<h2 style={{ color: 'var(--highlight-color--1)' }}>About My Notebook</h2>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+			incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+			exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+		</p>
+		<Subheading>About My Notebook</Subheading>
 		<p>
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 			incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud

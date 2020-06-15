@@ -36,6 +36,11 @@ body {
 	font-size: 1.8rem;
 }
 
+p {
+	margin: 0 0 2rem;
+}
+
+/* Headings */
 h1,
 h2,
 h3,
@@ -53,6 +58,12 @@ h3 {
 	color: var(--highlight-color--1);
 }
 
+.entry-title {
+	font-size: 4.5rem;
+	text-align: center;
+}
+
+/* Links */
 a,
 a:link,
 a:visited {
@@ -65,17 +76,21 @@ a:hover {
 	color: var(--highlight-color--2);
 }
 
-.note:not(:last-of-type) {
-	margin-bottom: 5.5rem;
+.note h2 a {
+	color: var(--highlight-color--1);
 }
-/* .note:not(:last-of-type):after {
-	background-color: var(--link-color);
-	content: '';
-	display: block;
-	height: 0.1rem;
-	max-width: 25%;
-	margin: 2.5rem auto;
-} */
+
+/* Block Elements */
+.note:not(:last-of-type) {
+	margin-bottom: 4.5rem;
+}
+
+.entry-meta {
+	color: var(--highlight-color--1);
+	font-style: italic;
+	margin-bottom: 1.5rem;
+	text-align: center;
+}
 
 /* Generated Elements */
 #gatsby-focus-wrapper {

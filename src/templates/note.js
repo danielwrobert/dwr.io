@@ -7,8 +7,6 @@ import Stitch from '../components/stitch';
 
 const Heading = styled.h1`
 	color: var(--highlight-color--5);
-	font-size: 4.5rem;
-	text-align: center;
 `;
 
 export const postQuery = graphql`
@@ -32,17 +30,9 @@ export default ({ data }) => {
 			<p>
 				<Link to={'/notebook'}>&larr; Back to all notes</Link>
 			</p>
-			<Heading>{title}</Heading>
-			<h5
-				style={{
-					textAlign: 'center',
-					fontStyle: 'italic',
-					color: 'var(--highlight-color--1)',
-				}}
-			>
-				Last updated on {date}
-			</h5>
-			<Stitch margin="1.5rem auto 4.5rem" />
+			<Heading className="entry-title">{title}</Heading>
+			<h5 className="entry-meta">Last updated on {date}</h5>
+			<Stitch />
 			<MDXRenderer>{body}</MDXRenderer>
 		</Layout>
 	);
