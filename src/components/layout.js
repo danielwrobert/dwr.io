@@ -8,7 +8,7 @@ import '../styles/global.css';
 
 const Content = styled.div`
 	margin: 0 auto;
-	max-width: 74rem;
+	max-width: calc(74rem + 8rem);
 	padding: 7rem 4rem;
 	width: 100%;
 `;
