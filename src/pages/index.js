@@ -49,6 +49,7 @@ const Home = () => {
 						slug
 						title
 						excerpt
+						date(formatString: "MM/DD/YYYY")
 					}
 				}
 			}
@@ -69,11 +70,12 @@ const Home = () => {
 			</p>
 
 			<Subheading>Latest Notes:</Subheading>
-			{notes.map(({ id, frontmatter: { title, slug, excerpt } }) => (
+			{notes.map(({ id, frontmatter: { title, slug, excerpt, date } }) => (
 				<article className="note" key={id}>
 					<NoteTitle>
 						<Link to={`/notebook/${slug}`}>{title}</Link>
 					</NoteTitle>
+					<h5>{date}</h5>
 					<p>{excerpt}</p>
 					<Link to={`/notebook/${slug}`}>Read more &rarr;</Link>
 				</article>

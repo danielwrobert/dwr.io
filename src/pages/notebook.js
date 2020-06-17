@@ -30,7 +30,7 @@ const Notebook = () => {
 		<Layout>
 			<Heading className="entry-title">Notebook</Heading>
 			<Stitch />
-			{notes.map(({ id, frontmatter: { title, excerpt, slug } }) => (
+			{notes.map(({ id, frontmatter: { title, excerpt, slug, date } }) => (
 				<article className="note" key={id}>
 					<h2>
 						<Link
@@ -40,6 +40,7 @@ const Notebook = () => {
 							{title}
 						</Link>
 					</h2>
+					<h5>{date}</h5>
 					<p>{excerpt}</p>
 					<Link to={`/notebook/${slug}`}>Read more &rarr;</Link>
 				</article>
