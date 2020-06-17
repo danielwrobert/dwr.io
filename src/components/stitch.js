@@ -2,7 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 
 const Stitch = ({
-	color = 'var(--link-color)',
+	color = 'var(--shadow-color-light)',
 	strokeWidth = '4',
 	width = '4.5rem',
 	margin = '0 auto 4.5rem',

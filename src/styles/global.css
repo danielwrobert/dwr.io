@@ -6,12 +6,12 @@
 :root {
 	--background-color: #383a59;
 	--text-color: #f2f2f2;
-	--link-color: #bcc2cd;
 	--highlight-color--1: #bd93f9;
 	--highlight-color--2: #ff79c6;
 	--highlight-color--3: #50fa7b;
 	--highlight-color--4: #ffb86c;
 	--highlight-color--5: #8be9fd;
+	--shadow-color-light: #bcc2cd;
 	--shadow-color: #282a36;
 }
 
@@ -44,6 +44,7 @@ p {
 pre {
 	border-radius: 0.5rem;
 	padding: 1.5rem;
+	overflow-x: auto;
 }
 
 /* Headings */
@@ -53,7 +54,7 @@ h3,
 h4,
 h5,
 h6 {
-	color: var(--link-color);
+	color: var(--shadow-color-light);
 	font-family: 'ovo', serif;
 	margin: 0;
 }
@@ -73,13 +74,26 @@ h3 {
 a,
 a:link,
 a:visited {
-	color: var(--link-color);
+	/* color: var(--shadow-color-light); */
+	color: var(--highlight-color--2);
 	text-decoration: none;
 	transition: color 0.5s;
 }
 
-a:hover {
+header a,
+header a:link,
+header a:visited,
+a.cta-link {
+	color: var(--shadow-color-light);
+}
+
+header a:hover,
+a.cta-link:hover {
 	color: var(--highlight-color--2);
+}
+
+a:hover {
+	color: var(--highlight-color--3);
 }
 
 .note h2 a {
