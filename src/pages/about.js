@@ -15,28 +15,36 @@ const About = () => (
 	<Layout>
 		<Heading className="entry-title">About</Heading>
 		<Stitch />
-		<Subheading>About Me</Subheading>
-		<p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-			incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-			exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-			dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-			Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-			mollit anim id est laborum.
-		</p>
-		<p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-			incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-			exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-		</p>
 		<Subheading>About My Notebook</Subheading>
 		<p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-			incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-			exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-			dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-			Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-			mollit anim id est laborum.
+			This notebook is meant to serve as my{' '}
+			<a href="https://twitter.com/Mappletons/status/1250532315459194880">"Digital Garden"</a>
+			. By that I mean the content here are more my notes and thoughts, rather than complete
+			tutorials or teaching material – although I will also post some of that too, from
+			time-to-time!
+		</p>
+		<p>
+			Instead of getting hung up on producing perfectly curated articles, I can just jot
+			things down and circle back to them later if necessary.
+		</p>
+		<p>
+			Joel Hooks put it nicely in his{' '}
+			<a href="https://joelhooks.com/digital-garden">post on Digital Gardens:</a>
+		</p>
+		<blockquote>
+			{' '}
+			"It is a blog, sure, but it is also a wiki. It's a spot where I can post ideas,
+			snippets, resources, thoughts, collections, and other bits and pieces that I find
+			interesting and useful. Instead of always being a "performance" level of blogging, it
+			can be a looser more human endeavor that drops the idea of robots sorting the content
+			(in this case simply by date created) and embraces the idea of curation, by me, for
+			you."
+		</blockquote>
+		<Subheading>About Me</Subheading>
+		<p>
+			I’m Dan and I’m a Front-End Engineer at <a href="https://automattic.com/">Automattic</a>{' '}
+			– the company behind WordPress.com, Jetpack, WooCommerce, Tumblr, Gravatar, and a bunch
+			of other cool products that you may have seen around the web.
 		</p>
 	</Layout>
 );

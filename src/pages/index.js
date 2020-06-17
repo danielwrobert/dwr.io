@@ -69,9 +69,9 @@ const Home = () => {
 			<Tagline>Front-End Engineer. Always a student.</Tagline>
 			<Stitch />
 			<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-				incididunt ut labore et dolore magna aliqua. Ipsum a arcu cursus vitae. Congue nisi
-				vitae suscipit tellus mauris a diam maecenas.
+				Hi! Welcome to my notebook. I'm a Front-End Engineer at{' '}
+				<a href="https://automattic.com">Automattic</a> and this is my open collection of
+				notes, resources, and explorations.
 			</p>
 
 			<Subheading>Latest Notes:</Subheading>
