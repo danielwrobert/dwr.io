@@ -40,6 +40,11 @@ const NoteTitle = styled.h3`
 	}
 `;
 
+const Date = styled.h5`
+	font-style: italic;
+	margin-bottom: 1rem;
+`;
+
 const Home = () => {
 	const data = useStaticQuery(graphql`
 		query HomeQuery {
@@ -75,7 +80,7 @@ const Home = () => {
 					<NoteTitle>
 						<Link to={`/notebook/${slug}`}>{title}</Link>
 					</NoteTitle>
-					<h5>{date}</h5>
+					<Date>{date}</Date>
 					<p>{excerpt}</p>
 					<Link to={`/notebook/${slug}`}>Read more &rarr;</Link>
 				</article>

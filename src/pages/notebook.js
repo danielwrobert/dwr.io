@@ -8,6 +8,11 @@ const Heading = styled.h1`
 	color: var(--highlight-color--5);
 `;
 
+const Date = styled.h5`
+	font-style: italic;
+	margin-bottom: 1rem;
+`;
+
 const Notebook = () => {
 	const data = useStaticQuery(graphql`
 		query NotesQuery {
@@ -40,7 +45,7 @@ const Notebook = () => {
 							{title}
 						</Link>
 					</h2>
-					<h5>{date}</h5>
+					<Date>{date}</Date>
 					<p>{excerpt}</p>
 					<Link to={`/notebook/${slug}`}>Read more &rarr;</Link>
 				</article>

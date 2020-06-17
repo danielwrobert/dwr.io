@@ -12,6 +12,6 @@ It was the very first WordCamp Greenville and also my first conference talk so i
 
 You can watch the full recording of my talk below:
 
-<iframe allowfullscreen="" frameborder="0" height="620" src="https://video.wordpress.com/embed/kos3pJws?hd=1" title="Dan Robert: Getting Started with CSS Grid" width="1100"></iframe><script src="https://v0.wordpress.com/js/next/videopress-iframe.js?m=1435166243"></script>
+<iframe allowfullscreen="" frameborder="0" height="415" src="https://video.wordpress.com/embed/kos3pJws?hd=1" title="Dan Robert: Getting Started with CSS Grid" width="100%"></iframe><script src="https://v0.wordpress.com/js/next/videopress-iframe.js?m=1435166243"></script>
 
 Additionally, you can view my presentation slides [here](https://danielwrobert.github.io/getting-started-with-css-grid/).
