@@ -8,7 +8,7 @@ module.exports = {
 	/* Your site config here */
 	siteMetadata: {
 		title: `dwr.io`,
-		description: `My Digital Garden`,
+		description: `My Digital Notebook`,
 	},
 	plugins: [
 		`gatsby-plugin-emotion`,
