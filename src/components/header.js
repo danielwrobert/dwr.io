@@ -31,10 +31,12 @@ export default () => (
 		<Nav>
 			<ul>
 				<li>
-					<Link to={`/`}>Hello</Link>
+					<Link to={`/`} activeClassName="active">
+						Hello
+					</Link>
 				</li>
 				<li>
-					<Link to={'/notebook'} activeClassName="active">
+					<Link to={'/notebook'} activeClassName="active" partiallyActive={true}>
 						Notebook
 					</Link>
 				</li>
