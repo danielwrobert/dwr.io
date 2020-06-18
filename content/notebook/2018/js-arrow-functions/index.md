@@ -86,8 +86,8 @@ It’s also worth noting that, like the `this` value, arrow functions also do no
 
 In addition to the above caveats with the binding `this` keyword, arrow functions do not have a `prototype` property and they cannot be used as constructors (they will throw an error when used with `new`). Because of this, these types of function expressions are best suited for non-method functions and are not ideal within an object-oriented programming style.
 
-### References &amp; Resources
+### References & Resources
 
-- [ES6 For Everyone](https://es6.io/) (Module #2: Function Improvements: Arrows and Default Arguments) – course by Wes Bos
+- [ES6 For Everyone](https://es6.io/) – course by Wes Bos
 - [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
 - [Arrow Functions in JavaScript](https://alligator.io/js/arrow-functions/) – Alligator.io
