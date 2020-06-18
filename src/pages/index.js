@@ -71,10 +71,11 @@ const Home = () => {
 			<Heading className="entry-title">Daniel W. Robert</Heading>
 			<Tagline>Front-End Engineer. Always a student.</Tagline>
 			<Stitch />
+			<p>Hello and welcome to my Digital Notebook!</p>
 			<p>
-				Hi! Welcome to my notebook. I'm a Front-End Engineer at{' '}
-				<a href="https://automattic.com">Automattic</a> and this is my open collection of
-				notes, resources, and explorations.
+				I'm a Front-End Engineer at <a href="https://automattic.com">Automattic</a> and this
+				is my open collection of notes, resources, and explorations I'm currently working
+				on.
 			</p>
 
 			<Subheading>Latest Notes:</Subheading>
