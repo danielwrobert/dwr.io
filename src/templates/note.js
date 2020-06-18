@@ -2,8 +2,9 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import styled from '@emotion/styled';
-import Layout from '../components/layout';
-import Stitch from '../components/stitch';
+import Layout from 'components/layout';
+import SEO from 'components/seo';
+import Stitch from 'components/stitch';
 
 const Heading = styled.h1`
 	color: var(--highlight-color--5);
@@ -27,6 +28,7 @@ export default ({ data }) => {
 
 	return (
 		<Layout>
+			<SEO title={title} />
 			<p>
 				<Link className="cta-link" to={'/notebook'}>
 					&larr; Back to all notes
