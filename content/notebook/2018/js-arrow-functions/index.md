@@ -15,49 +15,50 @@ New with ES6, we have an additional way to write function expressions in our cod
 Let’s take a look at a basic example to get familiar with the new syntax. Here we’ll take an array of pet names and map over them, using the different function syntax options:
 
 ```javascript
-// Pet names array
-const names = [ Tucker, Frank, Remy, Wesley ];
-
 // Function Declaration Syntax
-function petNames( names ) {
-    return `​I have a pet named ${ name }.`;
+function hello( names ) {
+	console.log( `Hello, ${ name }!` );
 }
-names.map( petnames );
 
 // Function Expression Syntax
-const petNames = names.map( function( name ) {
-    return ​`​I have a pet named ${ name }.`;
-} );
+const hello = function( name ) {
+	console.log( `Hello, ${ name }!` );
+};
 
 // Arrow Function Syntax
-const petNames = names.map( ( name ) => {
-    return `​I have a pet named ${ name }.`;
-} );
+const hello = ( name ) => {
+	console.log( `Hello, ${ name }!` );
+};
 ```
 
 Parentheses around parameters are really only needed when you have more than one parameter. In the above example, parentheses around `name` is not required. You can keep it if you prefer but it is completely optional. If you have multiple arguments or no arguments at all, however, you do need to pass an empty set of parentheses:
 
 ```javascript
-`const petNames = names.map( name => {    return `​I have a pet named ${ name }.`;} );`
+const hello = name => {
+	console.log( `Hello, ${ name }!` );
+};
 ```
 
 ### Implicit returns
 
-An *explicit return* is when you explicitly write out the `return` keyword before the statement. With an *implicit return*, you do not need to write out the `return` keyword. You can also remove the curly brackets and pull your statement up to one line. With this in mind, we can shorten the arrow function of `petNames` from our original example down to a single line:
+An *explicit return* is when you explicitly write out the `return` keyword before the statement. With an *implicit return*, you do not need to write out the `return` keyword. You can also remove the curly brackets and pull your statement up to one line. 
 
 ```javascript
+// Pet names array
+const names = [ Tucker, Frank, Remy, Wesley ];
+
+// Arrow Function Syntax lonfhand (explicit return)
+const petNames = names.map( name => {
+	return `​I have a pet named ${ name }.`
+} );
+
 // Arrow Function Syntax shorthand (implicit return)
 const petNames = names.map( name => `​I have a pet named ${ name }.` );
 ```
 
 ### Anonymous functions
 
-At the time of writing, arrow functions are always anonymous functions. If you are using an arrow function, you cannot name it. You can, however, assign it to a variable just like you would do with the function expression expression syntax (see above example):
-
-```javascript
-const sayHello = ( name ) => { alert( `Hello ${name}!` ) }
-
-```
+At the time of writing, arrow functions are always anonymous functions. If you are using an arrow function, you cannot name it. You can, however, assign it to a variable just like you would do with the function expression expression syntax.
 
 One downside to an anonymous function (as opposed to a named function) is that you won’t get as good of an error message, should an error occur in your code. It is often more helpful to know the name of the function where the error occurred, as opposed to just a line number in a stack-trace. That said, I certainly wouldn’t let that discourage you from using them, it’s just something to take note of.
 
