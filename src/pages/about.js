@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import Layout from '../components/layout';
-import Stitch from '../components/stitch';
+import Layout from 'components/layout';
+import SEO from 'components/seo';
+import Stitch from 'components/stitch';
 
 const Heading = styled.h1`
 	color: var(--highlight-color--4);
@@ -13,15 +14,16 @@ const Subheading = styled.h2`
 
 const About = () => (
 	<Layout>
+		<SEO title="About" />
 		<Heading className="entry-title">About</Heading>
 		<Stitch />
 		<Subheading>About My Notebook</Subheading>
 		<p>
-			This notebook is meant to serve as my{' '}
-			<a href="https://twitter.com/Mappletons/status/1250532315459194880">"Digital Garden"</a>
-			. By that I mean the content here are more my notes and thoughts, rather than complete
-			tutorials or teaching material – although I will also post some of that too, from
-			time-to-time!
+			This notebook is meant to serve as a{' '}
+			<a href="https://twitter.com/Mappletons/status/1250532315459194880">"Digital Garden"</a>{' '}
+			(or Digital Notebook, as I prefer to call it) . By that I mean the content here are more
+			my notes and thoughts, rather than complete tutorials or teaching material – although I
+			will also post some of that too, from time-to-time!
 		</p>
 		<p>
 			Instead of getting hung up on producing perfectly curated articles, I can just jot

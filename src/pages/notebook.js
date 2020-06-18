@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link, graphql, useStaticQuery } from 'gatsby';
 import styled from '@emotion/styled';
-import Layout from '../components/layout';
-import Stitch from '../components/stitch';
+import Layout from 'components/layout';
+import SEO from 'components/seo';
+import Stitch from 'components/stitch';
 
 const Heading = styled.h1`
 	color: var(--highlight-color--5);
@@ -18,6 +19,7 @@ const Notebook = () => {
 		query NotesQuery {
 			allMdx(sort: { fields: frontmatter___date, order: DESC }) {
 				nodes {
+					id
 					frontmatter {
 						slug
 						title
@@ -33,6 +35,7 @@ const Notebook = () => {
 
 	return (
 		<Layout>
+			<SEO title="Digital Notebook" />
 			<Heading className="entry-title">Notebook</Heading>
 			<Stitch />
 			{notes.map(({ id, frontmatter: { title, excerpt, slug, date } }) => (

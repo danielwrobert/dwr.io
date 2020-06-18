@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link, graphql, useStaticQuery } from 'gatsby';
 import styled from '@emotion/styled';
-import Layout from '../components/layout';
-import Stitch from '../components/stitch';
+import Layout from 'components/layout';
+import SEO from 'components/seo';
+import Stitch from 'components/stitch';
 
 const Button = styled(Link)`
 	background-color: var(--highlight-color--2);
@@ -50,6 +51,7 @@ const Home = () => {
 		query HomeQuery {
 			allMdx(sort: { fields: frontmatter___date, order: DESC }, limit: 3) {
 				nodes {
+					id
 					frontmatter {
 						slug
 						title
@@ -65,6 +67,7 @@ const Home = () => {
 
 	return (
 		<Layout>
+			<SEO title="Welcome to my Digital Notebook" />
 			<Heading className="entry-title">Daniel W. Robert</Heading>
 			<Tagline>Front-End Engineer. Always a student.</Tagline>
 			<Stitch />
