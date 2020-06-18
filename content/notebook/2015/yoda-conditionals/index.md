@@ -2,7 +2,7 @@
 title: 'Yoda Conditional Statements'
 date: '2015-01-02'
 slug: yoda-conditional-statements
-excerpt: 'Here’s a little gem on conditional statements that I saw for the first time in the [WordPress Coding Standards](https://make.wordpress.org/core/handbook/coding-standards/php/#yoda-conditions "WordPress Coding Standards - Yoda Conditionals") a few months ago. When writing out a conditional logic, it is recommended to place the variable on the right side of the comparison operator and the constants or literals on the left.'
+excerpt: 'Here’s a little gem on conditional statements that I saw for the first time in the WordPress Coding Standards a few months ago. When writing out a conditional logic, it is recommended to place the variable on the right side of the comparison operator and the constants or literals on the left.'
 tag: ['coding standards']
 ---
 

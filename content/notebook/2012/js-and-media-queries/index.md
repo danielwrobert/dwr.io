@@ -2,7 +2,7 @@
 title: 'JavaScript and Media Queries'
 date: '2012-12-05'
 slug: javascript-and-media-queries
-excerpt: 'When developing a responsively designed web site, it is likely that you will come across a situation where you will want to selectively execute a JavaScript callback based on a [media query](https://developer.mozilla.org/en-US/docs/CSS/Media_queries "Media Queries") comparison. For example, you may want to alter your menu layout for small-screen devices.'
+excerpt: 'When developing a responsively designed web site, it is likely that you will come across a situation where you will want to selectively execute a JavaScript callback based on a media query comparison. For example, you may want to alter your menu layout for small-screen devices.'
 tag: ['media queries']
 ---
 
