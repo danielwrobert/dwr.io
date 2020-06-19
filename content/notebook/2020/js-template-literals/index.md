@@ -2,7 +2,7 @@
 title: 'JavaScript: Template Literals'
 date: '2020-06-18'
 slug: javascript-template-literals
-excerpt: ''
+excerpt: 'Up until now, we only had two ways to write a string in JavaScript - single and double quotes. If we wanted to interpolate a variable with one of these string options, we'd need to break out of the string and concatenate the variable.'
 tag: ['javascript', 'esnext']
 ---
 
