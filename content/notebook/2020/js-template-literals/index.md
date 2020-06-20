@@ -81,7 +81,7 @@ const markup = `
 
 In the example above we have a template string that is nested inside a template string. With this, we can easily loop over and render the list items without breaking out of the containing string.
 
- _Side note: since `map()` returns an array, we pass it to `join()` and join it on an empty string to get rig of the commas in the output._
+ _Side note: since `map()` returns an array, we pass it to `join()` and join it on an empty string to get rid of the commas in the output._
 
 ### References & Resources
 

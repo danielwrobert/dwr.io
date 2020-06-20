@@ -2,6 +2,8 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import useSiteMetadata from 'hooks/use-sitemetadata';
 
+import favicon from 'images/favicon.ico';
+
 const SEO = ({ title, description, lang = 'en' }) => {
 	const site = useSiteMetadata(); // Returns full object to `site`, as opposed to destructuring out the `title` and `description` like we did in footer.php
 	const seo = {
@@ -17,6 +19,8 @@ const SEO = ({ title, description, lang = 'en' }) => {
 
 			<meta name="twitter:title" content={seo.title} />
 			<meta name="twitter:description" content={seo.description} />
+
+			<link rel="icon" href={favicon} />
 		</Helmet>
 	);
 };

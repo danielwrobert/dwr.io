@@ -42,6 +42,22 @@ const About = () => (
 			(in this case simply by date created) and embraces the idea of curation, by me, for
 			you."
 		</blockquote>
+
+		<h3>Colors</h3>
+		<p>
+			I've styled this site to use the colors from the{' '}
+			<a href="https://draculatheme.com/">Dracula</a> color scheme. I'm using that scheme in
+			just about all of my apps (VS Code, Vim, iTerm 2, Bear, MacDown, etc.) and I love it!
+		</p>
+
+		<h3>Fonts</h3>
+		<p>
+			This site uses <a href="https://fonts.google.com/specimen/Muli">Muli</a> for the body
+			font and <a href="https://fonts.google.com/specimen/Ovo">Ovo</a> for the headings. I'm
+			importhing them as local packages via{' '}
+			<a href="https://github.com/KyleAMathews/typefaces">Typefaces.js</a>.
+		</p>
+
 		<Subheading>About Me</Subheading>
 		<p>
 			I’m Dan and I’m a Front-End Engineer at <a href="https://automattic.com/">Automattic</a>{' '}
