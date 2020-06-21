@@ -43,14 +43,22 @@ const About = () => (
 			you."
 		</blockquote>
 
-		<h3>Colors</h3>
+		<h3>Under The Hood</h3>
+		<p>
+			This site was built as a SSG (static site generator) with{' '}
+			<a href="https://www.gatsbyjs.org/">GatsbyJS</a> and hosted on{' '}
+			<a href="https://www.netlify.com/">Netlify</a>.
+		</p>
+		<p>The posts are created in Markdown (MDX).</p>
+
+		<h4>Colors</h4>
 		<p>
 			I've styled this site to use the colors from the{' '}
 			<a href="https://draculatheme.com/">Dracula</a> color scheme. I'm using that scheme in
 			just about all of my apps (VS Code, Vim, iTerm 2, Bear, MacDown, etc.) and I love it!
 		</p>
 
-		<h3>Fonts</h3>
+		<h4>Fonts</h4>
 		<p>
 			This site uses <a href="https://fonts.google.com/specimen/Muli">Muli</a> for the body
 			font and <a href="https://fonts.google.com/specimen/Ovo">Ovo</a> for the headings. I'm
