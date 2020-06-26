@@ -7,15 +7,6 @@ const Footer = styled.footer`
 	justify-content: space-between;
 	margin-top: auto;
 	padding: 2.5rem;
-
-	/* p {
-		margin: 0 auto;
-		padding: 0 4rem;
-
-		@media screen and (min-width: 880px) {
-			max-width: 74rem;
-		}
-	} */
 `;
 
 const Copyright = styled.p`
