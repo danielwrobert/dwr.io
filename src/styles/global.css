@@ -108,6 +108,12 @@ a:hover {
 }
 
 /* Block Elements */
+.note {
+	background-color: var(--shadow-color);
+	border-radius: 0.4rem;
+	padding: 1.5rem 2rem;
+}
+
 .note:not(:last-of-type) {
 	margin-bottom: 4.5rem;
 }

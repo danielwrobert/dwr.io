@@ -30,9 +30,7 @@ export default ({ data }) => {
 		<Layout>
 			<SEO title={title} />
 			<p>
-				<Link className="cta-link" to={'/notebook'}>
-					&larr; Back to all notes
-				</Link>
+				<Link to={'/notebook'}>&larr; Back to all notes</Link>
 			</p>
 			<Heading className="entry-title">{title}</Heading>
 			<h5 className="entry-meta">Last updated on {date}</h5>

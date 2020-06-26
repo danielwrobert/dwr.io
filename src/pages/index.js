@@ -86,9 +86,7 @@ const Home = () => {
 					</NoteTitle>
 					<Date>{date}</Date>
 					<p>{excerpt}</p>
-					<Link className="cta-link" to={`/notebook/${slug}`}>
-						Read more &rarr;
-					</Link>
+					<Link to={`/notebook/${slug}`}>Read note &rarr;</Link>
 				</article>
 			))}
 
