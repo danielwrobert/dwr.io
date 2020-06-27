@@ -11,7 +11,10 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+	"test": "jest",
+	"test:update": "jest -u",
+	"test:watch": "jest --watch",
+	"test:coverage": "jest --coverage"
   },
   "dependencies": {
     "@emotion/core": "^10.0.28",
