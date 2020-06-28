@@ -13,7 +13,7 @@ const Footer = styled.footer`
 `;
 
 const Copyright = styled.p`
-	margin: 0 1rem 0 0;
+	margin: 0 2rem 0 0;
 `;
 
 const date = new Date();

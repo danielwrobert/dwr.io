@@ -18,9 +18,10 @@ const SocialLinks = styled.div`
 	}
 	svg {
 		width: 2rem;
+		transform: translateX(-0.9rem);
 	}
 
-	@media screen and (min-width: 574px) {
+	@media screen and (min-width: 590px) {
 		margin-top: 0;
 	}
 `;
