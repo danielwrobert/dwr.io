@@ -11,7 +11,10 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+	"test": "jest",
+	"test:update": "jest -u",
+	"test:watch": "jest --watch",
+	"test:coverage": "jest --coverage"
   },
   "dependencies": {
     "@emotion/core": "^10.0.28",
@@ -33,6 +36,12 @@
     "typeface-ovo": "0.0.71"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.11.0",
+    "@testing-library/react": "^10.4.3",
+    "babel-jest": "^26.1.0",
+    "babel-preset-gatsby": "^0.4.12",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^26.1.0",
     "prettier": "2.0.5"
   },
   "repository": {
