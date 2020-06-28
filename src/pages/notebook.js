@@ -38,6 +38,10 @@ const Notebook = () => {
 			<SEO title="Digital Notebook" />
 			<Heading className="entry-title">Notebook</Heading>
 			<Stitch />
+			<p>
+				My open collection of notes, resources, and explorations I'm currently working on.
+				This is a place for me to post ideas, snippets, resources, cource notes, etc.
+			</p>
 			{notes.map(({ id, frontmatter: { title, excerpt, slug, date } }) => (
 				<article className="note" key={id}>
 					<h2>

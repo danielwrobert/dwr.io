@@ -73,9 +73,9 @@ const Home = () => {
 			<Stitch />
 			<p>Hello and welcome to my Digital Notebook!</p>
 			<p>
-				I'm a Front-End Engineer at <a href="https://automattic.com">Automattic</a> and this
-				is my open collection of notes, resources, and explorations I'm currently working
-				on.
+				I'm a Front-End Engineer at <a href="https://automattic.com">Automattic</a> – the
+				company behind WordPress.com, Jetpack, WooCommerce, Tumblr, Gravatar, and a bunch of
+				other cool products that you may have seen around the web.
 			</p>
 
 			<Subheading>Latest Notes:</Subheading>

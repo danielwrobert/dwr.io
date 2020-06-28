@@ -8,16 +8,11 @@ const Heading = styled.h1`
 	color: var(--highlight-color--4);
 `;
 
-const Subheading = styled.h2`
-	color: var(--highlight-color--1);
-`;
-
 const About = () => (
 	<Layout>
-		<SEO title="About" />
-		<Heading className="entry-title">About</Heading>
+		<SEO title="About My Notebook" />
+		<Heading className="entry-title">About My Notebook</Heading>
 		<Stitch />
-		<Subheading>About My Notebook</Subheading>
 		<p>
 			This notebook is meant to serve as a{' '}
 			<a href="https://twitter.com/Mappletons/status/1250532315459194880">"Digital Garden"</a>{' '}
@@ -43,7 +38,7 @@ const About = () => (
 			you."
 		</blockquote>
 
-		<h3>Under The Hood</h3>
+		<h2>Under The Hood</h2>
 		<p>
 			This site was built as a SSG (static site generator) with{' '}
 			<a href="https://www.gatsbyjs.org/">GatsbyJS</a> and hosted on{' '}
@@ -51,26 +46,19 @@ const About = () => (
 		</p>
 		<p>The posts are created in Markdown (MDX).</p>
 
-		<h4>Colors</h4>
+		<h3>Colors</h3>
 		<p>
 			I've styled this site to use the colors from the{' '}
 			<a href="https://draculatheme.com/">Dracula</a> color scheme. I'm using that scheme in
 			just about all of my apps (VS Code, Vim, iTerm 2, Bear, MacDown, etc.) and I love it!
 		</p>
 
-		<h4>Fonts</h4>
+		<h3>Fonts</h3>
 		<p>
 			This site uses <a href="https://fonts.google.com/specimen/Muli">Muli</a> for the body
 			font and <a href="https://fonts.google.com/specimen/Ovo">Ovo</a> for the headings. I'm
 			importhing them as local packages via{' '}
 			<a href="https://github.com/KyleAMathews/typefaces">Typefaces.js</a>.
-		</p>
-
-		<Subheading>About Me</Subheading>
-		<p>
-			I’m Dan and I’m a Front-End Engineer at <a href="https://automattic.com/">Automattic</a>{' '}
-			– the company behind WordPress.com, Jetpack, WooCommerce, Tumblr, Gravatar, and a bunch
-			of other cool products that you may have seen around the web.
 		</p>
 	</Layout>
 );
