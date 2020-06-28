@@ -1,6 +1,7 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import styled from '@emotion/styled';
+
+import Nav from './nav';
 
 const Header = styled.header`
 	background-color: var(--shadow-color);
@@ -8,44 +9,8 @@ const Header = styled.header`
 	padding: 2.5rem;
 `;
 
-const Nav = styled.nav`
-	ul {
-		display: flex;
-		flex-direction: row;
-		list-style-type: none;
-		margin: 0;
-		padding: 0;
-
-		li {
-			margin: 0 15px;
-
-			&:first-of-type {
-				margin-right: auto;
-			}
-		}
-	}
-`;
-
 export default () => (
 	<Header>
-		<Nav>
-			<ul>
-				<li>
-					<Link to={`/`} activeClassName="active">
-						Hello
-					</Link>
-				</li>
-				<li>
-					<Link to={'/notebook'} activeClassName="active" partiallyActive={true}>
-						Notebook
-					</Link>
-				</li>
-				<li>
-					<Link to={'/about'} activeClassName="active">
-						About
-					</Link>
-				</li>
-			</ul>
-		</Nav>
+		<Nav />
 	</Header>
 );

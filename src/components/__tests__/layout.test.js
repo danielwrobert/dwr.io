@@ -12,7 +12,12 @@ test('Layout', () => {
 	);
 	const child = getByText(text);
 
+	// Renders a header element
 	expect(container.querySelector(`header`)).toBeInTheDocument();
+
+	// Renders a footer element
 	expect(container.querySelector(`footer`)).toBeInTheDocument();
+
+	// Renders children
 	expect(child).toBeInTheDocument();
 });
