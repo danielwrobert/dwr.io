@@ -10,6 +10,11 @@ const Heading = styled.h1`
 	color: var(--highlight-color--5);
 `;
 
+const Divider = styled.hr`
+	margin: 2.5rem 0;
+	opacity: 0.5;
+`;
+
 export const postQuery = graphql`
 	query MDXQuery($slug: String!) {
 		mdx(frontmatter: { slug: { eq: $slug } }) {
@@ -29,13 +34,14 @@ export default ({ data }) => {
 	return (
 		<Layout>
 			<SEO title={title} />
-			<p>
-				<Link to={'/notebook'}>&larr; Back to all notes</Link>
-			</p>
 			<Heading className="entry-title">{title}</Heading>
 			<h5 className="entry-meta">Last updated on {date}</h5>
 			<Stitch />
 			<MDXRenderer>{body}</MDXRenderer>
+			<Divider />
+			<p>
+				<Link to={'/notebook'}>&larr; Back to all notes</Link>
+			</p>
 		</Layout>
 	);
 };
