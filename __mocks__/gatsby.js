@@ -24,4 +24,13 @@ module.exports = {
 	),
 	StaticQuery: jest.fn(),
 	useStaticQuery: jest.fn(),
+	useSiteMetadata: jest.fn().mockImplementation(() => ({
+		site: {
+			siteMetadata: {
+				title: 'dwr.io',
+				description: `My Digital Notebook`,
+				siteUrl: `https://dwr.io`,
+			},
+		},
+	})),
 };
