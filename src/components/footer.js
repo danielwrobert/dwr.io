@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import useSiteMetadata from 'hooks/use-sitemetadata';
 import SocialLinks from './social-links';
 
 const Footer = styled.footer`
@@ -20,11 +19,10 @@ const Copyright = styled.p`
 const date = new Date();
 
 export default () => {
-	const site = useSiteMetadata(); // Returns full object to `site`, as opposed to destructuring out the `title` and `description` like we did in footer.php
 	return (
 		<Footer>
 			<Copyright>
-				Copyright © {date.getFullYear()} {site.title}. All rights reserved.
+				Copyright © {date.getFullYear()} Daniel W Robert. All rights reserved.
 			</Copyright>
 			<SocialLinks />
 		</Footer>
