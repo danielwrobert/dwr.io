@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link, graphql, useStaticQuery } from 'gatsby';
 import styled from '@emotion/styled';
-import Layout from 'components/layout';
-import SEO from 'components/seo';
-import Stitch from 'components/stitch';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import Stitch from '../components/stitch';
 
 const Button = styled(Link)`
 	background-color: var(--highlight-color--2);

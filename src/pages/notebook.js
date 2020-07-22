@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link, graphql, useStaticQuery } from 'gatsby';
 import styled from '@emotion/styled';
-import Layout from 'components/layout';
-import SEO from 'components/seo';
-import Stitch from 'components/stitch';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import Stitch from '../components/stitch';
 
 const Heading = styled.h1`
 	color: var(--highlight-color--5);

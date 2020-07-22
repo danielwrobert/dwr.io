@@ -30,12 +30,3 @@ exports.createPages = async ({ graphql, actions: { createPage }, reporter }) => 
 		});
 	});
 };
-
-// Set absolute import paths from /src
-exports.onCreateWebpackConfig = ({ actions: { setWebpackConfig } }) => {
-	setWebpackConfig({
-		resolve: {
-			modules: [path.resolve(__dirname, 'src'), 'node_modules'],
-		},
-	});
-};
