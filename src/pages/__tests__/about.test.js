@@ -3,31 +3,20 @@ import { render } from '@testing-library/react';
 
 import About from '../about';
 
-beforeEach(() => {
-	StaticQuery.mockImplementationOnce(({ render }) =>
-		render({
-			site: {
-				siteMetadata: {
-					title: `dwr.io`,
-					description: `My Digital Notebook`,
-					siteUrl: `https://dwr.io`,
-				},
-			},
-		})
-	);
-});
-
-test('About', () => {
+const useSiteMetadata = jest.fn().mockImplementationOnce(() => {
 	const data = {
 		site: {
 			siteMetadata: {
 				title: `dwr.io`,
 				description: `My Digital Notebook`,
-				siteUrl: `https://dwr.io`,
 			},
 		},
 	};
-	const { container } = render(<About data={data} />);
+	return data.site.siteMetadata;
+});
+
+test('About', () => {
+	const { container } = render(<About />);
 
 	// Snapshot Test for basic static page
 	expect(container).toMatchSnapshot();

@@ -24,5 +24,4 @@ module.exports = {
 	),
 	StaticQuery: jest.fn(),
 	useStaticQuery: jest.fn(),
-	useSiteMetadata: jest.fn(),
 };
