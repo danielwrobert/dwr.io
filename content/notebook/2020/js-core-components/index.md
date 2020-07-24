@@ -76,4 +76,4 @@ The above code would be executed (line-by-line) in the following way:
 
 During all of this, the Call Stack will look as follows:
 
-![Call Stack](./call-stack.gif)
+![Call Stack](./images/call-stack.gif)
