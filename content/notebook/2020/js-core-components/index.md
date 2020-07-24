@@ -33,3 +33,15 @@ A call stack is a traditional way of storing information on our computer. We hav
 The one key thing to note about the Call Stack is that the program is only engaged with the very top item on the stack at any given moment. That said, whatever is at the top of the Call Stack is where the program is at that moment in the Thread of Execution.
 
 At the very bottom of the Call Stack there will always be the Global Execution Context. When items are added to the Call Stack, the program will run those top items and then eventually return to the Global Execution Context (`global()`) when everything above it has been executed and removed.
+
+Let's take the following block of code for example:
+
+```js
+const num = 5;
+function addTwo (baseNumber){
+	const result = baseNumber + 2;
+	return result;
+}
+const sum = addTwo(num);
+const newSum = addTwo(10);
+```
