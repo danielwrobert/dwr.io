@@ -47,6 +47,12 @@ pre {
 	overflow-x: auto;
 }
 
+code {
+	background-color: var(--shadow-color);
+	border-radius: 3px;
+	padding: 3px 5px;
+}
+
 /* Headings */
 h1,
 h2,
