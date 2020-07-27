@@ -1,6 +1,6 @@
 ---
 title: 'JavaScript: The Core Components of Execution'
-date: '2020-07-23'
+date: '2020-07-26'
 slug: javascript-core-components-of-execution
 excerpt: "In order for JavaScript to operate in the way that it does, it relies on three core components..."
 tag: ['javascript']
@@ -40,7 +40,7 @@ At the very bottom of the Call Stack there will always be the Global Execution C
 
 ## Putting it all together
 
-To demonstrate everything in a more visual example, let's take a look at the following block of code:
+Let's demonstrate everything we've discussed so far with a more visual example.
 
 ```js
 const num = 5;
@@ -59,21 +59,28 @@ The above code would be executed (line-by-line) in the following way:
 	a. Define the label/identifier for that function (`addOne`, in this case).
 	b. Store all of the code in the function into memory (we do not execute anything at this point).
 3. Define the constant `sum` (in global memory) and assign it the value returned by `addOne(num)`.
-4. Execute `addOne(num)`, creating a new Execution Context for that function block.
+4. Execute `addOne(num)`, add it to the Call Stack, and create a new Execution Context for that function block.
 5. Enter the new Execution Context for `addOne` and:
 	a. Assign the parameter of `baseNum` with the value (argument) of `5` (in local memory).
-	b. Define the constant `result` (in local memory) and assign it the value of the operaton on the right hand side - which is immediately run and evaluated to `6`.
+	b. Define the constant `result` (in local memory) and assign it the value of the operaton on the right hand side - which is immediately run, added to the Call Stack, and evaluated to `6`.
 	c. In our local memory, locate the data stored with the label `result` and `return` it - ship it out of the functions Local Execution Context into the Global Execution Context. This function execution then evaluates to the value returned in `result` - in this case, `6`.
 6. Moving back out to the Global Execution context, the returned value of `6` will be assigned (in global memory) to `sum`.
 7. Define the constant `sumTwo` (in global memory) and assign it the value returned by `addOne(sum)`.
 8. Repeat step 5 for the call to execute `addOne(sum)`:
-	a. Create a new Execution Context for the function block.
+	a. Add it to the Call Stack and create a new Execution Context for the function block.
 	b. Enter the new Execution Context for the second call to `addOne()`.
 	b. Assign `baseNum` the value of `sum` (in local memory), which has not been stored as `6`.
-	c. Define constant `result` (in local memory) and assign it the value of the operaton on the right hand side - which is immediately run and evaluated to `7`.
+	c. Define constant `result` (in local memory) and assign it the value of the operaton on the right hand side - which is immediately run, added to the Call Stack, and evaluated to `7`.
 	d. In our local memory, locate the data stored with the label `result` and `return` it to the Global Execution Context.
 9. In the Global Execution Context, assign the returned value of `7` to `sumTwo`.
 
-During all of this, the Call Stack will look as follows:
+Here is a visual representation of the Call Stack during this process:
 
-![Call Stack](./images/call-stack.gif)
+![Call Stack](./images/call-stack-example.gif)
+
+This demonstrates how each function/operation is being executed, that item is added to the top of the Call Stack and then removed after it is completed.
+
+### References & Resources
+
+- [Frontend Masters - JavaScript: The New Hard Parts](https://frontendmasters.com/courses/javascript-new-hard-parts) – course by [Will Sentance](http://willsentance.com/)
+- [Frontend Masters - JavaScript: The Hard Parts, v2](https://frontendmasters.com/courses/javascript-hard-parts-v2) – course by [Will Sentance](http://willsentance.com/)
