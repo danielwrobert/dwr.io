@@ -1,5 +1,5 @@
 ---
-title: 'JavaScript: The Core Components of Execution'
+title: 'JavaScript: Core Components of Execution'
 date: '2020-07-26'
 slug: javascript-core-components-of-execution
 excerpt: "In order for JavaScript to operate in the way that it does, it relies on three core components..."

@@ -78,12 +78,8 @@ h3 {
 .entry-title {
 	font-size: 4.5rem;
 	text-align: center;
-	line-height: 1.5;
-}
-@media screen and (min-width: 800px) {
-	.entry-title {
-		line-height: 1.8;
-	}
+	line-height: 1.4;
+	margin: 0.9rem 0;
 }
 
 /* Links */
