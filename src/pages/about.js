@@ -57,7 +57,7 @@ const About = () => (
 		<p>
 			This site uses <a href="https://fonts.google.com/specimen/Muli">Muli</a> for the body
 			font and <a href="https://fonts.google.com/specimen/Ovo">Ovo</a> for the headings. I'm
-			importhing them as local packages via{' '}
+			importing them as local packages via{' '}
 			<a href="https://github.com/KyleAMathews/typefaces">Typefaces.js</a>.
 		</p>
 	</Layout>
