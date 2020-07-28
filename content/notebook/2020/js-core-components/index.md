@@ -12,7 +12,7 @@ In order for JavaScript to operate in the way that it does, it relies on three c
 - The Thread of Execution
 - The Call Stack
 
-## Memory and The Thread of Execution
+## Memory & The Thread of Execution
 
 When a JavaScript program runs it goes through the code, line-by-line, and executes each line. This process is referred to as the Thread of Execution.
 
