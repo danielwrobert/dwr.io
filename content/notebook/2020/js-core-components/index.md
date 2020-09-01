@@ -12,7 +12,7 @@ In order for JavaScript to operate in the way that it does, it relies on three c
 - The Thread of Execution
 - The Call Stack
 
-Note: I am not covering the concept of Asynchronicity in this post. I will go over that in a future note!
+I am not covering the concept of asynchronicity here but I will go over that in a future note(s).
 
 ## Memory & The Thread of Execution
 
