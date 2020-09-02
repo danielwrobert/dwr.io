@@ -2,11 +2,17 @@
 title: 'The "this" Keyword in JavaScript'
 date: '2020-09-01'
 slug: this-keyword-in-javascript
-excerpt: "When you define a funciton in JavaScript, in addition to the parameters that you explicitly set, there are two implicit parameters - arguments and this..."
+excerpt: "The `this` keyword in JavaScript is an implicit parameter (one that is automatically present and set) that is passed to a function when it is defined..."
 tag: ['javascript']
 ---
 
-When you define a funciton in JavaScript, in addition to the parameters that you explicitly set, there are two implicit parameters - `arguments` and `this` (we'll be covering the latter in this note).
+The `this` keyword in JavaScript is an implicit parameter (one that is automatically present and set) that is passed to a function when it is defined. It referrs to an object that is assiociated with the function invocation.
+
+For example:
+
+```js
+someFunction.run() // the this keyword will refer to someFunction
+```
 
 
 
