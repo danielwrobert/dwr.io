@@ -3,7 +3,7 @@ title: 'WCGVL 2018 - Getting Started with CSS Grid'
 date: '2018-04-04'
 slug: wcgvl-2018-getting-started-with-css-grid
 excerpt: 'A few weeks ago, I gave a presentation at WordCamp Greenville on CSS Grid Layout.'
-tag: ['css', 'css grid']
+tags: ['css', 'css grid']
 ---
 
 A few weeks ago, I gave a presentation at WordCamp Greenville on CSS Grid Layout.

@@ -3,7 +3,7 @@ title: 'JavaScript and Media Queries'
 date: '2012-12-05'
 slug: javascript-and-media-queries
 excerpt: 'When developing a responsively designed web site, it is likely that you will come across a situation where you will want to selectively execute a JavaScript callback based on a media query comparison. For example, you may want to alter your menu layout for small-screen devices.'
-tag: ['media queries']
+tags: ['media queries']
 ---
 
 When developing a responsively designed web site, it is likely that you will come across a situation where you will want to selectively execute a JavaScript callback based on a [media query](https://developer.mozilla.org/en-US/docs/CSS/Media_queries "Media Queries") comparison. For example, you may want to alter your menu layout for small-screen devices. Or you may wish to load in specific content only on large-screen devices. Luckily, these capabilities are currently available. In this article I will cover a couple methods and show you that this can be done without much trouble at all!

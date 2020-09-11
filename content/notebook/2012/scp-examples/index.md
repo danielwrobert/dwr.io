@@ -3,7 +3,7 @@ title: 'Secure Copy Syntax Examples'
 date: '2012-09-17'
 slug: secure-copy-syntax-examples
 excerpt: 'Secure Copy (SCP) is a means of securely transferring files between hosts on a network. It is based on the Secure Shell (SSH) protocol. The command line scp program, which is provided in most SSH implementations, is the secure analog of the rcp command.'
-tag: ['unix', 'workflow']
+tags: ['unix', 'workflow']
 ---
 
 Secure Copy (SCP) is a means of securely transferring files between hosts on a network. It is based on the Secure Shell (SSH) protocol. The command line `scp` program, which is provided in most SSH implementations, is the secure analog of the rcp command.

@@ -3,7 +3,7 @@ title: 'Modern JavaScript: Arrow Functions'
 date: '2018-07-30'
 slug: modern-javascript-arrow-functions
 excerpt: 'New with ES6, we have an additional way to write function expressions in our code – as arrow functions. This new syntax offers 3 main benefits...'
-tag: ['javascript', 'esnext']
+tags: ['javascript', 'esnext']
 ---
 
 New with ES6, we have an additional way to write function expressions in our code – as arrow functions. This new syntax offers 3 main benefits:

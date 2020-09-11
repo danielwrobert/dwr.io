@@ -3,7 +3,7 @@ title: 'Vim Text Completion'
 date: '2018-02-21'
 slug: vim-text-completion
 excerpt: 'I’ve been looking for a good autocomplete plugin for Vim for a while. It seems like the most popular option by far is YouCompleteMe (which I have been using for a while now). While I think YouCompleteMe is a good plugin, I also feel like it’s a bit heavy and seems to need a lot to setup and maintain. I always seem to have issues with the server going down.'
-tag: ['vim']
+tags: ['vim']
 ---
 
 I’ve been looking for a good autocomplete plugin for Vim for a while. It seems like the most popular option by far is YouCompleteMe (which I have been using for a while now). While I think YouCompleteMe is a good plugin, I also feel like it’s a bit heavy and seems to need a lot to setup and maintain. I always seem to have issues with the server going down.

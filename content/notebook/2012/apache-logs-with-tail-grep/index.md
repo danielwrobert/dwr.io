@@ -3,7 +3,7 @@ title: 'Viewing Apache Logs with Tail and Grep'
 date: '2012-08-21'
 slug: viewing-apache-logs-with-tail-and-grep
 excerpt: 'As a developer, there may be times when you need to monitor what is happening on an Apache server as live HTTP requests are coming in from a web page. In a UNIX environment, you can actually accomplish this quite painlessly through the command line, using the tail and grep commands.'
-tag: ['apache', 'unix', 'workflow']
+tags: ['apache', 'unix', 'workflow']
 ---
 
 As a developer, there may be times when you need to monitor what is happening on an Apache server as live HTTP requests are coming in from a web page. In a UNIX environment, you can actually accomplish this quite painlessly through the command line, using the `tail` and `grep` commands. `Tail` is a command which outputs the last part of a file and the `grep` utility is used for pattern matching.

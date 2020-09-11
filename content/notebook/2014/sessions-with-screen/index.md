@@ -3,7 +3,7 @@ title: 'Virtual Terminal Sessions with Screen'
 date: '2014-01-14'
 slug: virtual-terminal-sessions-with-screen
 excerpt: 'Not so long ago, a co-worker and friend of mine introduced me to the UNIX application, screen. While I was really excited to learn of something so useful, I was also deeply saddened in realizing that it was right under my nose all this freaking time. In this short post, I’m going to show you how you can take advantage of this clever little utility.'
-tag: ['unix', 'workflow']
+tags: ['unix', 'workflow']
 ---
 
 Not so long ago, a co-worker and friend of mine introduced me to the UNIX application, `screen`. While I was really excited to learn of something so useful, I was also deeply saddened in realizing that it was right under my nose all this freaking time. In this short post, I’m going to show you how you can take advantage of this clever little utility.

@@ -3,7 +3,7 @@ title: 'Using CSS Custom Properties'
 date: '2018-01-06'
 slug: using-css-custom-properties
 excerpt: 'CSS Custom Properties, also commonly referred to as CSS Variables, is a specification that allows you to declare a property and use it later on in your stylesheet. This works similar to how you would declare a variable with a preprocessor.'
-tag: ['css']
+tags: ['css']
 ---
 
 CSS Custom Properties, also commonly referred to as CSS Variables, is a specification that allows you to declare a property and use it later on in your stylesheet. This works similar to how you would declare a variable with a preprocessor.

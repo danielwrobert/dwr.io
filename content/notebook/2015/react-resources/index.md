@@ -3,7 +3,7 @@ title: 'React.js Resources'
 date: '2015-03-10'
 slug: react-js-resources
 excerpt: 'Recently I’ve been digging into React.js. Some my awesome co-workers are experimenting and utilizing the library in some pretty cool ways, so it really sparked my interest. As a result, I’ve collected a little list of bookmarks that I thought was worth sharing.'
-tag: ['javascript', 'react']
+tags: ['javascript', 'react']
 ---
 
 Recently I’ve been digging into [React.js](http://facebook.github.io/react/ "React.js"). Some my awesome co-workers are experimenting and utilizing the library in some pretty cool ways, so it really sparked my interest. As a result, I’ve collected a little list of bookmarks that I thought was worth sharing.
