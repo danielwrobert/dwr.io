@@ -21,6 +21,7 @@ export const postQuery = graphql`
 			frontmatter {
 				title
 				date(formatString: "MM/DD/YYYY")
+				updated(formatString: "MM/DD/YYYY")
 			}
 			body
 		}
@@ -28,14 +29,14 @@ export const postQuery = graphql`
 `;
 
 export default ({ data }) => {
-	const { title, date } = data.mdx.frontmatter;
+	const { title, date, updated } = data.mdx.frontmatter;
 	const { body } = data.mdx;
 
 	return (
 		<Layout>
 			<SEO title={title} />
 			<Heading className="entry-title">{title}</Heading>
-			<h5 className="entry-meta">Last updated on {date}</h5>
+			<h5 className="entry-meta">Last updated on {updated ? updated : date}</h5>
 			<Stitch />
 			<MDXRenderer>{body}</MDXRenderer>
 			<Divider />
