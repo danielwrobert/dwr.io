@@ -2,7 +2,7 @@
 title: 'TIL: GitHub Emojis'
 date: '2020-07-03'
 slug: til-github-emojis
-excerpt: "I knew GitHub supported emojis - I often use them in PR messages, comments, etc. What I didn't know is that you can also add emojis in your commit messages."
+excerpt: "I knew GitHub supported emojis - I often use them in PR messages, comments, etc. What I didn't know is that you can also add emojis in your commit messages..."
 tag: ['til', 'github']
 ---
 
