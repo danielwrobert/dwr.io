@@ -3,7 +3,7 @@ title: 'Moving Local Files with Rsync'
 date: '2014-06-01'
 slug: moving-local-files-with-rsync
 excerpt: 'I am very obsessive about backing up my data. To preserve space on my MacBook Air’s drive, I store most of media files on a WD Passport external drive. Additionally I back that media up on a second (and oftentimes a third) desktop external drive. Sure, this is a little OCD but it’d be quite a shame to lose all of my files, should my first Passport drive fail me.'
-tag: ['unix', 'workflow']
+tags: ['unix', 'workflow']
 ---
 
 I am very obsessive about backing up my data. To preserve space on my MacBook Air’s drive, I store most of media files on a WD Passport external drive. Additionally I back that media up on a second (and oftentimes a third) desktop external drive. Sure, this is a little OCD but it’d be quite a shame to lose all of my files, should my first Passport drive fail me.

@@ -3,7 +3,7 @@ title: 'Ubuntu MATE on Raspberry Pi'
 date: '2017-03-13'
 slug: ubuntu-mate-on-raspberry-pi
 excerpt: 'I’ve been wanting to try out a Linux desktop for a while now. Mainly out of curiosity – I like to try new devices, operating systems, etc. I didn’t really want to invest in a computer just to *try* out a new OS, however. I had a couple older MacBooks lying around but I also had a Raspberry Pi 3 that I hadn’t quite decided what to do with.'
-tag: ['raspberry pi', 'ubuntu mate']
+tags: ['raspberry pi', 'ubuntu mate']
 ---
 
 I’ve been wanting to try out a Linux desktop for a while now. Mainly out of curiosity – I like to try new devices, operating systems, etc. I didn’t really want to invest in a computer just to *try* out a new OS, however. I had a couple older MacBooks lying around but I also had a Raspberry Pi 3 that I hadn’t quite decided what to do with. After poking around a bit on the internet, I found desktop variant Ubuntu MATE had been optimized for the use with the Raspberry Pi 2 &amp; 3. The installation process looked pretty straightforward and I had an extra monitor, keyboard, and mouse so I figured I’d give it a try!

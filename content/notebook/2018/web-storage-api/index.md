@@ -3,7 +3,7 @@ title: 'Intro to the Web Storage API'
 date: '2018-01-27'
 slug: intro-to-the-web-storage-api
 excerpt: 'There are instances where storing data in a users browser can be really helpful. Up until somewhat recently, saving the state of the application locally in the browser via Cookies was the main way to achieve this. Cookies have limitations, however. For example, their max size (4093 bytes) and the fact that they have to me transmitted with every request.'
-tag: ['javascript', 'web storage']
+tags: ['javascript', 'web storage']
 ---
 
 ### What is Web Storage and when would you use it?

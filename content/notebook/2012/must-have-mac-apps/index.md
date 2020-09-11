@@ -3,7 +3,7 @@ title: 'Must-Have Mac Apps'
 date: '2012-06-24'
 slug: must-have-mac-apps
 excerpt: 'Recently a few of my friends have made the switch from using a PC to a Mac for their primary workstation. One of the first things people want to know when making that switch is what applications are available that would help them achieve the most optimal user experience on their new operating system.'
-tag: ['resources', 'workflow']
+tags: ['resources', 'workflow']
 ---
 
 Recently a few of my friends have made the switch from using a PC to a Mac for their primary workstation. One of the first things people want to know when making that switch is what applications are available that would help them achieve the most optimal user experience on their new operating system. Since this is such a common concern and one of the first things I would want to know as well, I have decided to post a quick list of my current, personal favorites. These are apps that I typically run through and install right away when setting up a new workstation because they have become such a major part of my daily workflow.

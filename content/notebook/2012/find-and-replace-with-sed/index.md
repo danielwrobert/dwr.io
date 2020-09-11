@@ -3,7 +3,7 @@ title: 'Super Fast Find and Replace with Sed'
 date: '2012-08-27'
 slug: super-fast-find-and-replace-with-sed
 excerpt: 'Sed is a UNIX stream editor that can be used to filter text files. This can be extremely useful if you have to run a Find and Replace on a string of text across a large file. I find this to be much more efficient than using a Find and Replace feature in a text editor.'
-tag: ['unix', 'workflow']
+tags: ['unix', 'workflow']
 ---
 
 `Sed` is a UNIX stream editor that can be used to filter text files. This can be extremely useful if you have to run a Find and Replace on a string of text across a large file. I find this to be much more efficient than using a Find and Replace feature in a text editor. It is much faster (especially on very large files) and you can let it run in a separate Terminal tab without holding up your workflow.
