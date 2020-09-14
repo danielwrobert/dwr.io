@@ -16,13 +16,13 @@ const About = () => (
 		<p>
 			This notebook is meant to serve as a{' '}
 			<a href="https://twitter.com/Mappletons/status/1250532315459194880">"Digital Garden"</a>{' '}
-			(or Digital Notebook, as I prefer to call it) . By that I mean the content here are more
-			my notes and thoughts, rather than complete tutorials or teaching material – although I
-			will also post some of that too, from time-to-time!
+			(or Digital Notebook, as I prefer to call it). By that I mean the content here are more
+			my notes and thoughts, rather than always being structured as complete tutorials or
+			teaching material – although I will also be posting in that format as well!
 		</p>
 		<p>
 			Instead of getting hung up on producing perfectly curated articles, I can just jot
-			things down and circle back to them later if necessary.
+			things down and circle back to them later, if necessary.
 		</p>
 		<p>
 			Joel Hooks put it nicely in his{' '}
@@ -44,7 +44,9 @@ const About = () => (
 			<a href="https://www.gatsbyjs.org/">GatsbyJS</a> and hosted on{' '}
 			<a href="https://www.netlify.com/">Netlify</a>.
 		</p>
-		<p>The posts are created in Markdown (MDX).</p>
+		<p>
+			The posts are created in <a href="https://mdxjs.com/">Markdown (MDX)</a>.
+		</p>
 
 		<h3>Colors</h3>
 		<p>
