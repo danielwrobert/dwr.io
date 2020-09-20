@@ -31,50 +31,59 @@ But before we get to that, let's take a look at objects themselves and how we ca
 
 ## Creating Objects
 
-Objects can be created in three different ways.
+Objects can be created in a few different ways.
 
-1. The [Object() constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/Object) (`new Object()`):
-
-```
-const coffee = new Object();
-```
-
-There's not too much to this but we'll cover more on constructors and the `new` keyword later.
-
-2. The [`Object.create()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create) method:
-
-```
-const coffee = Object.create();
-```
-
-This approach is a bit more interesting. The only things that it does in terms of our object itself is return another object. However, we'll see that it will give us fine-grained control over our object, later on.
-
-3. The [Object Literal / Object Initializer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) notation
-
-```
-const coffee = {
-	type: 'Colombian',
-	roast: 'medium',
-	origin: "Colombia"
-};
-```
-
-Here, we see that we've defined a small set of properties on the object when we've initialized it. So how would we get properties on the objects returned in the previous approaches?
+1. The [Object() constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/Object) (`new Object()`): `const coffee = new Object();`
+2. The [`Object.create()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create) method: `const coffee = Object.create();`
+3. The [Object Literal / Object Initializer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) notation: `const coffee = {}`
 
 ## Property Accessors
 
-Per [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors):
+Creating an empty object isn't always the most useful thing. In most cases, we'll want to add properties and/or methods to that object. To do so, we can use Property Accessors.
 
-> Property accessors provide access to an object's properties by using the dot notation or the bracket notation.
+Per [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors), "property accessors provide access to an object's properties by using the dot notation or the bracket notation".
 
-In the Object Literal notation above, we used the bracket notation to add properties to our object when we initialized it. For the other two, we can add properties via the dot notation, as follows:
+If we create an object with the Object Literal approach, we can add properties directly on the object when we define it:
 
+```js
+const coffee = {
+	type: 'RIstretto',
+	ingredients: ['espresso'],
+	origin: 'Italy',
+	description: 'A short shot of concentrated espresso.'
+};
 ```
+
+We can also add properties to an object that we've created via the dot notation, regardless of which above approach we take to define it:
+
+```js
 const coffee = Object.create();
 
-coffee.type = 'Colombian';
-coffee.roast = 'medium';
-coffee.origin = 'Colombia';
+coffee.type = 'Ristretto';
+coffee.ingredients = ['espresso'];
+coffee.origin = 'Italy';
+coffee.description = 'A short shot of concentrated espresso.';
 ```
 
-In addition to adding properties (i.e., primitive data types) to our objects, we can also add functions. A function on an object is referred to as a "method".
+We also use the dot notation to access these properties on an existing object:
+
+```js
+console.log( coffee.type ) // 'Riesretto
+```
+
+In addition to adding properties (i.e., primitive data types) to our objects, we can also add functions. A function that is stored as a property on an object is referred to as a "method".
+
+
+```js
+const coffee = {
+	type: 'Ristretto',
+	ingredients: ['espresso'],
+	origin: 'Italy',
+	description: 'A short shot of concentrated espresso.',
+	brew: function() {
+		console.log( `Your Ristretto will be ready in 5 minutes!` );
+	}
+};
+```
+
+Now that we've gone over the very basics of Objects in JavaScript, let's move on to how we can work with them in an object-oriented paradigm.
