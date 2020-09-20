@@ -27,7 +27,7 @@ In this series, we'll aim to cover the following things:
 - The Prototype Chain: the "under the hood" feature of JavaScript enables us to emulate OOP.
 - The `this`, `new`, and `class` keywords which allow us to automate our object and method creation.
 
-But before we get to that, let's take a look at objects themselves and how we can go about using them, at a basic level.
+But before we get to that, let's take a look at objects themselves and how we can go about using them, at a very basic level.
 
 ## Creating Objects
 
