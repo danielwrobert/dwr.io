@@ -6,7 +6,7 @@ excerpt: "This series of articles are my notes on Object-Oriented Programming, a
 tags: ['javascript', 'oop']
 ---
 
-import TOC from '../../../../src/components/toc';
+import TOC from '../../../../../src/components/toc';
 
 <TOC>
 
@@ -86,4 +86,14 @@ const coffee = {
 };
 ```
 
-Now that we've gone over the very basics of Objects in JavaScript, let's move on to how we can work with them in an object-oriented paradigm.
+Now that we've gone over the very basics of Objects in JavaScript, let's move on to [the next note](#) (coming soon), where we discuss how we can work with them in an object-oriented paradigm.
+
+<TOC>
+
+- **Part 1:** Series Introduction __(This Note)__
+- **Part 2:** The Prototype Chain __(Coming Soon)__
+- **Part 3:** The this Keyword __(Coming Soon)__
+- **Part 4:** The new Keyword __(Coming Soon)__
+- **Part 5:** Classes __(Coming Soon)__
+
+</TOC>
