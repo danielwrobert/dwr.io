@@ -90,7 +90,7 @@ Per [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Oper
 In addition to defining properties via the dot notation, as we saw above, we can also use it to access existing properties on an object:
 
 ```js
-console.log( coffee.type ) // 'Riesretto
+coffee.type; // 'Riesretto
 ```
 
 When working with dot notation, property [identifiers](https://developer.mozilla.org/en-US/docs/Glossary/identifier) can only be alphanumeric, with the exception of `_` and `$`. Also properties can not start with a number.
@@ -100,7 +100,7 @@ When working with dot notation, property [identifiers](https://developer.mozilla
 The bracket notation is similar to accessing an index on an array - or an element in an associative array, if you're familiar with that concept from another language:
 
 ```js
-console.log( coffee['description'] );
+coffee['description']; // 'A short shot of concentrated espresso.'
 ```
 
 When working with bracket notation, property identifiers have to be a string. Unlike with dot notation, variables may also be used as long as the variable resolves to a string. This also means that they can include any characters - including spaces. 
