@@ -65,7 +65,7 @@ coffee.description = 'A short shot of concentrated espresso.';
 
 This works regardless of which above approach we take to initially define the object. 
 
-We can store any type of data as properties on our object - strings, numbers, arrays, booleans, funcitons, even other objects. When a function is stored as a property on an object it is referred to as a "method".
+We can store any type of data as properties on our object - even other objects. When a function is stored as a property on an object it is referred to as a "method".
 
 ```js
 const coffee = {
