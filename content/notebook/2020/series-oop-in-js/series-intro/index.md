@@ -65,7 +65,7 @@ coffee.description = 'A short shot of concentrated espresso.';
 
 This works regardless of which above approach we take to initially define the object. 
 
-We can store any type of data as properties on our object - strings, numbers, arrays, booleans, funcitons, etc. When a function is stored as a property on an object it is referred to as a "method".
+We can store any type of data as properties on our object - strings, numbers, arrays, booleans, funcitons, even other objects. When a function is stored as a property on an object it is referred to as a "method".
 
 ```js
 const coffee = {
@@ -93,7 +93,7 @@ In addition to defining properties via the dot notation, as we saw above, we can
 console.log( coffee.type ) // 'Riesretto
 ```
 
-When working with dot notation, property identifiers can only be alphanumeric, with the exception of `_` and `$`. Also properties can not start with a number.
+When working with dot notation, property [identifiers](https://developer.mozilla.org/en-US/docs/Glossary/identifier) can only be alphanumeric, with the exception of `_` and `$`. Also properties can not start with a number.
 
 ### Bracket Notation
 
