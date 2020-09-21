@@ -1,6 +1,6 @@
 ---
 title: 'OOP in JS: Series Introduction'
-date: '2020-09-15'
+date: '2020-09-21'
 slug: oop-in-js-series-intro
 excerpt: "This series of articles are my notes on Object-Oriented Programming, as it is in JavaScript..."
 tags: ['javascript', 'oop']
@@ -27,7 +27,7 @@ In this series, we'll aim to cover the following things:
 - The Prototype Chain: the "under the hood" feature of JavaScript enables us to emulate OOP.
 - The `this`, `new`, and `class` keywords which allow us to automate our object and method creation.
 
-But before we get to that, let's take a look at objects themselves and how we can go about using them, at a very basic level.
+But before we get to that, let's take a look at objects themselves and how we can go about creating and using them, at a very basic level.
 
 ## Creating Objects
 
@@ -37,24 +37,22 @@ Objects can be created in a few different ways.
 2. The [`Object.create()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create) method: `const coffee = Object.create();`
 3. The [Object Literal / Object Initializer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) notation: `const coffee = {}`
 
-## Property Accessors
+## Properties & Methods
 
 Creating an empty object isn't always the most useful thing. In most cases, we'll want to add properties and/or methods to that object. To do so, we can use Property Accessors.
-
-Per [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors), "property accessors provide access to an object's properties by using the dot notation or the bracket notation".
 
 If we create an object with the Object Literal approach, we can add properties directly on the object when we define it:
 
 ```js
 const coffee = {
-	type: 'RIstretto',
+	type: 'Ristretto',
 	ingredients: ['espresso'],
 	origin: 'Italy',
 	description: 'A short shot of concentrated espresso.'
 };
 ```
 
-We can also add properties to an object that we've created via the dot notation, regardless of which above approach we take to define it:
+We can also add properties to an object that we've created via the dot notation:
 
 ```js
 const coffee = Object.create();
@@ -65,14 +63,9 @@ coffee.origin = 'Italy';
 coffee.description = 'A short shot of concentrated espresso.';
 ```
 
-We also use the dot notation to access these properties on an existing object:
+This works regardless of which above approach we take to initially define the object. 
 
-```js
-console.log( coffee.type ) // 'Riesretto
-```
-
-In addition to adding properties (i.e., primitive data types) to our objects, we can also add functions. A function that is stored as a property on an object is referred to as a "method".
-
+We can store any type of data as properties on our object - strings, numbers, arrays, booleans, funcitons, etc. When a function is stored as a property on an object it is referred to as a "method".
 
 ```js
 const coffee = {
@@ -86,7 +79,46 @@ const coffee = {
 };
 ```
 
-Now that we've gone over the very basics of Objects in JavaScript, let's move on to [the next note](#) (coming soon), where we discuss how we can work with them in an object-oriented paradigm.
+## Property Accessors
+
+Once we have an object with all of the data that we want stored in it, we'll need a way to access (and/or add to) that data.
+
+Per [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors), "property accessors provide access to an object's properties by using the dot notation or the bracket notation".
+
+### Dot Notation
+
+In addition to defining properties via the dot notation, as we saw above, we can also use it to access existing properties on an object:
+
+```js
+console.log( coffee.type ) // 'Riesretto
+```
+
+When working with dot notation, property identifiers can only be alphanumeric, with the exception of `_` and `$`. Also properties can not start with a number.
+
+### Bracket Notation
+
+The bracket notation is similar to accessing an index on an array - or an element in an associative array, if you're familiar with that concept from another language:
+
+```js
+console.log( coffee['description'] );
+```
+
+When working with bracket notation, property identifiers have to be a string. Unlike with dot notation, variables may also be used as long as the variable resolves to a string. This also means that they can include any characters - including spaces. 
+
+Overall, dot notation is much eaiser to read than bracket notation and will probably be what you see most often used. However, bracket notation is still very useful in scenarios where you need to work around those naming limitations in dot notation. For example:
+
+```js
+const eleven = {
+	'11' = 'eleven',
+}
+
+eleven.11; // this will result in a SyntaxError.
+eleven['11']; // this will output 'eleven', as expected.
+```
+
+## Up Next
+
+Now that we've gone over the very basics of objects in JavaScript, in [the next note](#) (coming soon), we'll discuss the Prototype Chain and how we can use it to work with objects in an object-oriented paradigm.
 
 <TOC>
 
