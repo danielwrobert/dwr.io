@@ -31,12 +31,16 @@ export const postQuery = graphql`
 export default ({ data }) => {
 	const { title, date, updated } = data.mdx.frontmatter;
 	const { body } = data.mdx;
+	const isUpdated = updated ? (
+		<h5 className="entry-meta-updated">(Updated on {updated})</h5>
+	) : null;
 
 	return (
 		<Layout>
 			<SEO title={title} />
 			<Heading className="entry-title">{title}</Heading>
-			<h5 className="entry-meta">Last updated on {updated ? updated : date}</h5>
+			<h5 className="entry-meta">Published on {date}</h5>
+			{isUpdated}
 			<Stitch />
 			<MDXRenderer>{body}</MDXRenderer>
 			<Divider />

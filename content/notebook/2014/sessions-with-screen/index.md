@@ -1,6 +1,7 @@
 ---
 title: 'Virtual Terminal Sessions with Screen'
 date: '2014-01-14'
+updated: '2020-09-23'
 slug: virtual-terminal-sessions-with-screen
 excerpt: 'Not so long ago, a co-worker and friend of mine introduced me to the UNIX application, screen. While I was really excited to learn of something so useful, I was also deeply saddened in realizing that it was right under my nose all this freaking time. In this short post, I’m going to show you how you can take advantage of this clever little utility.'
 tags: ['unix', 'workflow']
@@ -41,6 +42,21 @@ Control + a + c
 # Close current window in the current screen socket
 Control + a + k
 ```
+
+To switch between open windows within a screen session you can jump to the desired window number (ordered starting with `0`):
+
+```bash
+# Jump to the first window in the screen session
+Control + 0
+
+# Jump to the third window in the screen session
+COntrol + 2
+
+# Toggle between the current and the previous open window (note this will not cycle through all open windows)
+Control + a, Control + a
+```
+
+ or use `Control + a + a` to cycle through 
 
 Those are the main commands that I use most often. For example, when I am working on a web application, I will likely have at least one process constantly running – wether that be a server, compiling Sass, or multiple tasks managed with Grunt. It’s really nice to be able to set that process up on a detached `screen` session and forget about it until I’m ready to move on to something else.
 
