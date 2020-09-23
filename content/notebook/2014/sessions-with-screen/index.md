@@ -64,5 +64,3 @@ Control + a, Space
 Those are the main commands that I use most often. For example, when I am working on a web application, I will likely have at least one process constantly running – wether that be a server, compiling Sass, or multiple tasks managed with Grunt. It’s really nice to be able to set that process up on a detached `screen` session and forget about it until I’m ready to move on to something else.
 
 For a full list of commands, run `screen --help` from the Terminal or check out this handy [Quick Reference](http://aperiodic.net/screen/quick_reference "screen Quick Reference"). I hope you found this as useful as I did and, as always, thanks for reading!
-
-*Update 2016-12-23: Added snippets for window management from within a screen socket.*
