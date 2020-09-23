@@ -14,7 +14,7 @@ const TOC = styled.div`
 export default ({ children }) => (
 	<>
 		<TOC>
-			<h2>Note Series:</h2>
+			<h2>Series Table of Contents:</h2>
 			{children}
 		</TOC>
 	</>
