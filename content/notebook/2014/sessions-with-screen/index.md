@@ -43,7 +43,7 @@ Control + a + c
 Control + a + k
 ```
 
-To switch between open windows within a screen session you can jump to the desired window number (ordered starting with `0`):
+To switch between open windows within a screen session you can either jump to the desired window number (ordered starting with `0`) or cycle through the open windows:
 
 ```bash
 # Jump to the first window in the screen session
@@ -54,6 +54,9 @@ COntrol + 2
 
 # Toggle between the current and the previous open window (note this will not cycle through all open windows)
 Control + a, Control + a
+
+# Cycle through all open windows
+Control + a, Space
 ```
 
  or use `Control + a + a` to cycle through 
