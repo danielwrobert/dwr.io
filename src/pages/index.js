@@ -82,11 +82,11 @@ const Home = () => {
 			{notes.map(({ id, frontmatter: { title, slug, excerpt, date } }) => (
 				<article className="note" key={id}>
 					<NoteTitle>
-						<Link to={`/notebook/${slug}`}>{title}</Link>
+						<Link to={`/${slug}`}>{title}</Link>
 					</NoteTitle>
 					<Date>{date}</Date>
 					<p>{excerpt}</p>
-					<Link to={`/notebook/${slug}`}>Read note &rarr;</Link>
+					<Link to={`/${slug}`}>Read note &rarr;</Link>
 				</article>
 			))}
 

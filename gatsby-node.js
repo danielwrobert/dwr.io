@@ -22,7 +22,7 @@ exports.createPages = async ({ graphql, actions: { createPage }, reporter }) => 
 	const posts = postsQuery.data.allMdx.nodes;
 	posts.forEach((post) => {
 		createPage({
-			path: `/notebook/${post.frontmatter.slug}`,
+			path: `/${post.frontmatter.slug}`,
 			component: require.resolve(`./src/templates/note.js`),
 			context: {
 				slug: post.frontmatter.slug, // This does not necessarily have to match the `path` above. We can also pass multiple things here.
