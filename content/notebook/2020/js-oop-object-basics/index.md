@@ -1,24 +1,12 @@
 ---
-title: 'OOP in JS: Series Introduction'
+title: 'OOP in JS: Object Basics'
 date: '2020-09-21'
-slug: oop-in-js-series-intro
-excerpt: "This series of articles are my notes on Object-Oriented Programming, as it is in JavaScript..."
+slug: oop-in-js-object-basics
+excerpt: "Object-Oriented Programming (OOP) is a popular programming paradigm..."
 tags: ['javascript', 'oop']
 ---
 
-import TOC from '../../../../../src/components/toc';
-
-<TOC>
-
-- **Part 1:** Series Introduction __(This Note)__
-- **Part 2:** The Prototype Chain __(Coming Soon)__
-- **Part 3:** The this Keyword __(Coming Soon)__
-- **Part 4:** The new Keyword __(Coming Soon)__
-- **Part 5:** Classes __(Coming Soon)__
-
-</TOC>
-
-This series of articles are my notes on Object-Oriented Programming (OOP), as it is in JavaScript. OOP is a popular programming paradigm that allows us a way to structure and maintain complex code.
+Object-Oriented Programming (OOP) is a popular programming paradigm that allows us a way to structure and maintain complex code.
 
 Unlike other programming languages that use class-based object orientation, JavaScript uses prototype-based object orientation. This difference may be a source of confustion for developers coming from a class-based language, especially when using the "syntactical sugar" of the `class` keyword and the results don't turn out quite as expected.
 
@@ -116,16 +104,6 @@ eleven.11; // this will result in a SyntaxError.
 eleven['11']; // this will output 'eleven', as expected.
 ```
 
-## Up Next
+## What's Next?
 
-Now that we've gone over the very basics of objects in JavaScript, in [the next note](#) (coming soon), we'll discuss the Prototype Chain and how we can use it to work with objects in an object-oriented paradigm.
-
-<TOC>
-
-- **Part 1:** Series Introduction __(This Note)__
-- **Part 2:** The Prototype Chain __(Coming Soon)__
-- **Part 3:** The this Keyword __(Coming Soon)__
-- **Part 4:** The new Keyword __(Coming Soon)__
-- **Part 5:** Classes __(Coming Soon)__
-
-</TOC>
+Now that we've gone over the very basics of objects in JavaScript, we can move on to discuss the Prototype Chain (in a future article) and how we can use it to work with objects in an object-oriented paradigm.
