@@ -15,6 +15,23 @@ const Divider = styled.hr`
 	opacity: 0.5;
 `;
 
+const Button = styled(Link)`
+	background-color: var(--highlight-color--2);
+	border-radius: 0.4rem;
+	color: var(--background-color) !important;
+	display: block;
+	font-weight: 700;
+	margin: 5.5rem auto 0;
+	opacity: 0.8;
+	padding: 1rem 1.5rem;
+	transition: opacity 0.5s !important;
+	width: fit-content;
+
+	&:hover {
+		opacity: 1;
+	}
+`;
+
 export const postQuery = graphql`
 	query MDXQuery($slug: String!) {
 		mdx(frontmatter: { slug: { eq: $slug } }) {
@@ -44,9 +61,9 @@ export default ({ data }) => {
 			<Stitch />
 			<MDXRenderer>{body}</MDXRenderer>
 			<Divider />
-			<p>
-				<Link to={'/notebook'}>&larr; Back to all notes</Link>
-			</p>
+			<Button to={'/notebook'} activeClassName="active">
+				&larr; Back to all notes
+			</Button>
 		</Layout>
 	);
 };
