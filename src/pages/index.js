@@ -33,13 +33,13 @@ const Tagline = styled.h3`
 `;
 
 const Subheading = styled.h2`
-	color: var(--highlight-color--1);
+	color: var(--highlight-color--5);
 	margin-bottom: 1.8rem;
 `;
 
 const NoteTitle = styled.h3`
 	a {
-		color: var(--highlight-color--5);
+		color: var(--highlight-color--1);
 	}
 `;
 
