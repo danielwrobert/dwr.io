@@ -25,7 +25,7 @@ export default () => (
 		<ul>
 			<li>
 				<Link to={`/`} activeClassName="active">
-					Hello
+					DWR
 				</Link>
 			</li>
 			<li>
