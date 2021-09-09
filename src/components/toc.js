@@ -12,7 +12,7 @@ const TOC = styled.div`
 `;
 
 const Heading = styled.h2`
-	color: var(--highlight-color--1);
+	color: var(--highlight-color--4);
 `;
 
 export default ({ children }) => (

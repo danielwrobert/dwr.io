@@ -10,6 +10,13 @@ const Heading = styled.h1`
 	color: var(--highlight-color--3);
 `;
 
+const Date = styled.h5`
+	color: var(--highlight-color--1);
+	font-style: italic;
+	margin-bottom: 1.5rem;
+	text-align: center;
+`;
+
 const Divider = styled.hr`
 	margin: 2.5rem 0;
 	opacity: 0.5;
@@ -48,16 +55,13 @@ export const postQuery = graphql`
 export default ({ data }) => {
 	const { title, date, updated } = data.mdx.frontmatter;
 	const { body } = data.mdx;
-	const isUpdated = updated ? (
-		<h5 className="entry-meta-updated">(Updated on {updated})</h5>
-	) : null;
+	const isUpdated = updated ? `Updated on ${updated}` : `Published on ${date}`;
 
 	return (
 		<Layout>
 			<SEO title={title} />
 			<Heading className="entry-title">{title}</Heading>
-			<h5 className="entry-meta">Published on {date}</h5>
-			{isUpdated}
+			<Date>{isUpdated}</Date>
 			<Stitch />
 			<MDXRenderer>{body}</MDXRenderer>
 			<Divider />
