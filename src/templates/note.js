@@ -18,7 +18,7 @@ const Date = styled.h5`
 `;
 
 const Divider = styled.hr`
-	margin: 2.5rem 0;
+	margin: 4.5rem 0 2.5rem;
 	opacity: 0.5;
 `;
 
