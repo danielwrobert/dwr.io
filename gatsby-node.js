@@ -34,7 +34,7 @@ exports.createPages = async ({ graphql, actions: { createPage }, reporter }) => 
 exports.onCreateNode = ({ node, actions, getNode }) => {
 	const { createNodeField } = actions;
 
-	if (node.internal.type === `MarkdownRemark`) {
+	if (node.internal.type === `allMdx`) {
 		const fileNode = getNode(node.parent);
 		let nodeSlug;
 		nodeSlug = ensureSlashes(
