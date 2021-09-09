@@ -26,12 +26,14 @@ const Heading = styled.h1`
 	color: var(--highlight-color--3);
 `;
 const Tagline = styled.h3`
+	color: var(--highlight-color--1);
 	font-style: italic;
 	margin-bottom: 1.5rem;
 	text-align: center;
 `;
 
 const Subheading = styled.h2`
+	color: var(--highlight-color--1);
 	margin-bottom: 1.8rem;
 `;
 

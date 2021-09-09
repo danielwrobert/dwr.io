@@ -11,10 +11,14 @@ const TOC = styled.div`
 	margin: 1.8rem 0;
 `;
 
+const Heading = styled.h2`
+	color: var(--highlight-color--1);
+`;
+
 export default ({ children }) => (
 	<>
 		<TOC>
-			<h2>Series Table of Contents:</h2>
+			<Heading>Series Table of Contents:</Heading>
 			{children}
 		</TOC>
 	</>

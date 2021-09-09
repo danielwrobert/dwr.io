@@ -7,7 +7,7 @@ import SEO from '../components/seo';
 import Stitch from '../components/stitch';
 
 const Heading = styled.h1`
-	color: var(--highlight-color--5);
+	color: var(--highlight-color--3);
 `;
 
 const Divider = styled.hr`
