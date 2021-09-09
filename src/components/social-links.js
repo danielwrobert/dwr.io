@@ -4,7 +4,6 @@ import styled from '@emotion/styled';
 const Container = styled.div`
 	display: flex;
 	margin-top: 1.5rem;
-	margin-left: 0.9rem;
 
 	a {
 		color: var(--shadow-color-light);
@@ -24,7 +23,6 @@ const Container = styled.div`
 
 	@media screen and (min-width: 590px) {
 		margin-top: 0;
-		margin-left: 0;
 	}
 `;
 
