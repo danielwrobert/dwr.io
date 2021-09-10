@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 
 import SocialLinks from './social-links';
 
-const Footer = styled.footer`
+const Container = styled.footer`
 	background-color: var(--shadow-color);
 	display: flex;
 	align-items: center;
@@ -18,13 +18,15 @@ const Copyright = styled.p`
 
 const date = new Date();
 
-export default () => {
+const Footer = () => {
 	return (
-		<Footer>
+		<Container>
 			<Copyright>
 				Copyright © {date.getFullYear()} Daniel W Robert. All rights reserved.
 			</Copyright>
 			<SocialLinks />
-		</Footer>
+		</Container>
 	);
 };
+
+export default Footer;

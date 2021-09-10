@@ -1,10 +1,11 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import styled from '@emotion/styled';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Stitch from '../components/stitch';
+import Button from '../components/button';
 
 const Heading = styled.h1`
 	color: var(--highlight-color--3);
@@ -22,23 +23,6 @@ const Divider = styled.hr`
 	opacity: 0.5;
 `;
 
-const Button = styled(Link)`
-	background-color: var(--highlight-color--2);
-	border-radius: 0.4rem;
-	color: var(--background-color) !important;
-	display: block;
-	font-weight: 700;
-	margin: 5.5rem auto 0;
-	opacity: 0.8;
-	padding: 1rem 1.5rem;
-	transition: opacity 0.5s !important;
-	width: fit-content;
-
-	&:hover {
-		opacity: 1;
-	}
-`;
-
 export const postQuery = graphql`
 	query MDXQuery($slug: String!) {
 		mdx(frontmatter: { slug: { eq: $slug } }) {
@@ -52,7 +36,7 @@ export const postQuery = graphql`
 	}
 `;
 
-export default ({ data }) => {
+const Note = ({ data }) => {
 	const { title, date, updated } = data.mdx.frontmatter;
 	const { body } = data.mdx;
 	const isUpdated = updated ? `Updated on ${updated}` : `Published on ${date}`;
@@ -71,3 +55,5 @@ export default ({ data }) => {
 		</Layout>
 	);
 };
+
+export default Note;
