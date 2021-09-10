@@ -3,7 +3,6 @@ import styled from '@emotion/styled';
 
 const Container = styled.div`
 	display: flex;
-	margin-top: 1.5rem;
 
 	a {
 		color: var(--shadow-color-light);
@@ -19,10 +18,6 @@ const Container = styled.div`
 	}
 	svg {
 		width: 3.2rem;
-	}
-
-	@media screen and (min-width: 590px) {
-		margin-top: 0;
 	}
 `;
 

@@ -6,7 +6,6 @@ import SocialLinks from './social-links';
 const Footer = styled.footer`
 	background-color: var(--shadow-color);
 	display: flex;
-	flex-wrap: wrap;
 	align-items: center;
 	justify-content: space-between;
 	margin-top: auto;
