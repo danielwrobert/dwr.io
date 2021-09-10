@@ -3,24 +3,8 @@ import { Link, graphql, useStaticQuery } from 'gatsby';
 import styled from '@emotion/styled';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
+import Button from '../components/button';
 import Stitch from '../components/stitch';
-
-const Button = styled(Link)`
-	background-color: var(--highlight-color--2);
-	border-radius: 0.4rem;
-	color: var(--background-color) !important;
-	display: block;
-	font-weight: 700;
-	margin: 5.5rem auto 0;
-	opacity: 0.8;
-	padding: 1rem 1.5rem;
-	transition: opacity 0.5s !important;
-	width: fit-content;
-
-	&:hover {
-		opacity: 1;
-	}
-`;
 
 const Heading = styled.h1`
 	color: var(--highlight-color--3);
