@@ -5,11 +5,14 @@ import SocialLinks from './social-links';
 
 const Container = styled.footer`
 	background-color: var(--shadow-color);
-	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	margin-top: auto;
 	padding: 2.5rem;
+
+	@media screen and (min-width: 640px) {
+		display: flex;
+	}
 `;
 
 const Copyright = styled.p`

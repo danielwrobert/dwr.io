@@ -15,6 +15,17 @@
 	--shadow-color: #282a36;
 }
 
+/** 
+ * Media Queries (sizes influenced by Tailwind's container class - https://tailwindcss.com/docs/container)
+ *
+ * None     	width: 100%;
+ * sm (640px)	min/max-width: 640px;
+ * md (768px)	min/max-width: 768px;
+ * lg (1024px)	min/max-width: 1024px;
+ * xl (1280px)	min/max-width: 1280px;
+ * 2xl (1536px)	min/max-width: 1536px;
+ */
+
 /* Global Styles */
 html {
 	box-sizing: border-box;
