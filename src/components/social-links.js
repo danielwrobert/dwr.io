@@ -7,7 +7,6 @@ const Container = styled.div`
 
 	a {
 		color: var(--shadow-color-light);
-		display: inline-flex;
 
 		&:not(:last-of-type) {
 			margin-right: 2rem;
@@ -15,6 +14,10 @@ const Container = styled.div`
 
 		&:hover {
 			color: var(--highlight-color--3);
+		}
+
+		@media screen and (min-width: 640px) {
+			display: inline-flex;
 		}
 	}
 	svg {
