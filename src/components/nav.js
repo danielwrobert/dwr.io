@@ -14,6 +14,8 @@ const Nav = styled.nav`
 			margin: 0 15px;
 
 			&:first-of-type {
+				font-family: 'ovo', serif;
+				font-weight: bold;
 				margin-right: auto;
 			}
 		}
