@@ -4,6 +4,7 @@ import styled from '@emotion/styled';
 
 const Nav = styled.nav`
 	ul {
+		align-items: center;
 		display: flex;
 		flex-direction: row;
 		list-style-type: none;
@@ -15,7 +16,7 @@ const Nav = styled.nav`
 
 			&:first-of-type {
 				font-family: 'ovo', serif;
-				font-weight: bold;
+				font-size: 2.5rem;
 				margin-right: auto;
 			}
 		}
