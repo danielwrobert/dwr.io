@@ -1,6 +1,7 @@
 ---
 title: 'Modern JavaScript: Using Var, Let, and Const'
 date: '2018-07-12'
+updated: '2022-03-04'
 slug: modern-javascript-using-var-let-and-const
 excerpt: 'As of ES6, we have two new ways to define variables, in addition to the classic var keyword. Each are a little bit different in their own way and I’ll break down those differences in this article.'
 tags: ['javascript', 'esnext']
@@ -8,8 +9,7 @@ tags: ['javascript', 'esnext']
 
 As of ES6, we have two new ways to define variables, in addition to the classic `var` keyword. Each are a little bit different in their own way and I’ll break down those differences in this article.
 
-Var
----
+## Var
 
 The biggest difference between `var` and the aforementioned new keywords is around the concept of “scoping”.
 
@@ -34,8 +34,7 @@ console.log( window.i ); // 10
 
 This is really unnecessary, as the only reason this iterator variable was created at all was specifically for the use of this loop. Allowing it to leak out to the global scope in this way just pollutes that scope with unneeded data.
 
-Let and Const
--------------
+## Let and Const
 
 When using `let` and `const`, the issue with the `for` loop is solved because both `let` and `const` are block-scoped. An example of a block statement is anything within open and closing curly brackets `{}` – functions, conditionals, or even just a set of curly brackets themselves. If something is defined using `let` or `const` within a block, it will not be leaked outside of that block to the parent.
 
@@ -72,8 +71,7 @@ const pet = "Frank"; // SyntaxError: redeclaration of const pet
 console.log( pet );
 ```
 
-The difference between `let` and `const`
-----------------------------------------
+## The difference between `let` and `const`
 
 A variable that has been defined with `let` *can* be updated but it can not be redefined. For example:
 
@@ -114,8 +112,19 @@ console.log(pet); // Object { name: "Frank", type: "dog", age: 3 }
 
 If you do want to totally freeze an object, you can pass it to `Object.freeze()`. This will prevent you from updating any of the properties on that object. See [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) for more details.
 
-Should `var` be used at all anymore?
-------------------------------------
+## The Temporal Dead Zone (TDZ)
+
+Like `var`, variables declared with `let` and `const` are hoisted - the process where the interpreter moves the declaration of your variables to the top of their scope, prior to execution of the code.
+
+Hoisting allows the variables to be safely used in your code before they are declared (_note that doing so can lead to unexpected errors, and is not generally recommended_).
+
+When a variable is declared with `var`, it is initialized with a default value of `undefined`. When a variable is declared with `let` or `const`, however, it is not initialized at all (aka "uninitialized").
+
+The "temporal dead zone" (TDZ) is that point in time where you can not access that variable before it is defined in your code.
+
+This is probably not something you'll come across _too_ often but it's still good to be aware of.
+
+## Should `var` be used at all anymore?
 
 There are a couple of popular approaches to using `var`, `let`, and `const` in defining your variables. These are just opinions, however, there really isn’t a definitive answer here.
 
