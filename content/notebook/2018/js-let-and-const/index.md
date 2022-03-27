@@ -116,9 +116,9 @@ If you do want to totally freeze an object, you can pass it to `Object.freeze()`
 
 Like `var`, variables declared with `let` and `const` are hoisted - the process where the interpreter moves the declaration of your variables to the top of their scope, prior to execution of the code.
 
-Hoisting allows the variables to be safely used in your code before they are declared. Note that doing so can lead to unexpected errors, and is not generally recommended.
+Hoisting allows the variables to be safely used in your code before they are declared (_note that doing so can lead to unexpected errors, and is not generally recommended_).
 
-When a variable is declared with `var`, it is initialized with a default value of `undefined`. When a variable is declared with `let` and `const`, however, it is not initialized at all (aka "uninitialized").
+When a variable is declared with `var`, it is initialized with a default value of `undefined`. When a variable is declared with `let` or `const`, however, it is not initialized at all (aka "uninitialized").
 
 The "temporal dead zone" (TDZ) is that point in time where you can not access that variable before it is defined in your code.
 
