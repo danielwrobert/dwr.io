@@ -4,7 +4,7 @@ import useSiteMetadata from '../hooks/use-sitemetadata';
 
 import favicon from '../images/favicon.png';
 
-const SEO = ({ title, description, lang = 'en' }) => {
+const Seo = ({ title, description, lang = 'en' }) => {
 	const site = useSiteMetadata(); // Returns full object to `site`, as opposed to destructuring out the `title` and `description` like we did in footer.php
 	const seo = {
 		title: title || site.title,
@@ -25,4 +25,4 @@ const SEO = ({ title, description, lang = 'en' }) => {
 	);
 };
 
-export default SEO;
+export default Seo;

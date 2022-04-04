@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, graphql, useStaticQuery } from 'gatsby';
 import styled from '@emotion/styled';
 import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Seo from '../components/seo';
 import Stitch from '../components/stitch';
 
 const Heading = styled.h1`
@@ -35,7 +35,7 @@ const Notebook = () => {
 
 	return (
 		<Layout>
-			<SEO title="Digital Notebook" />
+			<Seo title="Digital Notebook" />
 			<Heading className="entry-title">Notebook</Heading>
 			<Stitch />
 			<p>

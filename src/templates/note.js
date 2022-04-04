@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import styled from '@emotion/styled';
 import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Seo from '../components/seo';
 import Stitch from '../components/stitch';
 import Button from '../components/button';
 
@@ -43,7 +43,7 @@ const Note = ({ data }) => {
 
 	return (
 		<Layout>
-			<SEO title={title} />
+			<Seo title={title} />
 			<Heading className="entry-title">{title}</Heading>
 			<Date>{isUpdated}</Date>
 			<Stitch />

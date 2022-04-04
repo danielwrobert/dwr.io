@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Seo from '../components/seo';
 import Stitch from '../components/stitch';
 
 const Heading = styled.h1`
@@ -10,7 +10,7 @@ const Heading = styled.h1`
 
 const About = () => (
 	<Layout>
-		<SEO title="About My Notebook" />
+		<Seo title="About My Notebook" />
 		<Heading className="entry-title">About My Notebook</Heading>
 		<Stitch />
 		<p>
