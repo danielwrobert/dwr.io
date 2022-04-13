@@ -6,8 +6,13 @@ import 'typeface-muli';
 import React from 'react';
 import { MDXProvider } from '@mdx-js/react';
 import Highlight, { defaultProps } from 'prism-react-renderer';
+import Prism from 'prism-react-renderer/prism';
 import dracula from 'prism-react-renderer/themes/dracula';
 import 'prismjs/plugins/command-line/prism-command-line.css';
+
+// Add additional language support (see https://github.com/FormidableLabs/prism-react-renderer/issues/53)
+(typeof global !== 'undefined' ? global : window).Prism = Prism;
+require('prismjs/components/prism-php');
 
 const component = {
 	pre: (props) => {
