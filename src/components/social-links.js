@@ -33,6 +33,7 @@ const SocialLinks = () => (
 	<Container>
 		<a href="https://twitter.com/danielwrobert" rel="external">
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+				<title>Twitter</title>
 				<rect x="0" fill="none" width="24" height="24" />
 				<g>
 					<path
@@ -44,6 +45,7 @@ const SocialLinks = () => (
 		</a>
 		<a href="https://github.com/danielwrobert" rel="external">
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+				<title>GitHub</title>
 				<rect x="0" fill="none" width="24" height="24" />
 				<g>
 					<path
@@ -55,6 +57,7 @@ const SocialLinks = () => (
 		</a>
 		<a href="https://dwr.io/rss.xml" rel="external">
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+				<title>RSS</title>
 				<rect x="0" fill="none" width="16" height="16" />
 				<g>
 					<path

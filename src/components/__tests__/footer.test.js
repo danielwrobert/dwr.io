@@ -7,10 +7,11 @@ import { render } from '@testing-library/react';
 import Footer from '../footer';
 
 test('Footer', () => {
-	const { container, getByText } = render(<Footer />);
+	const { container, getByTitle } = render(<Footer />);
 	const socialLinks = container.querySelectorAll('svg');
-	// const twitterIcon = getByText(`Twitter`);
-	// const githubIcon = getByText(`GitHub`);
+	const twitterIcon = getByTitle(`Twitter`);
+	const githubIcon = getByTitle(`GitHub`);
+	const rssIcon = getByTitle(`RSS`);
 
 	// Renders a paragraph element (copyright)
 	expect(container.querySelector(`p`)).toBeInTheDocument();
@@ -22,8 +23,11 @@ test('Footer', () => {
 	expect(socialLinks.length).toBe(3);
 
 	// Renders Twitter Icon (title)
-	// expect(twitterIcon).toBeInTheDocument();
+	expect(twitterIcon).toBeInTheDocument();
 
 	// Renders GitHub Icon (title)
-	// expect(githubIcon).toBeInTheDocument();
+	expect(githubIcon).toBeInTheDocument();
+
+	// Renders RSS Icon (title)
+	expect(rssIcon).toBeInTheDocument();
 });
