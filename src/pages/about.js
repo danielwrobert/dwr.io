@@ -13,23 +13,31 @@ const About = () => (
 		<Seo title="About My Notebook" />
 		<Heading className="entry-title">About My Notebook</Heading>
 		<Stitch />
+		<h2>Welcome!</h2>
 		<p>
-			This notebook is meant to serve as a{' '}
-			<a href="https://twitter.com/Mappletons/status/1250532315459194880">"Digital Garden"</a>{' '}
-			(or Digital Notebook, as I prefer to call it). By that I mean the content here are more
-			my notes and thoughts, rather than always being structured as complete tutorials or
-			teaching material – although I will also be posting in that format as well!
+			This site is meant to serve as a Digital Notebook, of sorts. The content you will find
+			here is made up of my notes and learnings- whether they be from a course I've taken, a
+			book or article I've read, or something interesting I've discovered in experimenting.
 		</p>
 		<p>
-			Instead of getting hung up on producing perfectly curated articles, I can just jot
-			things down and circle back to them later, if necessary.
+			Writing things out, in my own words, allows me to solidify my understanding of what I am
+			learning. It also serves as a nice reference to look back on when trying to recall
+			something (as opposed to trying to search around for "that one article I read on a
+			particular topic once").
 		</p>
 		<p>
-			Joel Hooks put it nicely in his{' '}
-			<a href="https://joelhooks.com/digital-garden">post on Digital Gardens:</a>
+			Hopefully, some of my notes here will be helpful for you in your learning journey as
+			well!
+		</p>
+		<p>
+			Instead of getting hung up on producing perfectly curated articles, I may often post
+			some of my notes/thoughts and circle back to them later, if necessary.
+		</p>
+		<p>
+			While maybe not <em>exactly</em> the same thing, this isn't too far off from the whole{' '}
+			<a href="https://joelhooks.com/digital-garden">"Digital Garden"</a> idea:
 		</p>
 		<blockquote>
-			{' '}
 			"It is a blog, sure, but it is also a wiki. It's a spot where I can post ideas,
 			snippets, resources, thoughts, collections, and other bits and pieces that I find
 			interesting and useful. Instead of always being a "performance" level of blogging, it
