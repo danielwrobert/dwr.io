@@ -9,7 +9,7 @@ tags: ['javascript', 'esnext']
 
 As of ES6, we have two new ways to define variables, in addition to the classic `var` keyword. Each are a little bit different in their own way and I’ll break down those differences in this article.
 
-## Var
+## var
 
 The biggest difference between `var` and the aforementioned new keywords is around the concept of “scoping”.
 
@@ -34,7 +34,7 @@ console.log( window.i ); // 10
 
 This is really unnecessary, as the only reason this iterator variable was created at all was specifically for the use of this loop. Allowing it to leak out to the global scope in this way just pollutes that scope with unneeded data.
 
-## Let and Const
+## let & const
 
 When using `let` and `const`, the issue with the `for` loop is solved because both `let` and `const` are block-scoped. An example of a block statement is anything within open and closing curly brackets `{}` – functions, conditionals, or even just a set of curly brackets themselves. If something is defined using `let` or `const` within a block, it will not be leaked outside of that block to the parent.
 
@@ -71,7 +71,7 @@ const pet = "Frank"; // SyntaxError: redeclaration of const pet
 console.log( pet );
 ```
 
-## The difference between `let` and `const`
+## The difference between let and const
 
 A variable that has been defined with `let` *can* be updated but it can not be redefined. For example:
 
@@ -124,7 +124,7 @@ The "temporal dead zone" (TDZ) is that point in time where you can not access th
 
 This is probably not something you'll come across *too* often but it's still good to be aware of.
 
-## Should `var` be used at all anymore?
+## Should var be used at all anymore?
 
 There are a couple of popular approaches to using `var`, `let`, and `const` in defining your variables. These are just opinions, however, there really isn’t a definitive answer here.
 
