@@ -1,12 +1,12 @@
 ---
-title: 'Modern JavaScript: Arrow Functions'
+title: 'JavaScript Arrow Functions'
 date: '2018-07-30'
-slug: modern-javascript-arrow-functions
-excerpt: 'New with ES6, we have an additional way to write function expressions in our code – as arrow functions. This new syntax offers 3 main benefits...'
+slug: javascript-arrow-functions
+excerpt: 'As of ES6, we have an additional way to write function expressions in our code – as arrow functions. This new syntax offers 3 main benefits...'
 tags: ['javascript', 'esnext']
 ---
 
-New with ES6, we have an additional way to write function expressions in our code – as arrow functions. This new syntax offers 3 main benefits:
+As of ES6, we have an additional way to write function expressions in our code – as arrow functions. This new syntax offers 3 main benefits:
 
 - They are much more concise than regular function expressions/definitions
 - They have implicit returns, which allow us to write single-line expressions (much like we can do with conditionals and the [ternary operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator))
