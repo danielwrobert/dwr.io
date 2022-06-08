@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import styled from '@emotion/styled';
 
-const Nav = styled.nav`
+const StyledNav = styled.nav`
 	ul {
 		align-items: center;
 		display: flex;
@@ -23,8 +23,8 @@ const Nav = styled.nav`
 	}
 `;
 
-export default () => (
-	<Nav>
+const Nav = () => (
+	<StyledNav>
 		<ul>
 			<li>
 				<Link to={`/`} activeClassName="active">
@@ -42,5 +42,7 @@ export default () => (
 				</Link>
 			</li>
 		</ul>
-	</Nav>
+	</StyledNav>
 );
+
+export default Nav;

@@ -6,17 +6,19 @@ import Footer from './footer';
 import '../styles/normalize.css';
 import '../styles/global.css';
 
-const Content = styled.div`
+const StyledContent = styled.div`
 	margin: 0 auto;
 	max-width: calc(74rem + 5rem);
 	padding: 7rem 2.5rem;
 	width: 100%;
 `;
 
-export default ({ children }) => (
+const Layout = ({ children }) => (
 	<>
 		<Header />
-		<Content>{children}</Content>
+		<StyledContent>{children}</StyledContent>
 		<Footer />
 	</>
 );
+
+export default Layout;
