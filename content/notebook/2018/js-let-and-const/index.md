@@ -1,8 +1,8 @@
 ---
-title: 'Modern JavaScript: Using Var, Let, and Const'
+title: 'Using var, let, & const in JavaScript'
 date: '2018-07-12'
 updated: '2022-03-04'
-slug: modern-javascript-using-var-let-and-const
+slug: using-var-let-and-const-in-javascript
 excerpt: 'As of ES6, we have two new ways to define variables, in addition to the classic var keyword. Each are a little bit different in their own way and I’ll break down those differences in this article.'
 tags: ['javascript', 'esnext']
 ---
