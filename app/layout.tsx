@@ -30,7 +30,9 @@ export default function RootLayout({
       lang="en"
       className={`${ovo.variable} ${mulish.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col bg-background text-text font-sans leading-relaxed">
+        {children}
+      </body>
     </html>
   );
 }
