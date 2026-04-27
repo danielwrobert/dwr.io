@@ -1,26 +1,131 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-background: #383a59;
+  --color-text: #f2f2f2;
+  --color-highlight-1: #bd93f9;
+  --color-highlight-2: #ff79c6;
+  --color-highlight-3: #50fa7b;
+  --color-highlight-4: #ffb86c;
+  --color-highlight-5: #8be9fd;
+  --color-shadow: #282a36;
+  --color-shadow-light: #bcc2cd;
+  --font-serif: var(--font-ovo);
+  --font-sans: var(--font-muli);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  line-height: 1.6;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-size: 2rem;
+  -webkit-font-smoothing: antialiased;
+}
+
+p {
+  margin: 0 0 2rem;
+}
+
+pre {
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  overflow-x: auto;
+}
+
+code {
+  background-color: var(--color-shadow);
+  border-radius: 3px;
+  padding: 3px 5px;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-shadow-light);
+  font-family: var(--font-serif), serif;
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-highlight-5);
+}
+
+.entry-title {
+  font-size: 4.5rem;
+  text-align: center;
+  line-height: 1.4;
+  margin: 0.9rem 0;
+}
+
+a,
+a:link,
+a:visited {
+  color: var(--color-highlight-2);
+  text-decoration: none;
+  transition: color 0.5s;
+}
+
+header a,
+header a:link,
+header a:visited,
+a.cta-link {
+  color: var(--color-shadow-light);
+}
+
+header a:hover,
+header a.active,
+a.cta-link:hover {
+  color: var(--color-highlight-2);
+}
+
+a:hover {
+  color: var(--color-highlight-3);
+}
+
+.note h2 a {
+  color: var(--color-highlight-1);
+}
+
+.note {
+  background-color: var(--color-shadow);
+  border-radius: 0.4rem;
+  padding: 1.5rem 2rem;
+}
+
+.note:not(:last-of-type) {
+  margin-bottom: 4.5rem;
+}
+
+.entry-meta,
+.entry-meta-updated {
+  color: var(--color-highlight-1);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.entry-meta-updated {
+  color: var(--color-highlight-4);
 }

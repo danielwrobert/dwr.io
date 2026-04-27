@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Gatsby legacy site — not part of this project's build
+    "resources/**",
   ]),
 ]);
 
