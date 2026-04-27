@@ -16,8 +16,8 @@ const mulish = Mulish({
 });
 
 export const metadata: Metadata = {
-  title: "Daniel W. Robert — Digital Notebook",
-  description: "My Digital Notebook",
+  title: "Daniel W. Robert",
+  description: "Front-End Engineer. Always a student. This is my Digital Notebook",
 };
 
 export default function RootLayout({
