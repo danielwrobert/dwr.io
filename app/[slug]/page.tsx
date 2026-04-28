@@ -19,8 +19,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const { frontmatter } = await loadBlogPost(slug);
   return {
-    title: `${frontmatter.title} — Daniel W. Robert`,
+    title: frontmatter.title,
     description: frontmatter.excerpt,
+    openGraph: {
+      title: frontmatter.title,
+      description: frontmatter.excerpt,
+      type: "article",
+      publishedTime: frontmatter.date,
+      modifiedTime: frontmatter.updated,
+    },
+    twitter: {
+      card: "summary",
+      title: frontmatter.title,
+      description: frontmatter.excerpt,
+    },
   };
 }
 
