@@ -18,9 +18,31 @@ const mulish = Mulish({
   display: "swap",
 });
 
+const SITE_URL = "https://dwr.io";
+const SITE_TITLE = "Daniel W. Robert";
+const SITE_DESCRIPTION =
+  "Front-End Engineer. Always a student. This is my Digital Notebook";
+
 export const metadata: Metadata = {
-  title: "Daniel W. Robert",
-  description: "Front-End Engineer. Always a student. This is my Digital Notebook",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: SITE_TITLE,
+    template: `%s — ${SITE_TITLE}`,
+  },
+  description: SITE_DESCRIPTION,
+  openGraph: {
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    url: SITE_URL,
+    siteName: "dwr.io",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    creator: "@danielwrobert",
+  },
 };
 
 export default function RootLayout({
