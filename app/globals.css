@@ -13,3 +13,126 @@
   --font-serif: var(--font-ovo);
   --font-sans: var(--font-muli);
 }
+
+/* Base — the entire rem scale is built on 62.5% (1rem = 10px) */
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  line-height: 1.6;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 2rem;
+  -webkit-font-smoothing: antialiased;
+}
+
+p {
+  margin: 0 0 2rem;
+}
+
+pre {
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  overflow-x: auto;
+}
+
+:not(pre) > code {
+  background-color: #282a36;
+  border-radius: 3px;
+  padding: 3px 5px;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Headings — restore visual hierarchy that Tailwind preflight removes */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #bcc2cd;
+  font-family: var(--font-ovo), serif;
+  margin: 0;
+}
+
+h1 { font-size: 4rem; }
+h2 { font-size: 3rem; }
+h3 { font-size: 2.4rem; }
+h4,
+h5,
+h6 { font-size: 1.6rem; }
+
+h1,
+h2,
+h3 {
+  color: #8be9fd;
+}
+
+.entry-title {
+  font-size: 4.5rem;
+  text-align: center;
+  line-height: 1.4;
+  margin: 0.9rem 0;
+}
+
+/* Links */
+a,
+a:link,
+a:visited {
+  color: #ff79c6;
+  text-decoration: none;
+  transition: color 0.5s;
+}
+
+header a,
+header a:link,
+header a:visited {
+  color: #bcc2cd;
+}
+
+header a:hover,
+header a.active {
+  color: #ff79c6;
+}
+
+a:hover {
+  color: #50fa7b;
+}
+
+/* Post cards */
+.note h2 a,
+.note h3 a {
+  color: #bd93f9;
+}
+
+.note {
+  background-color: #282a36;
+  border-radius: 0.4rem;
+  padding: 1.5rem 2rem;
+}
+
+.note:not(:last-of-type) {
+  margin-bottom: 4.5rem;
+}
+
+/* Post-page meta line */
+.entry-meta,
+.entry-meta-updated {
+  color: #bd93f9;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.entry-meta-updated {
+  color: #ffb86c;
+}
