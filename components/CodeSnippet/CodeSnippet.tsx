@@ -6,7 +6,7 @@ export default function CodeSnippet(props: React.ComponentProps<typeof Code>) {
     <Code
       {...props}
       theme={draculaTheme}
-      className="rounded-lg overflow-x-auto text-base"
+      className="rounded-lg overflow-x-auto"
     />
   );
 }
