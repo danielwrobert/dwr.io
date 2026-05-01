@@ -65,7 +65,7 @@ export default function SearchBox({ posts }: { posts: Post[] }) {
           onKeyDown={(e) => {
             if (e.key === "Escape") close();
           }}
-          className="search-input bg-background text-text rounded-[0.4rem] pl-[1rem] pr-[3rem] py-[0.5rem] text-[1.4rem] outline-none border-0 w-full"
+          className="search-input bg-background text-text rounded-[0.4rem] pl-4 pr-12 py-4 text-[1.4rem] outline-none border-0 w-full"
         />
         {query && (
           <button
@@ -78,7 +78,7 @@ export default function SearchBox({ posts }: { posts: Post[] }) {
         )}
       </div>
       {open && results.length > 0 && (
-        <ul className="absolute top-full mt-[0.5rem] right-0 bg-shadow rounded-[0.4rem] list-none p-0 m-0 w-[34rem] z-50 shadow-[0_0.5rem_1.5rem_0_rgba(0,0,0,0.4)] overflow-hidden">
+        <ul className="absolute top-full mt-2 right-0 bg-shadow rounded-[0.4rem] list-none p-0 m-0 w-136 z-50 shadow-[0_0.5rem_1.5rem_0_rgba(0,0,0,0.4)] overflow-hidden">
           {results.map((post) => (
             <li
               key={post.slug}
