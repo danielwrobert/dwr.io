@@ -9,7 +9,7 @@ export default function Button({ href, children }: ButtonProps) {
   return (
     <Link
       href={href}
-      className="bg-highlight-2 !text-background rounded-[0.4rem] block font-bold mt-[5.5rem] mx-auto opacity-80 py-4 px-6 w-fit transition-opacity duration-500 hover:opacity-100"
+      className="bg-highlight-2 !text-background rounded-sm block font-bold mt-14 mx-auto opacity-80 py-2.5 px-4 w-fit transition-opacity duration-500 hover:opacity-100"
     >
       {children}
     </Link>

@@ -15,10 +15,8 @@
 }
 
 @layer base {
-	/* Base — the entire rem scale is built on 62.5% (1rem = 10px) */
 	html {
 		box-sizing: border-box;
-		font-size: 62.5%;
 		line-height: 1.6;
 	}
 
@@ -29,17 +27,17 @@
 	}
 
 	body {
-		font-size: 2rem;
+		font-size: 1.25rem; /* 20px */
 		-webkit-font-smoothing: antialiased;
 	}
 
 	p {
-		margin: 0 0 2rem;
+		margin: 0 0 1.25rem;
 	}
 
 	pre {
-		border-radius: 0.5rem;
-		padding: 1.5rem;
+		border-radius: 0.3125rem;
+		padding: 1rem;
 		overflow-x: auto;
 	}
 
@@ -65,12 +63,12 @@
 		margin: 0;
 	}
 
-	h1 { font-size: 4rem; }
-	h2 { font-size: 3rem; }
-	h3 { font-size: 2.4rem; }
+	h1 { font-size: 2.5rem; }    /* 40px */
+	h2 { font-size: 1.875rem; }  /* 30px */
+	h3 { font-size: 1.5rem; }    /* 24px */
 	h4,
 	h5,
-	h6 { font-size: 1.6rem; }
+	h6 { font-size: 1rem; }      /* 16px */
 
 	h1,
 	h2,
@@ -79,10 +77,10 @@
 	}
 
 	.entry-title {
-		font-size: 4.5rem;
+		font-size: 3rem; /* 48px */
 		text-align: center;
 		line-height: 1.4;
-		margin: 0.9rem 0;
+		margin: 0.5625rem 0; /* 9px */
 	}
 
 	/* Links */
@@ -117,12 +115,12 @@
 
 	.note {
 		background-color: #282a36;
-		border-radius: 0.4rem;
-		padding: 1.5rem 2rem;
+		border-radius: 0.25rem;
+		padding: 1rem 1.25rem;
 	}
 
 	.note:not(:last-of-type) {
-		margin-bottom: 4.5rem;
+		margin-bottom: 3rem; /* 48px */
 	}
 
 	/* Post-page meta line */
@@ -130,11 +128,17 @@
 	.entry-meta-updated {
 		color: #bd93f9;
 		font-style: italic;
-		margin-bottom: 1.5rem;
+		margin-bottom: 1rem;
 		text-align: center;
 	}
 
 	.entry-meta-updated {
 		color: #ffb86c;
+	}
+
+	/* Search */
+	.search-input::placeholder {
+		color: #bcc2cd;
+		opacity: 1;
 	}
 }
