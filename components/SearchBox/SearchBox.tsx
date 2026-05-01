@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect, useMemo } from "react";
 import Link from "next/link";
 import Fuse from "fuse.js";
+import { X } from "react-feather";
 
 type Post = {
   slug: string;
@@ -51,20 +52,31 @@ export default function SearchBox({ posts }: { posts: Post[] }) {
 
   return (
     <div ref={containerRef} className="relative">
-      <input
-        type="search"
-        placeholder="Search..."
-        value={query}
-        onChange={(e) => {
-          setQuery(e.target.value);
-          setOpen(true);
-        }}
-        onFocus={() => setOpen(true)}
-        onKeyDown={(e) => {
-          if (e.key === "Escape") close();
-        }}
-        className="search-input bg-background text-text rounded-[0.4rem] p-[1rem] text-[1.4rem] outline-none border-0 w-full"
-      />
+      <div className="relative">
+        <input
+          type="text"
+          placeholder="Search..."
+          value={query}
+          onChange={(e) => {
+            setQuery(e.target.value);
+            setOpen(true);
+          }}
+          onFocus={() => setOpen(true)}
+          onKeyDown={(e) => {
+            if (e.key === "Escape") close();
+          }}
+          className="search-input bg-background text-text rounded-[0.4rem] pl-[1rem] pr-[3rem] py-[0.5rem] text-[1.4rem] outline-none border-0 w-full"
+        />
+        {query && (
+          <button
+            onClick={close}
+            aria-label="Clear search"
+            className="absolute right-[0.6rem] top-1/2 -translate-y-1/2 text-shadow-light hover:text-highlight-2 transition-colors duration-500"
+          >
+            <X className="w-[1.6rem] h-[1.6rem]" />
+          </button>
+        )}
+      </div>
       {open && results.length > 0 && (
         <ul className="absolute top-full mt-[0.5rem] right-0 bg-shadow rounded-[0.4rem] list-none p-0 m-0 w-[34rem] z-50 shadow-[0_0.5rem_1.5rem_0_rgba(0,0,0,0.4)] overflow-hidden">
           {results.map((post) => (
