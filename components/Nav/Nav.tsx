@@ -40,7 +40,7 @@ export default function Nav({ posts = [] }: { posts?: Post[] }) {
       {/* ── Desktop nav (hidden on mobile) ─────────────────────── */}
       <nav className="hidden sm:block">
         <ul className="flex flex-row items-center list-none m-0 p-0">
-          <li className="font-serif text-[2.5rem] ml-[15px] mr-auto">
+          <li className="font-serif text-2xl ml-[15px] mr-auto">
             <Link href="/" className={pathname === "/" ? "active" : ""}>
               DWR
             </Link>
@@ -61,7 +61,7 @@ export default function Nav({ posts = [] }: { posts?: Post[] }) {
               About
             </Link>
           </li>
-          <li className="ml-[15px] w-[18rem]">
+          <li className="ml-[15px] w-[180px]">
             <SearchBox posts={posts} />
           </li>
         </ul>
@@ -71,34 +71,34 @@ export default function Nav({ posts = [] }: { posts?: Post[] }) {
       <div className="flex sm:hidden items-center justify-between">
         <Link
           href="/"
-          className={`font-serif text-[2.5rem]${pathname === "/" ? " active" : ""}`}
+          className={`font-serif text-2xl${pathname === "/" ? " active" : ""}`}
         >
           DWR
         </Link>
         <button
           onClick={() => setMobileOpen(true)}
           aria-label="Open navigation menu"
-          className="text-shadow-light hover:text-highlight-2 transition-colors duration-500 p-[0.5rem]"
+          className="text-shadow-light hover:text-highlight-2 transition-colors duration-500 p-1.5"
         >
-          <Menu className="w-[2.4rem] h-[2.4rem]" />
+          <Menu className="w-6 h-6" />
         </button>
       </div>
 
       {/* ── Mobile overlay ─────────────────────────────────────── */}
       {mobileOpen && (
-        <div className="fixed inset-0 bg-shadow z-50 flex flex-col p-10 overflow-y-auto">
-          <div className="flex justify-end mb-[3rem]">
+        <div className="fixed inset-0 bg-shadow z-50 flex flex-col p-6 overflow-y-auto">
+          <div className="flex justify-end mb-7.5">
             <button
               onClick={() => setMobileOpen(false)}
               aria-label="Close navigation menu"
-              className="border border-shadow-light text-shadow-light hover:text-highlight-2 hover:border-highlight-2 transition-colors duration-500 p-[0.5rem]"
+              className="border border-shadow-light text-shadow-light hover:text-highlight-2 hover:border-highlight-2 transition-colors duration-500 p-1.5"
             >
-              <X className="w-[2.4rem] h-[2.4rem]" />
+              <X className="w-6 h-6" />
             </button>
           </div>
 
           <nav>
-            <ul className="list-none p-0 m-0 flex flex-col gap-[3rem] mb-[4rem]">
+            <ul className="list-none p-0 m-0 flex flex-col gap-7.5 mb-10">
               {[
                 { href: "/", label: "Home", active: pathname === "/" },
                 {
@@ -112,7 +112,7 @@ export default function Nav({ posts = [] }: { posts?: Post[] }) {
                   <Link
                     href={href}
                     onClick={() => setMobileOpen(false)}
-                    className={`text-[3rem] block transition-colors duration-500 ${
+                    className={`text-3xl block transition-colors duration-500 ${
                       active
                         ? "text-highlight-2"
                         : "text-shadow-light hover:text-highlight-2"

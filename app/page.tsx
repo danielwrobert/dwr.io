@@ -11,7 +11,7 @@ export default async function Home() {
   return (
     <>
       <h1 className="entry-title text-highlight-3">Daniel W. Robert</h1>
-      <h3 className="text-highlight-1 italic mb-6 text-center">
+      <h3 className="text-highlight-1 italic mb-4 text-center">
         Front-End Engineer. Always a student.
       </h3>
       <Stitch />
@@ -22,7 +22,7 @@ export default async function Home() {
         WordPress.com, Jetpack, WooCommerce, Tumblr, Gravatar, and a bunch of
         other cool products that you may have seen around the web.
       </p>
-      <h2 className="mb-[1.8rem]">Latest Notes:</h2>
+      <h2 className="mb-[1.125rem]">Latest Notes:</h2>
       {latestPosts.map((post) => (
         <article className="note" key={post.slug}>
           <h3>
@@ -30,7 +30,7 @@ export default async function Home() {
               {post.title}
             </Link>
           </h3>
-          <h5 className="italic mb-4">
+          <h5 className="italic mb-2.5">
             {format(parseISO(post.date), "MM/dd/yyyy")}
           </h5>
           <p>{post.excerpt}</p>

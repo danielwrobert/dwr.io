@@ -65,20 +65,20 @@ export default function SearchBox({ posts }: { posts: Post[] }) {
           onKeyDown={(e) => {
             if (e.key === "Escape") close();
           }}
-          className="search-input bg-background text-text rounded-[0.4rem] pl-4 pr-12 py-4 text-[1.4rem] outline-none border-0 w-full"
+          className="search-input bg-background text-text rounded-sm pl-2.5 pr-7.5 py-2.5 text-sm outline-none border-0 w-full"
         />
         {query && (
           <button
             onClick={close}
             aria-label="Clear search"
-            className="absolute right-[0.6rem] top-1/2 -translate-y-1/2 text-shadow-light hover:text-highlight-2 transition-colors duration-500"
+            className="absolute right-1.5 top-1/2 -translate-y-1/2 text-shadow-light hover:text-highlight-2 transition-colors duration-500"
           >
-            <X className="w-[1.6rem] h-[1.6rem]" />
+            <X className="w-4 h-4" />
           </button>
         )}
       </div>
       {open && results.length > 0 && (
-        <ul className="absolute top-full mt-2 right-0 bg-shadow rounded-[0.4rem] list-none p-0 m-0 w-136 z-50 shadow-[0_0.5rem_1.5rem_0_rgba(0,0,0,0.4)] overflow-hidden">
+        <ul className="absolute top-full mt-1 right-0 bg-shadow rounded-sm list-none p-0 m-0 w-full sm:w-136 z-50 shadow-[0_0.3125rem_0.9375rem_0_rgba(0,0,0,0.4)] overflow-hidden">
           {results.map((post) => (
             <li
               key={post.slug}
@@ -87,10 +87,10 @@ export default function SearchBox({ posts }: { posts: Post[] }) {
               <Link
                 href={`/${post.slug}`}
                 onClick={close}
-                className="block px-[1.5rem] py-[1rem] hover:bg-background"
+                className="block px-4 py-2.5 hover:bg-background"
               >
                 <span className="block text-highlight-1">{post.title}</span>
-                <span className="block text-shadow-light text-[1.4rem] line-clamp-1">
+                <span className="block text-shadow-light text-sm line-clamp-1">
                   {post.excerpt}
                 </span>
               </Link>

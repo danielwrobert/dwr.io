@@ -5,7 +5,7 @@ export default async function Header() {
   const posts = await getBlogPostList();
 
   return (
-    <header className="bg-shadow shadow-[0_0.5rem_1rem_0_rgba(0,0,0,0.15)] p-10">
+    <header className="bg-shadow shadow-[0_0.3125rem_0.625rem_0_rgba(0,0,0,0.15)] p-6">
       <Nav
         posts={posts.map(({ slug, title, excerpt, tags }) => ({
           slug,
