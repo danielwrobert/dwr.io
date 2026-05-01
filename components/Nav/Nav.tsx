@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-export default function Nav() {
+export default function Nav({ searchSlot }: { searchSlot?: React.ReactNode }) {
   const pathname = usePathname();
 
   return (
@@ -30,6 +30,7 @@ export default function Nav() {
             About
           </Link>
         </li>
+        {searchSlot && <li className="ml-[15px]">{searchSlot}</li>}
       </ul>
     </nav>
   );

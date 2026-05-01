@@ -137,4 +137,11 @@
 	.entry-meta-updated {
 		color: #ffb86c;
 	}
+
+	/* Search */
+	.search-input::placeholder {
+		color: #bcc2cd;
+		opacity: 1;
+	}
 }
+
