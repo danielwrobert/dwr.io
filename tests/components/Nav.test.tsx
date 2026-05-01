@@ -9,8 +9,12 @@ vi.mock("next/navigation", () => ({
 describe("Nav", () => {
   it('renders the DWR logo link pointing to "/"', () => {
     render(<Nav />);
-    const logo = screen.getByText("DWR");
-    expect(logo.closest("a")).toHaveAttribute("href", "/");
+    // "DWR" appears in both the desktop nav and the mobile bar
+    const logos = screen.getAllByText("DWR");
+    expect(logos.length).toBeGreaterThanOrEqual(1);
+    logos.forEach((logo) =>
+      expect(logo.closest("a")).toHaveAttribute("href", "/")
+    );
   });
 
   it('renders a Notebook link pointing to "/notebook"', () => {
