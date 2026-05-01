@@ -51,9 +51,7 @@ export default async function PostPage({ params }: Props) {
       <h1 className="entry-title text-highlight-3">{title}</h1>
       <p className={dateClass}>{dateLabel}</p>
       <Stitch />
-      <div className="bg-shadow rounded-[0.4rem] px-[2rem] py-[1.5rem]">
-        <MDXRemote source={content} components={COMPONENT_MAP} />
-      </div>
+      <MDXRemote source={content} components={COMPONENT_MAP} />
       <hr className="mt-[4.5rem] mb-[2.5rem] opacity-50" />
       <Button href="/notebook">&larr; Back to all notes</Button>
     </>
