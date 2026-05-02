@@ -42,15 +42,7 @@ export default function Nav({ posts = [] }: { posts?: Post[] }) {
         <ul className="flex flex-row items-center list-none m-0 p-0">
           <li className="font-serif text-2xl ml-[15px] mr-auto">
             <Link href="/" className={pathname === "/" ? "active" : ""}>
-              DWR
-            </Link>
-          </li>
-          <li className="mx-[15px]">
-            <Link
-              href="/notebook"
-              className={pathname?.startsWith("/notebook") ? "active" : ""}
-            >
-              Notebook
+              DWR.IO
             </Link>
           </li>
           <li className="mx-[15px]">
@@ -101,11 +93,6 @@ export default function Nav({ posts = [] }: { posts?: Post[] }) {
             <ul className="list-none p-0 m-0 flex flex-col gap-7.5 mb-10">
               {[
                 { href: "/", label: "Home", active: pathname === "/" },
-                {
-                  href: "/notebook",
-                  label: "Notebook",
-                  active: !!pathname?.startsWith("/notebook"),
-                },
                 { href: "/about", label: "About", active: pathname === "/about" },
               ].map(({ href, label, active }) => (
                 <li key={href}>

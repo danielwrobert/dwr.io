@@ -1,15 +1,11 @@
 import { test, expect } from "@playwright/test";
 
-test("home → notebook → post → notebook", async ({ page }) => {
+test("home → post → back to home", async ({ page }) => {
   // Home page loads with correct title
   await page.goto("/");
   await expect(page).toHaveTitle(/Daniel W\. Robert/);
 
-  // Click the Notebook nav link
-  await page.getByRole("navigation").getByRole("link", { name: "Notebook" }).click();
-  await expect(page).toHaveURL("/notebook");
-
-  // A known post is listed
+  // A known post is listed on the home page
   const postLink = page
     .getByRole("article")
     .filter({ hasText: /Intro to the Web Storage API/i })
@@ -21,7 +17,7 @@ test("home → notebook → post → notebook", async ({ page }) => {
   await expect(page).toHaveURL(/\/intro-to-the-web-storage-api/);
   await expect(page).toHaveTitle(/Web Storage API/);
 
-  // Back to all notes
+  // Back to all notes returns to home
   await page.getByRole("link", { name: /back to all notes/i }).click();
-  await expect(page).toHaveURL("/notebook");
+  await expect(page).toHaveURL("/");
 });

@@ -2,11 +2,9 @@ import Link from "next/link";
 import { format, parseISO } from "date-fns";
 import { getBlogPostList } from "@/lib/helpers/file-helpers";
 import Stitch from "@/components/Stitch/Stitch";
-import Button from "@/components/Button/Button";
 
 export default async function Home() {
   const posts = await getBlogPostList();
-  const latestPosts = posts.slice(0, 3);
 
   return (
     <>
@@ -15,29 +13,18 @@ export default async function Home() {
         Front-End Engineer. Always a student.
       </h3>
       <Stitch />
-      <p>Hello and welcome to my Digital Notebook!</p>
-      <p>
-        I&apos;m a Front-End Engineer at{" "}
-        <a href="https://automattic.com">Automattic</a> – the company behind
-        WordPress.com, Jetpack, WooCommerce, Tumblr, Gravatar, and a bunch of
-        other cool products that you may have seen around the web.
-      </p>
-      <h2 className="mb-[1.125rem]">Latest Notes:</h2>
-      {latestPosts.map((post) => (
+      {posts.map((post) => (
         <article className="note" key={post.slug}>
-          <h3>
-            <Link href={`/${post.slug}`} className="text-highlight-1">
-              {post.title}
-            </Link>
-          </h3>
+          <h2>
+            <Link href={`/${post.slug}`}>{post.title}</Link>
+          </h2>
           <h5 className="italic mb-2.5">
-            {format(parseISO(post.date), "MM/dd/yyyy")}
+            {format(parseISO(post.date), "MMMM d, yyyy")}
           </h5>
           <p>{post.excerpt}</p>
           <Link href={`/${post.slug}`}>Read note &rarr;</Link>
         </article>
       ))}
-      <Button href="/notebook">View all notes</Button>
     </>
   );
 }
