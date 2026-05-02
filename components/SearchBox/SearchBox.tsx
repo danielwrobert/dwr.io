@@ -65,7 +65,7 @@ export default function SearchBox({ posts }: { posts: Post[] }) {
           onKeyDown={(e) => {
             if (e.key === "Escape") close();
           }}
-          className="search-input bg-background text-text rounded-sm pl-2.5 pr-7.5 py-2.5 text-sm outline-none border-0 w-full"
+          className="search-input bg-background text-text rounded-sm pl-2.5 pr-7.5 py-2.5 text-base outline-none border-0 w-full"
         />
         {query && (
           <button
