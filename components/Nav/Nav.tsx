@@ -42,7 +42,7 @@ export default function Nav({ posts = [] }: { posts?: Post[] }) {
         <ul className="flex flex-row items-center list-none m-0 p-0">
           <li className="font-serif text-2xl ml-[15px] mr-auto">
             <Link href="/" className={pathname === "/" ? "active" : ""}>
-              DWR
+              DWR.IO
             </Link>
           </li>
           <li className="mx-[15px]">
