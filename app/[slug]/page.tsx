@@ -55,7 +55,7 @@ export default async function PostPage({ params }: Props) {
 		<MDXRemote source={content} components={COMPONENT_MAP} />
 	  </div>
       <hr className="mt-12 mb-6 opacity-50" />
-      <Button href="/notebook">&larr; Back to all notes</Button>
+      <Button href="/">&larr; Back to all notes</Button>
     </>
   );
 }

@@ -47,14 +47,6 @@ export default function Nav({ posts = [] }: { posts?: Post[] }) {
           </li>
           <li className="mx-[15px]">
             <Link
-              href="/notebook"
-              className={pathname?.startsWith("/notebook") ? "active" : ""}
-            >
-              Notebook
-            </Link>
-          </li>
-          <li className="mx-[15px]">
-            <Link
               href="/about"
               className={pathname === "/about" ? "active" : ""}
             >
@@ -101,11 +93,6 @@ export default function Nav({ posts = [] }: { posts?: Post[] }) {
             <ul className="list-none p-0 m-0 flex flex-col gap-7.5 mb-10">
               {[
                 { href: "/", label: "Home", active: pathname === "/" },
-                {
-                  href: "/notebook",
-                  label: "Notebook",
-                  active: !!pathname?.startsWith("/notebook"),
-                },
                 { href: "/about", label: "About", active: pathname === "/about" },
               ].map(({ href, label, active }) => (
                 <li key={href}>

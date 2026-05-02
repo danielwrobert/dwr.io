@@ -20,8 +20,7 @@ const mulish = Mulish({
 
 const SITE_URL = "https://dwr.io";
 const SITE_TITLE = "Daniel W. Robert";
-const SITE_DESCRIPTION =
-  "Front-End Engineer. Always a student. This is my Digital Notebook";
+const SITE_DESCRIPTION = "Front-End Engineer. Always a student.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

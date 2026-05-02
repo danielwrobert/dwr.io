@@ -17,14 +17,6 @@ describe("Nav", () => {
     );
   });
 
-  it('renders a Notebook link pointing to "/notebook"', () => {
-    render(<Nav />);
-    expect(screen.getByText("Notebook").closest("a")).toHaveAttribute(
-      "href",
-      "/notebook"
-    );
-  });
-
   it('renders an About link pointing to "/about"', () => {
     render(<Nav />);
     expect(screen.getByText("About").closest("a")).toHaveAttribute(
