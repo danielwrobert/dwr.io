@@ -1,0 +1,171 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - navigation [ref=e3]:
+      - list [ref=e4]:
+        - listitem [ref=e5]:
+          - link "DWR.IO" [ref=e6] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=e7]:
+          - link "About" [ref=e8] [cursor=pointer]:
+            - /url: /about
+        - listitem [ref=e9]:
+          - textbox "Search..." [ref=e12]
+  - generic [ref=e13]:
+    - heading "JavaScript Arrow Functions" [level=1] [ref=e14]
+    - paragraph [ref=e15]: Published on 07/30/2018
+    - img [ref=e16]
+    - generic [ref=e23]:
+      - paragraph [ref=e24]: "As of ES6, we have an additional way to write function expressions in our code – as arrow functions. This new syntax offers 3 main benefits:"
+      - list [ref=e25]:
+        - listitem [ref=e26]: They are much more concise than regular function expressions/definitions
+        - listitem [ref=e27]:
+          - text: They have implicit returns, which allow us to write single-line expressions (much like we can do with conditionals and the
+          - link "ternary operator" [ref=e28] [cursor=pointer]:
+            - /url: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
+          - text: )
+        - listitem [ref=e29]:
+          - text: The value of
+          - code [ref=e30]: this
+          - text: is lexically bound, meaning that it is not re-bound when you use an arrow function inside of another function – which is very helpful for asynchronous callbacks
+      - paragraph [ref=e31]: "Let’s take a look at a basic example to get familiar with the new syntax. Here we’ll take an array of pet names and map over them, using the different function syntax options:"
+      - code [ref=e34]:
+        - generic [ref=e36]: // Function Declaration Syntax
+        - generic [ref=e38]: "function hello( names ) {"
+        - generic [ref=e40]: "console.log( `Hello, ${ name }!` );"
+        - generic [ref=e42]: "}"
+        - generic [ref=e45]: // Function Expression Syntax
+        - generic [ref=e47]: "const hello = function( name ) {"
+        - generic [ref=e49]: "console.log( `Hello, ${ name }!` );"
+        - generic [ref=e51]: "};"
+        - generic [ref=e54]: // Arrow Function Syntax
+        - generic [ref=e56]: "const hello = ( name ) => {"
+        - generic [ref=e58]: "console.log( `Hello, ${ name }!` );"
+        - generic [ref=e60]: "};"
+      - paragraph [ref=e61]:
+        - text: Parentheses around parameters are really only needed when you have more than one parameter. In the above example, parentheses around
+        - code [ref=e62]: name
+        - text: "is not required. You can keep it if you prefer but it is completely optional. If you have multiple arguments or no arguments at all, however, you do need to pass an empty set of parentheses:"
+      - code [ref=e65]:
+        - generic [ref=e67]: "const hello = name => {"
+        - generic [ref=e69]: "console.log( `Hello, ${ name }!` );"
+        - generic [ref=e71]: "};"
+      - heading "Implicit returns" [level=3] [ref=e72]
+      - paragraph [ref=e73]:
+        - text: An
+        - emphasis [ref=e74]: explicit return
+        - text: is when you explicitly write out the
+        - code [ref=e75]: return
+        - text: keyword before the statement. With an
+        - emphasis [ref=e76]: implicit return
+        - text: ", you do not need to write out the"
+        - code [ref=e77]: return
+        - text: keyword. You can also remove the curly brackets and pull your statement up to one line.
+      - code [ref=e80]:
+        - generic [ref=e82]: // Pet names array
+        - generic [ref=e84]: const names = [ Tucker, Frank, Remy, Wesley ];
+        - generic [ref=e87]: // Arrow Function Syntax lonfhand (explicit return)
+        - generic [ref=e89]: "const petNames = names.map( name => {"
+        - generic [ref=e91]: "return `I have a pet named ${ name }.`"
+        - generic [ref=e93]: "} );"
+        - generic [ref=e96]: // Arrow Function Syntax shorthand (implicit return)
+        - generic [ref=e98]: "const petNames = names.map( name => `I have a pet named ${ name }.` );"
+      - heading "Anonymous functions" [level=3] [ref=e99]
+      - paragraph [ref=e100]: At the time of writing, arrow functions are always anonymous functions. If you are using an arrow function, you cannot name it. You can, however, assign it to a variable just like you would do with the function expression expression syntax.
+      - paragraph [ref=e101]: One downside to an anonymous function (as opposed to a named function) is that you won’t get as good of an error message, should an error occur in your code. It is often more helpful to know the name of the function where the error occurred, as opposed to just a line number in a stack-trace. That said, I certainly wouldn’t let that discourage you from using them, it’s just something to take note of.
+      - heading "The “this” keyword" [level=3] [ref=e102]
+      - paragraph [ref=e103]:
+        - text: As mentioned above, arrow functions do not define their own
+        - code [ref=e104]: this
+        - text: value, rather the
+        - code [ref=e105]: this
+        - text: "inside of an arrow function refers to the parent’s scope. Therefore, you don’t want to just use arrow functions everywhere because it’s less to type. Instead, you need to know what the benefits and downsides are and use them where applicable. Take the following code, for example:"
+      - code [ref=e108]:
+        - generic [ref=e110]: const button = document.querySelector('.button');
+        - generic [ref=e113]: "// Here, `this` refers to the `div.box` element"
+        - generic [ref=e115]: "button.addEventListener('click', function() { console.log( this ); } );"
+        - generic [ref=e118]: "// Here, `this` refers to the global `window` object"
+        - generic [ref=e120]: "button.addEventListener('click', () => { console.log( this ); } );"
+      - paragraph [ref=e121]:
+        - text: As you can see here, if you want
+        - code [ref=e122]: this
+        - text: to reference the actual element that was clicked, using an arrow function would not be what you want.
+      - paragraph [ref=e123]:
+        - text: On the other hand, as mentioned previously, arrow functions are great for asynchronous code because they automatically bind the context of the
+        - code [ref=e124]: this
+        - text: within the callback to the scope in which they’re called. With a traditional function, you would need to explicitly bind
+        - code [ref=e125]: this
+        - text: ", using something like"
+        - code [ref=e126]: .bind()
+        - text: ", otherwise the callback function will be bound to the global"
+        - code [ref=e127]: window
+        - text: object when it is returned. This is because the global
+        - code [ref=e128]: window
+        - text: object is the default context for anything that is not specifically bound to something else.
+      - paragraph [ref=e129]:
+        - text: It’s also worth noting that, like the
+        - code [ref=e130]: this
+        - text: value, arrow functions also do not have their own
+        - code [ref=e131]: arguments
+        - text: object. The
+        - code [ref=e132]: arguments
+        - text: object within an arrow function is a reference to the
+        - code [ref=e133]: arguments
+        - text: object of the enclosing scope. In many cases, however, using
+        - link "rest parameters" [ref=e134] [cursor=pointer]:
+          - /url: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters
+        - text: is a good alternative to working with an
+        - code [ref=e135]: arguments
+        - text: object.
+      - heading "When would you not want to use an arrow function?" [level=3] [ref=e136]:
+        - text: When would you
+        - emphasis [ref=e137]: not
+        - text: want to use an arrow function?
+      - paragraph [ref=e138]:
+        - text: In addition to the above caveats with the binding
+        - code [ref=e139]: this
+        - text: keyword, arrow functions do not have a
+        - code [ref=e140]: prototype
+        - text: property and they cannot be used as constructors (they will throw an error when used with
+        - code [ref=e141]: new
+        - text: ). Because of this, these types of function expressions are best suited for non-method functions and are not ideal within an object-oriented programming style.
+      - heading "References & Resources" [level=3] [ref=e142]
+      - list [ref=e143]:
+        - listitem [ref=e144]:
+          - link "ES6 For Everyone" [ref=e145] [cursor=pointer]:
+            - /url: https://es6.io/
+          - text: – course by Wes Bos
+        - listitem [ref=e146]:
+          - link "MDN Documentation" [ref=e147] [cursor=pointer]:
+            - /url: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+        - listitem [ref=e148]:
+          - link "Arrow Functions in JavaScript" [ref=e149] [cursor=pointer]:
+            - /url: https://alligator.io/js/arrow-functions/
+          - text: – Alligator.io
+    - separator [ref=e150]
+    - paragraph [ref=e151]:
+      - text: "In:"
+      - link "JavaScript" [ref=e152] [cursor=pointer]:
+        - /url: /category/javascript
+    - paragraph [ref=e153]:
+      - text: "Tags:"
+      - generic [ref=e154]:
+        - link "javascript" [ref=e155] [cursor=pointer]:
+          - /url: /tags/javascript
+        - text: ","
+      - link "esnext" [ref=e157] [cursor=pointer]:
+        - /url: /tags/esnext
+    - link "← Back to all notes" [ref=e158] [cursor=pointer]:
+      - /url: /
+  - contentinfo [ref=e159]:
+    - paragraph [ref=e160]: Copyright © 2026 Daniel W Robert. All rights reserved.
+    - generic [ref=e161]:
+      - link "Twitter" [ref=e162] [cursor=pointer]:
+        - /url: https://twitter.com/danielwrobert
+        - img [ref=e163]
+      - link "GitHub" [ref=e165] [cursor=pointer]:
+        - /url: https://github.com/danielwrobert
+        - img [ref=e166]
+      - link "RSS Feed" [ref=e168] [cursor=pointer]:
+        - /url: /rss.xml
+        - img [ref=e169]
+  - alert [ref=e173]
