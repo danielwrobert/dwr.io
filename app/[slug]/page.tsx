@@ -52,20 +52,20 @@ export default async function PostPage({ params }: Props) {
       <h1 className="entry-title text-highlight-3">{title}</h1>
       <p className={dateClass}>{dateLabel}</p>
       <Stitch />
-      <div className="bg-shadow rounded-sm px-5 py-4">
+      <div className="bg-shadow rounded-sm mb-12 px-5 py-4">
         <MDXRemote source={content} components={COMPONENT_MAP} />
       </div>
-      <hr className="mt-12 mb-6 opacity-50" />
+      <Stitch />
       {category && (
-        <p className="entry-meta">
-          In:{' '}
+        <p>
+          Category:{' '}
           <Link href={`/category/${slugify(category)}`} className="text-highlight-1">
             {category}
           </Link>
         </p>
       )}
       {tags && tags.length > 0 && (
-        <p className="entry-meta">
+        <p>
           Tags:{' '}
           {tags.map((tag: string, i: number) => (
             <span key={tag}>
@@ -77,6 +77,7 @@ export default async function PostPage({ params }: Props) {
           ))}
         </p>
       )}
+      <hr className="mt-12 mb-6 opacity-50" />
       <Button href="/">&larr; Back to all notes</Button>
     </>
   );
