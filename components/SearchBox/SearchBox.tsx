@@ -12,7 +12,13 @@ type Post = {
   tags?: string[];
 };
 
-export default function SearchBox({ posts }: { posts: Post[] }) {
+export default function SearchBox({
+  posts,
+  onNavigate,
+}: {
+  posts: Post[];
+  onNavigate?: () => void;
+}) {
   const [query, setQuery] = useState("");
   const [open, setOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -65,7 +71,7 @@ export default function SearchBox({ posts }: { posts: Post[] }) {
           onKeyDown={(e) => {
             if (e.key === "Escape") close();
           }}
-          className="search-input bg-background text-text rounded-sm pl-2.5 pr-7.5 py-2.5 text-base outline-none border-0 w-full"
+          className="search-input bg-background text-text rounded-sm pl-2.5 pr-7.5 py-2.5 text-[1.6rem] sm:text-base outline-none border-0 w-full"
         />
         {query && (
           <button
@@ -86,7 +92,7 @@ export default function SearchBox({ posts }: { posts: Post[] }) {
             >
               <Link
                 href={`/${post.slug}`}
-                onClick={close}
+                onClick={() => { close(); onNavigate?.(); }}
                 className="block px-4 py-2.5 hover:bg-background"
               >
                 <span className="block text-highlight-1">{post.title}</span>

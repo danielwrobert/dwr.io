@@ -35,12 +35,6 @@ export default function Nav({ posts = [] }: { posts?: Post[] }) {
     return () => document.removeEventListener("keydown", onKey);
   }, [mobileOpen]);
 
-  // Close overlay on any client-side navigation
-  useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    setMobileOpen(false);
-  }, [pathname]);
-
   return (
     <>
       {/* ── Desktop nav (hidden on mobile) ─────────────────────── */}
@@ -118,7 +112,7 @@ export default function Nav({ posts = [] }: { posts?: Post[] }) {
             </ul>
           </nav>
 
-          <SearchBox posts={posts} />
+          <SearchBox posts={posts} onNavigate={() => setMobileOpen(false)} />
         </div>
       )}
     </>
