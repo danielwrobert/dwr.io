@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import { useState, useEffect } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { Menu, X } from "react-feather";
-import SearchBox from "@/components/SearchBox/SearchBox";
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { Menu, X } from 'react-feather';
+import SearchBox from '@/components/SearchBox/SearchBox';
 
 type Post = {
   slug: string;
@@ -19,9 +19,9 @@ export default function Nav({ posts = [] }: { posts?: Post[] }) {
 
   // Lock body scroll while overlay is open
   useEffect(() => {
-    document.body.style.overflow = mobileOpen ? "hidden" : "";
+    document.body.style.overflow = mobileOpen ? 'hidden' : '';
     return () => {
-      document.body.style.overflow = "";
+      document.body.style.overflow = '';
     };
   }, [mobileOpen]);
 
@@ -29,10 +29,10 @@ export default function Nav({ posts = [] }: { posts?: Post[] }) {
   useEffect(() => {
     if (!mobileOpen) return;
     function onKey(e: KeyboardEvent) {
-      if (e.key === "Escape") setMobileOpen(false);
+      if (e.key === 'Escape') setMobileOpen(false);
     }
-    document.addEventListener("keydown", onKey);
-    return () => document.removeEventListener("keydown", onKey);
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
   }, [mobileOpen]);
 
   return (
@@ -40,16 +40,13 @@ export default function Nav({ posts = [] }: { posts?: Post[] }) {
       {/* ── Desktop nav (hidden on mobile) ─────────────────────── */}
       <nav className="hidden sm:block">
         <ul className="flex flex-row items-center list-none m-0 p-0">
-          <li className="font-serif text-2xl ml-[15px] mr-auto">
-            <Link href="/" className={pathname === "/" ? "active" : ""}>
-              DWR.IO
+          <li className="mx-[15px]">
+            <Link href="/" className={pathname === '/' ? 'text-highlight-2' : ''}>
+              Home
             </Link>
           </li>
           <li className="mx-[15px]">
-            <Link
-              href="/about"
-              className={pathname === "/about" ? "active" : ""}
-            >
+            <Link href="/about" className={pathname === '/about' ? 'text-highlight-2' : ''}>
               About
             </Link>
           </li>
@@ -60,13 +57,7 @@ export default function Nav({ posts = [] }: { posts?: Post[] }) {
       </nav>
 
       {/* ── Mobile bar (logo + hamburger) ──────────────────────── */}
-      <div className="flex sm:hidden items-center justify-between">
-        <Link
-          href="/"
-          className={`font-serif text-2xl${pathname === "/" ? " active" : ""}`}
-        >
-          DWR
-        </Link>
+      <div className="sm:hidden">
         <button
           onClick={() => setMobileOpen(true)}
           aria-label="Open navigation menu"
@@ -92,17 +83,15 @@ export default function Nav({ posts = [] }: { posts?: Post[] }) {
           <nav>
             <ul className="list-none p-0 m-0 flex flex-col gap-7.5 mb-10">
               {[
-                { href: "/", label: "Home", active: pathname === "/" },
-                { href: "/about", label: "About", active: pathname === "/about" },
+                { href: '/', label: 'Home', active: pathname === '/' },
+                { href: '/about', label: 'About', active: pathname === '/about' },
               ].map(({ href, label, active }) => (
                 <li key={href}>
                   <Link
                     href={href}
                     onClick={() => setMobileOpen(false)}
                     className={`text-3xl block transition-colors duration-500 ${
-                      active
-                        ? "text-highlight-2"
-                        : "text-shadow-light hover:text-highlight-2"
+                      active ? 'text-highlight-2' : 'text-shadow-light hover:text-highlight-2'
                     }`}
                   >
                     {label}

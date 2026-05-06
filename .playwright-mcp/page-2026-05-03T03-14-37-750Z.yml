@@ -1,0 +1,53 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - navigation [ref=e3]:
+      - list [ref=e4]:
+        - listitem [ref=e5]:
+          - link "DWR.IO" [ref=e6] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=e7]:
+          - link "About" [ref=e8] [cursor=pointer]:
+            - /url: /about
+        - listitem [ref=e9]:
+          - textbox "Search..." [ref=e12]
+  - generic [ref=e13]:
+    - 'heading "Tagged: esnext" [level=1] [ref=e14]'
+    - img [ref=e15]
+    - article [ref=e22]:
+      - heading "JavaScript Template Literals" [level=2] [ref=e23]:
+        - link "JavaScript Template Literals" [ref=e24] [cursor=pointer]:
+          - /url: /javascript-template-literals
+      - heading "June 18, 2020" [level=5] [ref=e25]
+      - paragraph [ref=e26]: Up until now, we only had two ways to write a string in JavaScript - single and double quotes. If we wanted to interpolate a variable with one of these string options, we'd need to break out of the string and concatenate the variable.
+      - link "Read note →" [ref=e27] [cursor=pointer]:
+        - /url: /javascript-template-literals
+    - article [ref=e28]:
+      - heading "JavaScript Arrow Functions" [level=2] [ref=e29]:
+        - link "JavaScript Arrow Functions" [ref=e30] [cursor=pointer]:
+          - /url: /javascript-arrow-functions
+      - heading "July 30, 2018" [level=5] [ref=e31]
+      - paragraph [ref=e32]: As of ES6, we have an additional way to write function expressions in our code – as arrow functions. This new syntax offers 3 main benefits...
+      - link "Read note →" [ref=e33] [cursor=pointer]:
+        - /url: /javascript-arrow-functions
+    - article [ref=e34]:
+      - heading "Using var, let, & const in JavaScript" [level=2] [ref=e35]:
+        - link "Using var, let, & const in JavaScript" [ref=e36] [cursor=pointer]:
+          - /url: /using-var-let-and-const-in-javascript
+      - heading "July 12, 2018" [level=5] [ref=e37]
+      - paragraph [ref=e38]: As of ES6, we have two new ways to define variables, in addition to the classic var keyword. Each are a little bit different in their own way and I’ll break down those differences in this article.
+      - link "Read note →" [ref=e39] [cursor=pointer]:
+        - /url: /using-var-let-and-const-in-javascript
+    - link "← All notes" [ref=e40] [cursor=pointer]:
+      - /url: /
+  - contentinfo [ref=e41]:
+    - paragraph [ref=e42]: Copyright © 2026 Daniel W Robert. All rights reserved.
+    - generic [ref=e43]:
+      - link "Twitter" [ref=e44] [cursor=pointer]:
+        - /url: https://twitter.com/danielwrobert
+        - img [ref=e45]
+      - link "GitHub" [ref=e47] [cursor=pointer]:
+        - /url: https://github.com/danielwrobert
+        - img [ref=e48]
+      - link "RSS Feed" [ref=e50] [cursor=pointer]:
+        - /url: /rss.xml
+        - img [ref=e51]

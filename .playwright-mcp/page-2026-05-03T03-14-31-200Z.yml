@@ -1,0 +1,101 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - navigation [ref=e3]:
+      - list [ref=e4]:
+        - listitem [ref=e5]:
+          - link "DWR.IO" [ref=e6] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=e7]:
+          - link "About" [ref=e8] [cursor=pointer]:
+            - /url: /about
+        - listitem [ref=e9]:
+          - textbox "Search..." [ref=e12]
+  - generic [ref=e13]:
+    - 'heading "In: JavaScript" [level=1] [ref=e14]'
+    - img [ref=e15]
+    - article [ref=e22]:
+      - heading "Setting up a CLI Script in Node.js" [level=2] [ref=e23]:
+        - link "Setting up a CLI Script in Node.js" [ref=e24] [cursor=pointer]:
+          - /url: /seting-up-cli-script-nodejs
+      - heading "October 14, 2021" [level=5] [ref=e25]
+      - paragraph [ref=e26]: Node.js is a perfect runtime to create a CLI that will run on any machine that has Node installed...
+      - link "Read note →" [ref=e27] [cursor=pointer]:
+        - /url: /seting-up-cli-script-nodejs
+    - article [ref=e28]:
+      - 'heading "Quick Tip: Debug in Incognito Mode" [level=2] [ref=e29]':
+        - 'link "Quick Tip: Debug in Incognito Mode" [ref=e30] [cursor=pointer]':
+          - /url: /quicktip-debug-in-incognito
+      - heading "September 9, 2021" [level=5] [ref=e31]
+      - paragraph [ref=e32]: When debugging in JavaScript, browser extenstions can be a potential source of confusion...
+      - link "Read note →" [ref=e33] [cursor=pointer]:
+        - /url: /quicktip-debug-in-incognito
+    - article [ref=e34]:
+      - 'heading "OOP in JS: Object Basics" [level=2] [ref=e35]':
+        - 'link "OOP in JS: Object Basics" [ref=e36] [cursor=pointer]':
+          - /url: /oop-in-js-object-basics
+      - heading "September 21, 2020" [level=5] [ref=e37]
+      - paragraph [ref=e38]: Object-Oriented Programming (OOP) is a popular programming paradigm...
+      - link "Read note →" [ref=e39] [cursor=pointer]:
+        - /url: /oop-in-js-object-basics
+    - article [ref=e40]:
+      - heading "Core Components of JavaScript Execution" [level=2] [ref=e41]:
+        - link "Core Components of JavaScript Execution" [ref=e42] [cursor=pointer]:
+          - /url: /javascript-core-components-of-execution
+      - heading "July 26, 2020" [level=5] [ref=e43]
+      - paragraph [ref=e44]: In order for JavaScript to operate in the way that it does, it relies on three core components...
+      - link "Read note →" [ref=e45] [cursor=pointer]:
+        - /url: /javascript-core-components-of-execution
+    - article [ref=e46]:
+      - heading "JavaScript Template Literals" [level=2] [ref=e47]:
+        - link "JavaScript Template Literals" [ref=e48] [cursor=pointer]:
+          - /url: /javascript-template-literals
+      - heading "June 18, 2020" [level=5] [ref=e49]
+      - paragraph [ref=e50]: Up until now, we only had two ways to write a string in JavaScript - single and double quotes. If we wanted to interpolate a variable with one of these string options, we'd need to break out of the string and concatenate the variable.
+      - link "Read note →" [ref=e51] [cursor=pointer]:
+        - /url: /javascript-template-literals
+    - article [ref=e52]:
+      - heading "JavaScript Arrow Functions" [level=2] [ref=e53]:
+        - link "JavaScript Arrow Functions" [ref=e54] [cursor=pointer]:
+          - /url: /javascript-arrow-functions
+      - heading "July 30, 2018" [level=5] [ref=e55]
+      - paragraph [ref=e56]: As of ES6, we have an additional way to write function expressions in our code – as arrow functions. This new syntax offers 3 main benefits...
+      - link "Read note →" [ref=e57] [cursor=pointer]:
+        - /url: /javascript-arrow-functions
+    - article [ref=e58]:
+      - heading "Using var, let, & const in JavaScript" [level=2] [ref=e59]:
+        - link "Using var, let, & const in JavaScript" [ref=e60] [cursor=pointer]:
+          - /url: /using-var-let-and-const-in-javascript
+      - heading "July 12, 2018" [level=5] [ref=e61]
+      - paragraph [ref=e62]: As of ES6, we have two new ways to define variables, in addition to the classic var keyword. Each are a little bit different in their own way and I’ll break down those differences in this article.
+      - link "Read note →" [ref=e63] [cursor=pointer]:
+        - /url: /using-var-let-and-const-in-javascript
+    - article [ref=e64]:
+      - heading "Intro to the Web Storage API" [level=2] [ref=e65]:
+        - link "Intro to the Web Storage API" [ref=e66] [cursor=pointer]:
+          - /url: /intro-to-the-web-storage-api
+      - heading "January 27, 2018" [level=5] [ref=e67]
+      - paragraph [ref=e68]: There are instances where storing data in a users browser can be really helpful. Up until somewhat recently, saving the state of the application locally in the browser via Cookies was the main way to achieve this. Cookies have limitations, however. For example, their max size (4093 bytes) and the fact that they have to me transmitted with every request.
+      - link "Read note →" [ref=e69] [cursor=pointer]:
+        - /url: /intro-to-the-web-storage-api
+    - article [ref=e70]:
+      - heading "React.js Resources" [level=2] [ref=e71]:
+        - link "React.js Resources" [ref=e72] [cursor=pointer]:
+          - /url: /react-js-resources
+      - heading "March 10, 2015" [level=5] [ref=e73]
+      - paragraph [ref=e74]: Recently I’ve been digging into React.js. Some my awesome co-workers are experimenting and utilizing the library in some pretty cool ways, so it really sparked my interest. As a result, I’ve collected a little list of bookmarks that I thought was worth sharing.
+      - link "Read note →" [ref=e75] [cursor=pointer]:
+        - /url: /react-js-resources
+    - link "← All notes" [ref=e76] [cursor=pointer]:
+      - /url: /
+  - contentinfo [ref=e77]:
+    - paragraph [ref=e78]: Copyright © 2026 Daniel W Robert. All rights reserved.
+    - generic [ref=e79]:
+      - link "Twitter" [ref=e80] [cursor=pointer]:
+        - /url: https://twitter.com/danielwrobert
+        - img [ref=e81]
+      - link "GitHub" [ref=e83] [cursor=pointer]:
+        - /url: https://github.com/danielwrobert
+        - img [ref=e84]
+      - link "RSS Feed" [ref=e86] [cursor=pointer]:
+        - /url: /rss.xml
+        - img [ref=e87]

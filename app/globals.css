@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme inline {
   --color-background: #383a59;
@@ -15,130 +15,137 @@
 }
 
 @layer base {
-	html {
-		box-sizing: border-box;
-		line-height: 1.6;
-	}
+  html {
+    box-sizing: border-box;
+    line-height: 1.6;
+  }
 
-	*,
-	*:before,
-	*:after {
-		box-sizing: inherit;
-	}
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
 
-	body {
-		font-size: 1.25rem; /* 20px */
-		-webkit-font-smoothing: antialiased;
-	}
+  body {
+    font-size: 1.25rem; /* 20px */
+    -webkit-font-smoothing: antialiased;
+  }
 
-	p {
-		margin: 0 0 1.25rem;
-	}
+  p {
+    margin: 0 0 1.25rem;
+  }
 
-	pre {
-		border-radius: 0.3125rem;
-		padding: 1rem;
-		overflow-x: auto;
-	}
+  pre {
+    border-radius: 0.3125rem;
+    padding: 1rem;
+    overflow-x: auto;
+  }
 
-	:not(pre) > code {
-		background-color: #282a36;
-		border-radius: 3px;
-		padding: 3px 5px;
-	}
+  :not(pre) > code {
+    background-color: #282a36;
+    border-radius: 3px;
+    padding: 3px 5px;
+  }
 
-	img {
-		max-width: 100%;
-	}
+  img {
+    max-width: 100%;
+  }
 
-	/* Headings — restore visual hierarchy that Tailwind preflight removes */
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-		color: #bcc2cd;
-		font-family: var(--font-ovo), serif;
-		margin: 0;
-	}
+  /* Headings — restore visual hierarchy that Tailwind preflight removes */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #bcc2cd;
+    font-family: var(--font-ovo), serif;
+    margin: 0;
+  }
 
-	h1 { font-size: 2.5rem; }    /* 40px */
-	h2 { font-size: 1.875rem; }  /* 30px */
-	h3 { font-size: 1.5rem; }    /* 24px */
-	h4,
-	h5,
-	h6 { font-size: 1rem; }      /* 16px */
+  h1 {
+    font-size: 2.5rem;
+  } /* 40px */
+  h2 {
+    font-size: 1.875rem;
+  } /* 30px */
+  h3 {
+    font-size: 1.5rem;
+  } /* 24px */
+  h4,
+  h5,
+  h6 {
+    font-size: 1rem;
+  } /* 16px */
 
-	h1,
-	h2,
-	h3 {
-		color: #8be9fd;
-	}
+  h1,
+  h2,
+  h3 {
+    color: #8be9fd;
+  }
 
-	.entry-title {
-		font-size: 3rem; /* 48px */
-		text-align: center;
-		line-height: 1.4;
-		margin: 0.5625rem 0; /* 9px */
-	}
+  .entry-title {
+    font-size: 3rem; /* 48px */
+    text-align: center;
+    line-height: 1.4;
+    margin: 0.5625rem 0; /* 9px */
+  }
 
-	/* Links */
-	a,
-	a:link,
-	a:visited {
-		color: #ff79c6;
-		text-decoration: none;
-		transition: color 0.5s;
-	}
+  /* Links */
+  a,
+  a:link,
+  a:visited {
+    color: #ff79c6;
+    text-decoration: none;
+    transition: color 0.5s;
+  }
 
-	header a,
-	header a:link,
-	header a:visited {
-		color: #bcc2cd;
-	}
+  header a,
+  header a:link,
+  header a:visited {
+    color: #bcc2cd;
+  }
 
-	header a:hover,
-	header a.active {
-		color: #ff79c6;
-	}
+  header a:hover {
+    color: #ff79c6;
+  }
 
-	a:hover {
-		color: #50fa7b;
-	}
+  a:hover {
+    color: #50fa7b;
+  }
 
-	/* Post cards */
-	.note h2 a,
-	.note h3 a {
-		color: #8be9fd;
-	}
+  /* Post cards */
+  .note h2 a,
+  .note h3 a {
+    color: #8be9fd;
+  }
 
-	.note {
-		background-color: #282a36;
-		border-radius: 0.25rem;
-		padding: 1rem 1.25rem;
-	}
+  .note {
+    background-color: #282a36;
+    border-radius: 0.25rem;
+    padding: 1rem 1.25rem;
+  }
 
-	.note:not(:last-of-type) {
-		margin-bottom: 3rem; /* 48px */
-	}
+  .note:not(:last-of-type) {
+    margin-bottom: 3rem; /* 48px */
+  }
 
-	/* Post-page meta line */
-	.entry-meta,
-	.entry-meta-updated {
-		color: #bd93f9;
-		font-style: italic;
-		margin-bottom: 1rem;
-		text-align: center;
-	}
+  /* Post-page meta line */
+  .entry-meta,
+  .entry-meta-updated {
+    color: #bd93f9;
+    font-style: italic;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
 
-	.entry-meta-updated {
-		color: #ffb86c;
-	}
+  .entry-meta-updated {
+    color: #ffb86c;
+  }
 
-	/* Search */
-	.search-input::placeholder {
-		color: #bcc2cd;
-		opacity: 1;
-	}
+  /* Search */
+  .search-input::placeholder {
+    color: #bcc2cd;
+    opacity: 1;
+  }
 }
