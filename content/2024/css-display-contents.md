@@ -53,7 +53,7 @@ Here is an example of using semantic sections within a Flexbox container:
 
 #### Output
 
-<iframe id="cp_embed_oNdKZqY" src="//codepen.io/anon/embed/preview/oNdKZqY?height=450&amp;theme-id=light&amp;slug-hash=oNdKZqY&amp;default-tab=result" height="450" scrolling="no" frameborder="0" allowfullscreen allowpaymentrequest name="CodePen Embed oNdKZqY" title="CodePen Embed oNdKZqY" class="cp_embed_iframe" style="width:100%;overflow:hidden">CodePen Embed Fallback</iframe>
+<iframe id="cp_embed_oNdKZqY" src="//codepen.io/anon/embed/preview/oNdKZqY?height=450&amp;theme-id=light&amp;slug-hash=oNdKZqY&amp;default-tab=result" height="450" scrolling="no" frameborder="0" allowfullscreen allowpaymentrequest name="CodePen Embed oNdKZqY" title="CodePen Embed oNdKZqY" class="cp_embed_iframe" style={{width:'100%',overflow:'hidden'}}>CodePen Embed Fallback</iframe>
 
 Here we are able maintain semantic sections in our HTML while having all of the item cards participate in the same flex layout. Without the `display: contents` rule, the sections would create unwanted grouping in the flex layout.
 
