@@ -6,6 +6,7 @@ import { getBlogPostList, loadBlogPost, slugify } from '@/lib/helpers/file-helpe
 import COMPONENT_MAP from '@/lib/helpers/mdx-components';
 import Stitch from '@/components/Stitch/Stitch';
 import Button from '@/components/Button/Button';
+import Heading from '@/components/Heading/Heading';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -49,10 +50,12 @@ export default async function PostPage({ params }: Props) {
 
   return (
     <>
-      <h1 className="entry-title text-highlight-3">{title}</h1>
+      <Heading level={1} color="text-highlight-3" className="text-center">
+        {title}
+      </Heading>
       <p className={dateClass}>{dateLabel}</p>
       <Stitch />
-      <div className="bg-shadow rounded-sm mb-12 px-5 py-4">
+      <div className="bg-shadow rounded-sm mb-12 p-5">
         <MDXRemote source={content} components={COMPONENT_MAP} />
       </div>
       <Stitch />

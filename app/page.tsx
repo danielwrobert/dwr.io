@@ -1,26 +1,35 @@
-import Link from "next/link";
-import { format, parseISO } from "date-fns";
-import { getBlogPostList } from "@/lib/helpers/file-helpers";
-import Stitch from "@/components/Stitch/Stitch";
+import Link from 'next/link';
+import { format, parseISO } from 'date-fns';
+import { getBlogPostList } from '@/lib/helpers/file-helpers';
+import Stitch from '@/components/Stitch/Stitch';
+import Heading from '@/components/Heading/Heading';
 
 export default async function Home() {
   const posts = await getBlogPostList();
 
   return (
     <>
-      <h1 className="entry-title text-highlight-3">Daniel W. Robert</h1>
-      <h3 className="text-highlight-1 italic mb-4 text-center">
+      <Heading
+        level={1}
+        color="text-highlight-3"
+        size="text-2xl sm:text-5xl"
+        margin="mb-4"
+        className="text-center leading-[1.4]"
+      >
+        Daniel W. Robert
+      </Heading>
+      <p className="italic mb-4 text-center text-highlight-1 text-xl md:text-2xl">
         Front-End Engineer. Always a student.
-      </h3>
+      </p>
       <Stitch />
       {posts.map((post) => (
         <article className="note" key={post.slug}>
-          <h2>
+          <Heading level={2}>
             <Link href={`/${post.slug}`}>{post.title}</Link>
-          </h2>
-          <h5 className="italic mb-2.5">
-            {format(parseISO(post.date), "MMMM d, yyyy")}
-          </h5>
+          </Heading>
+          <Heading level={5} className="italic mb-2.5">
+            {format(parseISO(post.date), 'MMMM d, yyyy')}
+          </Heading>
           <p>{post.excerpt}</p>
           <Link href={`/${post.slug}`}>Read note &rarr;</Link>
         </article>

@@ -1,9 +1,10 @@
 import Link from "next/link";
+import Heading from "@/components/Heading/Heading";
 
 export default function NotFound() {
   return (
     <>
-      <h1 className="entry-title text-highlight-3">404</h1>
+      <Heading level={1} color="text-highlight-3" className="text-center">404</Heading>
       <p className="text-center">
         Page not found.{" "}
         <Link href="/">Return home &rarr;</Link>

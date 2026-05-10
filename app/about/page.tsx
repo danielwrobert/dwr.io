@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Stitch from '@/components/Stitch/Stitch';
+import Heading from '@/components/Heading/Heading';
 
 export const metadata: Metadata = {
   title: 'About — Daniel W. Robert',
@@ -9,10 +10,10 @@ export const metadata: Metadata = {
 export default function About() {
   return (
     <>
-      <h1 className="entry-title text-highlight-3">About My Notebook</h1>
+      <Heading level={1} color="text-highlight-3" className="text-center">About My Notebook</Heading>
       <Stitch />
       <div className="bg-shadow rounded-sm px-5 py-4">
-        <h2>Welcome!</h2>
+        <Heading level={2}>Welcome!</Heading>
         <p>
           This site is meant to serve as a Digital Notebook, of sorts. The content you will find
           here is made up of my notes and learnings— whether they be from a course I&apos;ve taken,
@@ -46,7 +47,7 @@ export default function About() {
           for you.&rdquo;
         </blockquote>
 
-        <h2>Under The Hood</h2>
+        <Heading level={2}>Under The Hood</Heading>
         <p>
           This site is built with <a href="https://nextjs.org/">Next.js</a> and hosted on{' '}
           <a href="https://www.netlify.com/">Netlify</a>.
@@ -55,14 +56,14 @@ export default function About() {
           The posts are written in <a href="https://mdxjs.com/">Markdown (MDX)</a>.
         </p>
 
-        <h3>Colors</h3>
+        <Heading level={3}>Colors</Heading>
         <p>
           I&apos;ve styled this site to use the colors from the{' '}
           <a href="https://draculatheme.com/">Dracula</a> color scheme. I&apos;m using that scheme
           in just about all of my apps (VS Code, Vim, iTerm 2, Bear, MacDown, etc.) and I love it!
         </p>
 
-        <h3>Fonts</h3>
+        <Heading level={3}>Fonts</Heading>
         <p>
           This site uses <a href="https://fonts.google.com/specimen/Mulish">Mulish</a> for the body
           font and <a href="https://fonts.google.com/specimen/Ovo">Ovo</a> for the headings, loaded
