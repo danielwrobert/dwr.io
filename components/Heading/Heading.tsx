@@ -10,7 +10,7 @@ interface HeadingProps extends React.HTMLAttributes<HTMLHeadingElement> {
 }
 
 const sizeClass: Record<HeadingLevel, string> = {
-  1: 'text-2xl sm:text-[2.5rem]',
+  1: 'text-3xl sm:text-[2.5rem]',
   2: 'text-2xl sm:text-3xl',
   3: 'text-xl sm:text-2xl',
   4: 'text-lg',

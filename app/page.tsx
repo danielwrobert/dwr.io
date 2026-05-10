@@ -11,7 +11,7 @@ export default async function Home() {
       <Heading
         level={1}
         color="text-highlight-3"
-        size="text-2xl sm:text-5xl"
+        size="text-3xl sm:text-5xl"
         margin="mb-4"
         className="text-center leading-[1.4]"
       >
