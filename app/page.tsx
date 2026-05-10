@@ -17,7 +17,7 @@ export default async function Home() {
       >
         Daniel W. Robert
       </Heading>
-      <p className="italic mb-4 text-center text-highlight-1 text-xl md:text-2xl">
+      <p className="italic mb-4 text-center text-highlight-1 text-xl sm:text-2xl">
         Front-End Engineer. Always a student.
       </p>
       <Stitch />
