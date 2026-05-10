@@ -109,11 +109,3 @@
     opacity: 1;
   }
 }
-
-/* Unlayered so it overrides Tailwind utility classes for font-size */
-.entry-title {
-  font-size: 3rem; /* 48px */
-  text-align: center;
-  line-height: 1.4;
-  margin: 0.5625rem 0; /* 9px */
-}

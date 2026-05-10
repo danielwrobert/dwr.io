@@ -8,8 +8,8 @@ interface StitchProps {
 export default function Stitch({
   color = 'var(--color-shadow-light)',
   strokeWidth = '4',
-  width = '2.8125rem',
-  margin = '0 auto 2.8125rem',
+  width = '4rem',
+  margin = '0 auto 2.5rem',
 }: StitchProps) {
   return (
     <svg

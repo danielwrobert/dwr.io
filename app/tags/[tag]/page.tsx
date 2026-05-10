@@ -35,7 +35,7 @@ export default async function TagPage({ params }: Props) {
 
   return (
     <>
-      <Heading level={1} color="text-highlight-3" className="entry-title">Tagged: {label}</Heading>
+      <Heading level={1} color="text-highlight-3" className="text-center">Tagged: {label}</Heading>
       <Stitch />
       {posts.map((post) => (
         <article className="note" key={post.slug}>

@@ -50,10 +50,12 @@ export default async function PostPage({ params }: Props) {
 
   return (
     <>
-      <Heading level={1} color="text-highlight-3" className="entry-title">{title}</Heading>
+      <Heading level={1} color="text-highlight-3" className="text-center">
+        {title}
+      </Heading>
       <p className={dateClass}>{dateLabel}</p>
       <Stitch />
-      <div className="bg-shadow rounded-sm mb-12 px-5 py-4">
+      <div className="bg-shadow rounded-sm mb-12 p-5">
         <MDXRemote source={content} components={COMPONENT_MAP} />
       </div>
       <Stitch />

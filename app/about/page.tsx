@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function About() {
   return (
     <>
-      <Heading level={1} color="text-highlight-3" className="entry-title">About My Notebook</Heading>
+      <Heading level={1} color="text-highlight-3" className="text-center">About My Notebook</Heading>
       <Stitch />
       <div className="bg-shadow rounded-sm px-5 py-4">
         <Heading level={2}>Welcome!</Heading>
