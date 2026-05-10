@@ -1,9 +1,7 @@
-import Link from 'next/link';
-import { format, parseISO } from 'date-fns';
 import { getBlogPostList } from '@/lib/helpers/file-helpers';
 import Stitch from '@/components/Stitch/Stitch';
 import Heading from '@/components/Heading/Heading';
-import NoteCard from '@/components/NoteCard/NoteCard';
+import PostList from '@/components/PostList/PostList';
 
 export default async function Home() {
   const posts = await getBlogPostList();
@@ -23,18 +21,7 @@ export default async function Home() {
         Front-End Engineer. Always a student.
       </p>
       <Stitch />
-      {posts.map((post) => (
-        <NoteCard key={post.slug}>
-          <Heading level={2}>
-            <Link href={`/${post.slug}`}>{post.title}</Link>
-          </Heading>
-          <Heading level={5} className="italic mb-2.5">
-            {format(parseISO(post.date), 'MMMM d, yyyy')}
-          </Heading>
-          <p>{post.excerpt}</p>
-          <Link href={`/${post.slug}`}>Read note &rarr;</Link>
-        </NoteCard>
-      ))}
+      <PostList posts={posts} />
     </>
   );
 }

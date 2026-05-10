@@ -62,7 +62,7 @@ export default async function PostPage({ params }: Props) {
       {category && (
         <p>
           Category:{' '}
-          <Link href={`/category/${slugify(category)}`} className="text-highlight-1">
+          <Link href={`/category/${slugify(category)}`} className="text-highlight-1 transition-colors duration-500 hover:text-highlight-3">
             {category}
           </Link>
         </p>
@@ -72,7 +72,7 @@ export default async function PostPage({ params }: Props) {
           Tags:{' '}
           {tags.map((tag: string, i: number) => (
             <span key={tag}>
-              <Link href={`/tags/${slugify(tag)}`} className="text-highlight-1">
+              <Link href={`/tags/${slugify(tag)}`} className="text-highlight-1 transition-colors duration-500 hover:text-highlight-3">
                 {tag}
               </Link>
               {i < tags.length - 1 ? ', ' : ''}
