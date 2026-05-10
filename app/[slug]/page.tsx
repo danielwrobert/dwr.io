@@ -46,7 +46,9 @@ export default async function PostPage({ params }: Props) {
   const dateLabel = updated
     ? `Updated on ${format(parseISO(updated), 'MM/dd/yyyy')}`
     : `Published on ${format(parseISO(date), 'MM/dd/yyyy')}`;
-  const dateClass = updated ? 'entry-meta-updated' : 'entry-meta';
+  const dateClass = updated
+    ? 'text-highlight-4 italic mb-4 text-center'
+    : 'text-highlight-1 italic mb-4 text-center';
 
   return (
     <>

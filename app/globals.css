@@ -74,19 +74,6 @@
     color: #50fa7b;
   }
 
-  /* Post-page meta line */
-  .entry-meta,
-  .entry-meta-updated {
-    color: #bd93f9;
-    font-style: italic;
-    margin-bottom: 1rem;
-    text-align: center;
-  }
-
-  .entry-meta-updated {
-    color: #ffb86c;
-  }
-
   /* Search */
   .search-input::placeholder {
     color: #bcc2cd;
