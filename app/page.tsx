@@ -2,25 +2,26 @@ import Link from "next/link";
 import { format, parseISO } from "date-fns";
 import { getBlogPostList } from "@/lib/helpers/file-helpers";
 import Stitch from "@/components/Stitch/Stitch";
+import Heading from "@/components/Heading/Heading";
 
 export default async function Home() {
   const posts = await getBlogPostList();
 
   return (
     <>
-      <h1 className="entry-title text-highlight-3">Daniel W. Robert</h1>
-      <h3 className="text-highlight-1 italic mb-4 text-center">
+      <Heading level={1} color="text-highlight-3" className="entry-title">Daniel W. Robert</Heading>
+      <Heading level={3} color="text-highlight-1" className="italic mb-4 text-center">
         Front-End Engineer. Always a student.
-      </h3>
+      </Heading>
       <Stitch />
       {posts.map((post) => (
         <article className="note" key={post.slug}>
-          <h2>
+          <Heading level={2}>
             <Link href={`/${post.slug}`}>{post.title}</Link>
-          </h2>
-          <h5 className="italic mb-2.5">
+          </Heading>
+          <Heading level={5} className="italic mb-2.5">
             {format(parseISO(post.date), "MMMM d, yyyy")}
-          </h5>
+          </Heading>
           <p>{post.excerpt}</p>
           <Link href={`/${post.slug}`}>Read note &rarr;</Link>
         </article>

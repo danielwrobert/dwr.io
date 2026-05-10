@@ -51,46 +51,6 @@
     max-width: 100%;
   }
 
-  /* Headings — restore visual hierarchy that Tailwind preflight removes */
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: #bcc2cd;
-    font-family: var(--font-ovo), serif;
-    margin: 0;
-  }
-
-  h1 {
-    font-size: 2.5rem;
-  } /* 40px */
-  h2 {
-    font-size: 1.875rem;
-  } /* 30px */
-  h3 {
-    font-size: 1.5rem;
-  } /* 24px */
-  h4,
-  h5,
-  h6 {
-    font-size: 1rem;
-  } /* 16px */
-
-  h1,
-  h2,
-  h3 {
-    color: #8be9fd;
-  }
-
-  .entry-title {
-    font-size: 3rem; /* 48px */
-    text-align: center;
-    line-height: 1.4;
-    margin: 0.5625rem 0; /* 9px */
-  }
-
   /* Links */
   a,
   a:link,
@@ -148,4 +108,12 @@
     color: #bcc2cd;
     opacity: 1;
   }
+}
+
+/* Unlayered so it overrides Tailwind utility classes for font-size */
+.entry-title {
+  font-size: 3rem; /* 48px */
+  text-align: center;
+  line-height: 1.4;
+  margin: 0.5625rem 0; /* 9px */
 }
