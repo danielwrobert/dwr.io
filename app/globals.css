@@ -74,22 +74,6 @@
     color: #50fa7b;
   }
 
-  /* Post cards */
-  .note h2 a,
-  .note h3 a {
-    color: #8be9fd;
-  }
-
-  .note {
-    background-color: #282a36;
-    border-radius: 0.25rem;
-    padding: 1rem 1.25rem;
-  }
-
-  .note:not(:last-of-type) {
-    margin-bottom: 3rem; /* 48px */
-  }
-
   /* Post-page meta line */
   .entry-meta,
   .entry-meta-updated {

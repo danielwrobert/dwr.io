@@ -5,6 +5,7 @@ import { getTagList, getPostsByTag } from '@/lib/helpers/file-helpers';
 import Stitch from '@/components/Stitch/Stitch';
 import Button from '@/components/Button/Button';
 import Heading from '@/components/Heading/Heading';
+import NoteCard from '@/components/NoteCard/NoteCard';
 
 type Props = {
   params: Promise<{ tag: string }>;
@@ -38,7 +39,7 @@ export default async function TagPage({ params }: Props) {
       <Heading level={1} color="text-highlight-3" className="text-center">Tagged: {label}</Heading>
       <Stitch />
       {posts.map((post) => (
-        <article className="note" key={post.slug}>
+        <NoteCard key={post.slug}>
           <Heading level={2}>
             <Link href={`/${post.slug}`}>{post.title}</Link>
           </Heading>
@@ -47,7 +48,7 @@ export default async function TagPage({ params }: Props) {
           </Heading>
           <p>{post.excerpt}</p>
           <Link href={`/${post.slug}`}>Read note &rarr;</Link>
-        </article>
+        </NoteCard>
       ))}
       <Button href="/">&larr; All notes</Button>
     </>
