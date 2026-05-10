@@ -46,7 +46,9 @@ export default async function PostPage({ params }: Props) {
   const dateLabel = updated
     ? `Updated on ${format(parseISO(updated), 'MM/dd/yyyy')}`
     : `Published on ${format(parseISO(date), 'MM/dd/yyyy')}`;
-  const dateClass = updated ? 'entry-meta-updated' : 'entry-meta';
+  const dateClass = updated
+    ? 'text-highlight-4 italic mb-4 text-center'
+    : 'text-highlight-1 italic mb-4 text-center';
 
   return (
     <>
@@ -57,30 +59,35 @@ export default async function PostPage({ params }: Props) {
       <Stitch />
       <div className="bg-shadow rounded-sm mb-12 p-5">
         <MDXRemote source={content} components={COMPONENT_MAP} />
+        <p>---</p>
+        {category && (
+          <p>
+            Category:{' '}
+            <Link
+              href={`/category/${slugify(category)}`}
+              className="text-highlight-1 transition-colors duration-500 hover:text-highlight-3"
+            >
+              {category}
+            </Link>
+          </p>
+        )}
+        {tags && tags.length > 0 && (
+          <p>
+            Tags:{' '}
+            {tags.map((tag: string, i: number) => (
+              <span key={tag}>
+                <Link
+                  href={`/tags/${slugify(tag)}`}
+                  className="text-highlight-1 transition-colors duration-500 hover:text-highlight-3"
+                >
+                  {tag}
+                </Link>
+                {i < tags.length - 1 ? ', ' : ''}
+              </span>
+            ))}
+          </p>
+        )}
       </div>
-      <Stitch />
-      {category && (
-        <p>
-          Category:{' '}
-          <Link href={`/category/${slugify(category)}`} className="text-highlight-1">
-            {category}
-          </Link>
-        </p>
-      )}
-      {tags && tags.length > 0 && (
-        <p>
-          Tags:{' '}
-          {tags.map((tag: string, i: number) => (
-            <span key={tag}>
-              <Link href={`/tags/${slugify(tag)}`} className="text-highlight-1">
-                {tag}
-              </Link>
-              {i < tags.length - 1 ? ', ' : ''}
-            </span>
-          ))}
-        </p>
-      )}
-      <hr className="mt-12 mb-6 opacity-50" />
       <Button href="/">&larr; Back to all notes</Button>
     </>
   );
