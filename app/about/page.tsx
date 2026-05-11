@@ -10,7 +10,9 @@ export const metadata: Metadata = {
 export default function About() {
   return (
     <>
-      <Heading level={1} color="text-highlight-3" className="text-center">About My Notebook</Heading>
+      <Heading level={1} color="text-highlight-3" className="text-center">
+        About My Notebook
+      </Heading>
       <Stitch />
       <div className="bg-shadow rounded-sm px-5 py-4">
         <Heading level={2}>Welcome!</Heading>
@@ -59,8 +61,8 @@ export default function About() {
         <Heading level={3}>Colors</Heading>
         <p>
           I&apos;ve styled this site to use the colors from the{' '}
-          <a href="https://draculatheme.com/">Dracula</a> color scheme. I&apos;m using that scheme
-          in just about all of my apps (VS Code, Vim, iTerm 2, Bear, MacDown, etc.) and I love it!
+          <a href="https://draculatheme.com/">Dracula </a> color scheme. I&apos;m using that scheme
+          in just about all of my apps.
         </p>
 
         <Heading level={3}>Fonts</Heading>
