@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 const sharedClass =
-  'bg-highlight-2 !text-background rounded-sm block font-bold mt-14 mx-auto py-2.5 px-4 w-fit transition-opacity duration-500';
+  'bg-highlight-2 !text-background rounded-sm block font-bold mt-10 mx-auto py-2.5 px-4 w-fit transition-opacity duration-500';
 
 type ButtonProps =
   | { href: string; onClick?: never; disabled?: never; children: React.ReactNode }

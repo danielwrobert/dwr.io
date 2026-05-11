@@ -57,7 +57,7 @@ export default async function PostPage({ params }: Props) {
       </Heading>
       <p className={dateClass}>{dateLabel}</p>
       <Stitch />
-      <div className="bg-shadow rounded-sm mb-12 p-5">
+      <div className="bg-shadow rounded-sm mb-10 p-5">
         <MDXRemote source={content} components={COMPONENT_MAP} />
         <p>---</p>
         {category && (
