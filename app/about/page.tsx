@@ -40,7 +40,7 @@ export default function About() {
           whole <a href="https://joelhooks.com/digital-garden">&ldquo;Digital Garden&rdquo;</a>{' '}
           idea:
         </p>
-        <blockquote>
+        <blockquote className="mb-5">
           &ldquo;It is a blog, sure, but it is also a wiki. It&apos;s a spot where I can post ideas,
           snippets, resources, thoughts, collections, and other bits and pieces that I find
           interesting and useful. Instead of always being a &lsquo;performance&rsquo; level of
