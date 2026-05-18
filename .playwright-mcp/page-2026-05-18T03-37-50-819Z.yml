@@ -1,0 +1,164 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#wp--skip-link--target"
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - generic [ref=e6]:
+        - heading "DWR.IO" [level=1] [ref=e7]:
+          - link "DWR.IO" [ref=e8] [cursor=pointer]:
+            - /url: https://dwrio.mystagingwebsite.com
+        - navigation "Header navigation" [ref=e9]:
+          - generic [ref=e13]:
+            - list [ref=e14]:
+              - listitem [ref=e15]:
+                - link "Home" [ref=e16] [cursor=pointer]:
+                  - /url: https://dwrio.mystagingwebsite.com
+              - listitem [ref=e17]:
+                - link "About" [ref=e18] [cursor=pointer]:
+                  - /url: https://dwrio.mystagingwebsite.com/about/
+            - search [ref=e19]:
+              - generic [ref=e20]: Search
+              - searchbox "Search" [ref=e22]
+    - main [ref=e23]:
+      - heading "Daniel W. Robert" [level=1] [ref=e24]
+      - paragraph [ref=e25]: Front-End Engineer. Always a student.
+      - separator [ref=e26]
+      - generic [ref=e27]:
+        - list [ref=e28]:
+          - listitem [ref=e29]:
+            - generic [ref=e30]:
+              - heading "JavaScript’s Nullish Coalescing Operator" [level=2] [ref=e31]:
+                - link "JavaScript’s Nullish Coalescing Operator" [ref=e32] [cursor=pointer]:
+                  - /url: https://dwrio.mystagingwebsite.com/javascripts-nullish-coalescing-operator/
+              - time [ref=e34]: January 30, 2025
+            - generic [ref=e35]:
+              - paragraph [ref=e36]: The nullish coalescing operator (??) is a relatively new addition to the JavaScript language (introduced in ES2020). It is a logical operator that returns the right side operand when the left side operand is null or undefined, and otherwise returns the left side operand. It is similar to the logical OR operator (||), however it…
+              - paragraph [ref=e37]:
+                - link "Read more →" [ref=e38] [cursor=pointer]:
+                  - /url: https://dwrio.mystagingwebsite.com/javascripts-nullish-coalescing-operator/
+          - listitem [ref=e39]:
+            - generic [ref=e40]:
+              - heading "Using AI to Summarize GitHub Communications" [level=2] [ref=e41]:
+                - link "Using AI to Summarize GitHub Communications" [ref=e42] [cursor=pointer]:
+                  - /url: https://dwrio.mystagingwebsite.com/using-ai-to-summarize-github-communications/
+              - time [ref=e44]: January 10, 2025
+            - generic [ref=e45]:
+              - paragraph [ref=e46]: Recently, a team mate of mine mentioned that they have been using AI to quickly get caught up on long communication threads in Github Discussions, Issues, and Pull Requests. This sparked my curiosity as and seemed like something that could offer a big productivity boost for me, especially as an Engineering Manager. So I decided…
+              - paragraph [ref=e47]:
+                - link "Read more →" [ref=e48] [cursor=pointer]:
+                  - /url: https://dwrio.mystagingwebsite.com/using-ai-to-summarize-github-communications/
+          - listitem [ref=e49]:
+            - generic [ref=e50]:
+              - heading "CSS Display Contents" [level=2] [ref=e51]:
+                - link "CSS Display Contents" [ref=e52] [cursor=pointer]:
+                  - /url: https://dwrio.mystagingwebsite.com/css-display-contents/
+              - time [ref=e54]: December 28, 2024
+            - generic [ref=e55]:
+              - paragraph [ref=e56]: "The display: contents; rule in CSS is a unique display value that tells CSS not to treat the targeted item as an actual element in the DOM and, instead, treat the children of the target element as direct children of the parent element. It is then essentially treated by CSS as if you set the…"
+              - paragraph [ref=e57]:
+                - link "Read more →" [ref=e58] [cursor=pointer]:
+                  - /url: https://dwrio.mystagingwebsite.com/css-display-contents/
+          - listitem [ref=e59]:
+            - generic [ref=e60]:
+              - heading "Make A Custom Script Globally Executable" [level=2] [ref=e61]:
+                - link "Make A Custom Script Globally Executable" [ref=e62] [cursor=pointer]:
+                  - /url: https://dwrio.mystagingwebsite.com/make-a-custom-script-globally-executable/
+              - time [ref=e64]: December 18, 2024
+            - generic [ref=e65]:
+              - paragraph [ref=e66]: Occasionally, I will put together script to automate some of my work tasks. More often than not, it’s ideal to be able to call that script from anywhere on my filesystem, as opposed to constantly navigating to its directory or typing out its full path to run it. Luckily, this is pretty straightforward to set…
+              - paragraph [ref=e67]:
+                - link "Read more →" [ref=e68] [cursor=pointer]:
+                  - /url: https://dwrio.mystagingwebsite.com/make-a-custom-script-globally-executable/
+          - listitem [ref=e69]:
+            - generic [ref=e70]:
+              - heading "Optional Chaining in JavaScript" [level=2] [ref=e71]:
+                - link "Optional Chaining in JavaScript" [ref=e72] [cursor=pointer]:
+                  - /url: https://dwrio.mystagingwebsite.com/optional-chaining-in-javascript/
+              - time [ref=e74]: December 27, 2023
+            - generic [ref=e75]:
+              - paragraph [ref=e76]: Introduced in ECMAScript 2020, Optional Chaining is a a modern feature in JavaScript that allows you to read the value of a property located deep within a chain of nested object properties, without having to explicitly validate each reference in the chain. This simplifies the process of handling potential null or undefined values without the…
+              - paragraph [ref=e77]:
+                - link "Read more →" [ref=e78] [cursor=pointer]:
+                  - /url: https://dwrio.mystagingwebsite.com/optional-chaining-in-javascript/
+          - listitem [ref=e79]:
+            - generic [ref=e80]:
+              - heading "Practical Differences Between sprintf() & printf() in PHP" [level=2] [ref=e81]:
+                - link "Practical Differences Between sprintf() & printf() in PHP" [ref=e82] [cursor=pointer]:
+                  - /url: https://dwrio.mystagingwebsite.com/practical-differences-between-sprintf-printf-in-php/
+              - time [ref=e84]: November 27, 2023
+            - generic [ref=e85]:
+              - paragraph [ref=e86]: "The sprintf() and printf() functions in PHP are often used for formatting strings. While they are very similar, they serve slightly different purposes. Let’s dive into the practical differences between the two: sprintf() The sprintf() function is primarily used to format a string but does not print it directly. Instead, it returns the formatted string…"
+              - paragraph [ref=e87]:
+                - link "Read more →" [ref=e88] [cursor=pointer]:
+                  - /url: https://dwrio.mystagingwebsite.com/practical-differences-between-sprintf-printf-in-php/
+          - listitem [ref=e89]:
+            - generic [ref=e90]:
+              - 'heading "Working With JavaScript Arrays: Static Methods" [level=2] [ref=e91]':
+                - 'link "Working With JavaScript Arrays: Static Methods" [ref=e92] [cursor=pointer]':
+                  - /url: https://dwrio.mystagingwebsite.com/working-with-javascript-arrays-static-methods/
+              - time [ref=e94]: July 27, 2023
+            - generic [ref=e95]:
+              - paragraph [ref=e96]: In JavaScript, arrays are one of the most commonly used data structures. They are a collection of elements, each with a unique index or key. JavaScript offers a variety of methods to work with arrays that make it easy to manipulate and transform your data. This short series will list out some of the most…
+              - paragraph [ref=e97]:
+                - link "Read more →" [ref=e98] [cursor=pointer]:
+                  - /url: https://dwrio.mystagingwebsite.com/working-with-javascript-arrays-static-methods/
+          - listitem [ref=e99]:
+            - generic [ref=e100]:
+              - 'heading "Working With JavaScript Arrays: Non-Destructive Methods" [level=2] [ref=e101]':
+                - 'link "Working With JavaScript Arrays: Non-Destructive Methods" [ref=e102] [cursor=pointer]':
+                  - /url: https://dwrio.mystagingwebsite.com/working-with-javascript-arrays-non-destructive-methods/
+              - time [ref=e104]: June 29, 2023
+            - generic [ref=e105]:
+              - paragraph [ref=e106]: In JavaScript, arrays are one of the most commonly used data structures. They are a collection of elements, each with a unique index or key. JavaScript offers a variety of methods to work with arrays that make it easy to manipulate and transform your data. This short series will list out some of the most…
+              - paragraph [ref=e107]:
+                - link "Read more →" [ref=e108] [cursor=pointer]:
+                  - /url: https://dwrio.mystagingwebsite.com/working-with-javascript-arrays-non-destructive-methods/
+          - listitem [ref=e109]:
+            - generic [ref=e110]:
+              - 'heading "Working With JavaScript Arrays: Destructive Methods" [level=2] [ref=e111]':
+                - 'link "Working With JavaScript Arrays: Destructive Methods" [ref=e112] [cursor=pointer]':
+                  - /url: https://dwrio.mystagingwebsite.com/working-with-javascript-arrays-destructive-methods/
+              - time [ref=e114]: June 19, 2023
+            - generic [ref=e115]:
+              - paragraph [ref=e116]: In JavaScript, arrays are one of the most commonly used data structures. They are a collection of elements, each with a unique index or key. JavaScript offers a variety of methods to work with arrays that make it easy to manipulate and transform your data. This short series will list out some of the most…
+              - paragraph [ref=e117]:
+                - link "Read more →" [ref=e118] [cursor=pointer]:
+                  - /url: https://dwrio.mystagingwebsite.com/working-with-javascript-arrays-destructive-methods/
+          - listitem [ref=e119]:
+            - generic [ref=e120]:
+              - heading "Object Key Access with Bracket Notation" [level=2] [ref=e121]:
+                - link "Object Key Access with Bracket Notation" [ref=e122] [cursor=pointer]:
+                  - /url: https://dwrio.mystagingwebsite.com/object-key-access-with-bracket-notation/
+              - time [ref=e124]: April 6, 2023
+            - generic [ref=e125]:
+              - paragraph [ref=e126]: "Somewhat recently, I was looking through some example code (JavaScript) for a project and I came across the following syntax: I hadn’t seen this format before so it took me a second to parse through what it was doing. Essentially, this is just a fancy way of returning a single value from within an unnamed…"
+              - paragraph [ref=e127]:
+                - link "Read more →" [ref=e128] [cursor=pointer]:
+                  - /url: https://dwrio.mystagingwebsite.com/object-key-access-with-bracket-notation/
+        - navigation "Pagination" [ref=e129]:
+          - link "Next Page" [ref=e130] [cursor=pointer]:
+            - /url: https://dwrio.mystagingwebsite.com/page/2/
+    - contentinfo [ref=e131]:
+      - generic [ref=e133]:
+        - paragraph [ref=e134]: © 2026 DWR.IO
+        - list [ref=e135]:
+          - listitem [ref=e136]:
+            - link "GitHub" [ref=e137] [cursor=pointer]:
+              - /url: https://github.com/danielwrobert
+              - img [ref=e138]
+              - generic [ref=e140]: GitHub
+          - listitem [ref=e141]:
+            - link "Instagram" [ref=e142] [cursor=pointer]:
+              - /url: https://instagram.com/d.w.robert
+              - img [ref=e143]
+              - generic [ref=e145]: Instagram
+          - listitem [ref=e146]:
+            - link "X" [ref=e147] [cursor=pointer]:
+              - /url: https://twitter.com/danielwrobert
+              - img [ref=e148]
+              - generic [ref=e150]: X
+          - listitem [ref=e151]:
+            - link "Mastodon" [ref=e152] [cursor=pointer]:
+              - /url: https://hachyderm.io/@danielwrobert
+              - img [ref=e153]
+              - generic [ref=e155]: Mastodon
