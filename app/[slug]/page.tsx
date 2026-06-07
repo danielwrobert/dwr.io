@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { format, parseISO } from 'date-fns';
 import { MDXRemote } from 'next-mdx-remote/rsc';
@@ -17,9 +18,15 @@ export async function generateStaticParams() {
   return posts.map((post) => ({ slug: post.slug }));
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata | null> {
   const { slug } = await params;
-  const { frontmatter } = await loadBlogPost(slug);
+  const blogPostData = await loadBlogPost(slug);
+
+  if (!blogPostData) {
+    return null;
+  }
+
+  const { frontmatter } = blogPostData;
   return {
     title: frontmatter.title,
     description: frontmatter.excerpt,
@@ -40,7 +47,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function PostPage({ params }: Props) {
   const { slug } = await params;
-  const { frontmatter, content } = await loadBlogPost(slug);
+  const blogPostData = await loadBlogPost(slug);
+
+  if (!blogPostData) {
+    notFound();
+  }
+
+  const { frontmatter, content } = blogPostData;
 
   const { title, date, updated, category, tags } = frontmatter;
   const dateLabel = updated
