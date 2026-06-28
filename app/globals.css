@@ -1,6 +1,6 @@
 @import 'tailwindcss';
 
-@theme inline {
+@theme {
   --color-background: #383a59;
   --color-text: #f2f2f2;
   --color-highlight-1: #bd93f9;
@@ -42,7 +42,7 @@
   }
 
   :not(pre) > code {
-    background-color: #282a36;
+    background-color: var(--color-shadow);
     border-radius: 3px;
     padding: 3px 5px;
   }
@@ -55,7 +55,7 @@
   a,
   a:link,
   a:visited {
-    color: #ff79c6;
+    color: var(--color-highlight-2);
     text-decoration: none;
     transition: color 0.5s;
   }
@@ -63,20 +63,20 @@
   header a,
   header a:link,
   header a:visited {
-    color: #bcc2cd;
+    color: var(--color-shadow-light);
   }
 
   header a:hover {
-    color: #ff79c6;
+    color: var(--color-highlight-2);
   }
 
   a:hover {
-    color: #50fa7b;
+    color: var(--color-highlight-3);
   }
 
   /* Search */
   .search-input::placeholder {
-    color: #bcc2cd;
+    color: var(--color-shadow-light);
     opacity: 1;
   }
 }
