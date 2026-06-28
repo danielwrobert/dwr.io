@@ -7,7 +7,7 @@ export default async function Header({ initialTheme }: { initialTheme: 'light' |
   const posts = await getBlogPostList();
 
   return (
-    <header className="flex flex-row items-center justify-between bg-shadow shadow-[0_0.3125rem_0.625rem_0_rgba(0,0,0,0.15)] p-6">
+    <header className="flex flex-row items-center justify-between bg-shadow p-6">
       <Logo />
       <div className="flex items-center gap-2">
         <Nav
