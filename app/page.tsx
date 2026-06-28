@@ -1,7 +1,7 @@
 import { getBlogPostList } from '@/lib/helpers/file-helpers';
-import Stitch from '@/components/Stitch/Stitch';
-import Heading from '@/components/Heading/Heading';
-import PostList from '@/components/PostList/PostList';
+import Stitch from '@/components/Stitch';
+import Heading from '@/components/Heading';
+import PostList from '@/components/PostList';
 
 export default async function Home() {
   const posts = await getBlogPostList();

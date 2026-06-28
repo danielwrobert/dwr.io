@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
-import Stitch from '@/components/Stitch/Stitch';
-import Heading from '@/components/Heading/Heading';
+import Stitch from '@/components/Stitch';
+import Heading from '@/components/Heading';
 
 export const metadata: Metadata = {
   title: 'About — Daniel W. Robert',
