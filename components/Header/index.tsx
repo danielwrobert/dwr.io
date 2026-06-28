@@ -1,7 +1,7 @@
 import { getBlogPostList } from '@/lib/helpers/file-helpers';
-import Logo from '@/components/Logo/Logo';
-import Nav from '@/components/Nav/Nav';
-import ColorThemeToggle from '@/components/ColorThemeToggle/ColorThemeToggle';
+import Logo from '@/components/Logo';
+import Nav from '@/components/Nav';
+import ColorThemeToggle from '@/components/ColorThemeToggle';
 
 export default async function Header({ initialTheme }: { initialTheme: 'light' | 'dark' }) {
   const posts = await getBlogPostList();

@@ -5,9 +5,9 @@ import { format, parseISO } from 'date-fns';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import { getBlogPostList, loadBlogPost, slugify } from '@/lib/helpers/file-helpers';
 import COMPONENT_MAP from '@/lib/helpers/mdx-components';
-import Stitch from '@/components/Stitch/Stitch';
-import Button from '@/components/Button/Button';
-import Heading from '@/components/Heading/Heading';
+import Stitch from '@/components/Stitch';
+import Button from '@/components/Button';
+import Heading from '@/components/Heading';
 
 type Props = {
   params: Promise<{ slug: string }>;

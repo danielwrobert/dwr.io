@@ -3,9 +3,9 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { format, parseISO } from 'date-fns';
-import NoteCard from '@/components/NoteCard/NoteCard';
-import Heading from '@/components/Heading/Heading';
-import Button from '@/components/Button/Button';
+import NoteCard from '@/components/NoteCard';
+import Heading from '@/components/Heading';
+import Button from '@/components/Button';
 
 const PAGE_SIZE = 5;
 

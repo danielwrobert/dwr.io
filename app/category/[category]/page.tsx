@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 import { getCategoryList, getPostsByCategory } from '@/lib/helpers/file-helpers';
-import Stitch from '@/components/Stitch/Stitch';
-import Button from '@/components/Button/Button';
-import Heading from '@/components/Heading/Heading';
-import PostList from '@/components/PostList/PostList';
+import Stitch from '@/components/Stitch';
+import Button from '@/components/Button';
+import Heading from '@/components/Heading';
+import PostList from '@/components/PostList';
 
 type Props = {
   params: Promise<{ category: string }>;

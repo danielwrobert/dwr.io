@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X } from 'react-feather';
-import SearchBox from '@/components/SearchBox/SearchBox';
+import SearchBox from '@/components/SearchBox';
 
 type Post = {
   slug: string;
