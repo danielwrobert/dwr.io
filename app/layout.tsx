@@ -1,8 +1,14 @@
 import type { Metadata } from "next";
 import { Ovo, Mulish } from "next/font/google";
+import { cookies } from "next/headers";
 import Header from "@/components/Header/Header";
 import Layout from "@/components/Layout/Layout";
 import Footer from "@/components/Footer/Footer";
+import {
+  COLOR_THEME_COOKIE_NAME,
+  LIGHT_TOKENS,
+  DARK_TOKENS,
+} from "@/lib/constants";
 import "./globals.css";
 
 const ovo = Ovo({
@@ -44,18 +50,25 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const saved = (await cookies()).get(COLOR_THEME_COOKIE_NAME);
+  const theme: "light" | "dark" =
+    saved?.value === "light" ? "light" : "dark";
+  const tokens = theme === "light" ? LIGHT_TOKENS : DARK_TOKENS;
+
   return (
     <html
       lang="en"
+      data-color-theme={theme}
       className={`${ovo.variable} ${mulish.variable} h-full antialiased`}
+      style={tokens as React.CSSProperties}
     >
       <body className="min-h-full flex flex-col bg-background text-text font-sans leading-relaxed">
-        <Header />
+        <Header initialTheme={theme} />
         <Layout>{children}</Layout>
         <Footer />
       </body>

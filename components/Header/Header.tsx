@@ -1,21 +1,25 @@
 import { getBlogPostList } from '@/lib/helpers/file-helpers';
 import Logo from '@/components/Logo/Logo';
 import Nav from '@/components/Nav/Nav';
+import ColorThemeToggle from '@/components/ColorThemeToggle/ColorThemeToggle';
 
-export default async function Header() {
+export default async function Header({ initialTheme }: { initialTheme: 'light' | 'dark' }) {
   const posts = await getBlogPostList();
 
   return (
-    <header className="flex flex-row items-center justify-between bg-shadow shadow-[0_0.3125rem_0.625rem_0_rgba(0,0,0,0.15)] p-6">
+    <header className="flex flex-row items-center justify-between bg-shadow p-6">
       <Logo />
-      <Nav
-        posts={posts.map(({ slug, title, excerpt, tags }) => ({
-          slug,
-          title,
-          excerpt,
-          tags,
-        }))}
-      />
+      <div className="flex items-center gap-2">
+        <Nav
+          posts={posts.map(({ slug, title, excerpt, tags }) => ({
+            slug,
+            title,
+            excerpt,
+            tags,
+          }))}
+        />
+        <ColorThemeToggle initialTheme={initialTheme} />
+      </div>
     </header>
   );
 }
