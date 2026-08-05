@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { format, parseISO } from 'date-fns';
 import { MDXRemote } from 'next-mdx-remote/rsc';
+import remarkGfm from 'remark-gfm';
 import { getBlogPostList, loadBlogPost, slugify } from '@/lib/helpers/file-helpers';
 import COMPONENT_MAP from '@/lib/helpers/mdx-components';
 import Stitch from '@/components/Stitch';
@@ -71,7 +72,11 @@ export default async function PostPage({ params }: Props) {
       <p className={dateClass}>{dateLabel}</p>
       <Stitch />
       <div className="bg-shadow rounded-sm mb-10 p-5">
-        <MDXRemote source={content} components={COMPONENT_MAP} />
+        <MDXRemote
+          source={content}
+          components={COMPONENT_MAP}
+          options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }}
+        />
         <p>---</p>
         {category && (
           <p>

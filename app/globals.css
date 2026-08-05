@@ -51,6 +51,34 @@
     max-width: 100%;
   }
 
+  table {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 1.25rem;
+    overflow-x: auto;
+    border-collapse: collapse;
+  }
+
+  th,
+  td {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--color-shadow-light);
+    text-align: left;
+  }
+
+  th {
+    background-color: var(--color-shadow);
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: var(--color-shadow);
+  }
+
+  hr {
+    margin: 1.5rem 0;
+  }
+
   /* Links */
   a,
   a:link,
