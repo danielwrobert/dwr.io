@@ -1,5 +1,5 @@
 ---
-title: 'NeoVim / LazyVim Cheatsheet'
+title: 'Neovim / LazyVim Cheatsheet'
 date: '2026-08-05'
 slug: neovim-cheatsheet
 excerpt: 'A practical workflow for using AI to quickly get caught up on long GitHub Discussions, Issues, and Pull Request threads...'
