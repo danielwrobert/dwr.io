@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { format, parseISO } from 'date-fns';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import remarkGfm from 'remark-gfm';
+import rehypeSlug from 'rehype-slug';
 import { getBlogPostList, loadBlogPost, slugify } from '@/lib/helpers/file-helpers';
 import COMPONENT_MAP from '@/lib/helpers/mdx-components';
 import Stitch from '@/components/Stitch';
@@ -75,7 +76,7 @@ export default async function PostPage({ params }: Props) {
         <MDXRemote
           source={content}
           components={COMPONENT_MAP}
-          options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }}
+          options={{ mdxOptions: { remarkPlugins: [remarkGfm], rehypePlugins: [rehypeSlug] } }}
         />
         <p>---</p>
         {category && (
