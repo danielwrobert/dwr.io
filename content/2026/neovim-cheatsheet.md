@@ -106,8 +106,6 @@ vim.g.maplocalleader = ","
 
 (`"\\"` in Lua is an escaped backslash — a single `\` character.)
 
----
-
 ## Discoverability (the most important section)
 
 Do not memorize this document. Memorize these four things and let the editor teach you the rest.
@@ -137,8 +135,6 @@ Do not memorize this document. Memorize these four things and let the editor tea
 
 Learn the prefix, then use which-key for the second key. That's the whole system.
 
----
-
 ## LazyVim's changes to core Vim behavior
 
 These are the ones that will feel "wrong" coming from stock Vim. Worth reading carefully.
@@ -159,8 +155,6 @@ These are the ones that will feel "wrong" coming from stock Vim. Worth reading c
 | `<C-/>` or `<C-_>`       | Toggle terminal                                            | Not in Vim                                                                                              |
 
 **Things that are unchanged and worth remembering:** all operators (`d`, `c`, `y`, `>`, `=`, `gu`, `gU`, `g~`), all text objects (`iw`, `ap`, `i"`, `it`, `ab`), all motions (`f`, `t`, `%`, `{`, `}`, `(`, `)`, `[[`, `]]`), marks, macros (`q`, `@`), registers (`"a`), `.` repeat, `Ctrl-o`/`Ctrl-i` jumplist, `g;`/`g,` changelist.
-
----
 
 ## Files, buffers, and pickers
 
@@ -209,8 +203,6 @@ These are the ones that will feel "wrong" coming from stock Vim. Worth reading c
 | `<C-/>` (telescope) or `?` (snacks)    | Show picker-specific keymaps  |
 | `<Esc>` twice                          | Close                         |
 
----
-
 ## Search
 
 | Key          | Action                                                        |
@@ -244,8 +236,6 @@ These are the ones that will feel "wrong" coming from stock Vim. Worth reading c
 
 **Grep syntax tip:** the live grep uses ripgrep. You can pass rg flags inline in most setups by typing your pattern, then ` -- -g '*.php'` to restrict to a glob. Check `?` inside the picker for your version.
 
----
-
 ## File explorer
 
 `<leader>e` toggles the explorer at the project root. `<leader>E` opens at cwd. (In neo-tree setups, `<leader>fe` / `<leader>fE`.)
@@ -273,8 +263,6 @@ These are the ones that will feel "wrong" coming from stock Vim. Worth reading c
 
 > Neo-tree also has source tabs: `<` and `>` cycle between **filesystem**, **buffers**, and **git status** views. The git status view is a fast way to see and stage changed files.
 
----
-
 ## Windows, splits, and tabs
 
 | Key                           | Action                                        |
@@ -297,8 +285,6 @@ Tabs (Vim tabs = window layouts, not "tabs" in the VS Code sense — your buffer
 | `<leader><tab>d`                    | Close tab           |
 | `<leader><tab>f`                    | First tab           |
 | `<leader><tab>l`                    | Last tab            |
-
----
 
 ## LSP: navigation and code actions
 
@@ -331,8 +317,6 @@ This is the part that replaces most of what you used VS Code for. `<leader>cl` s
 
 **Formatting control:** `<leader>uf` toggles autoformat globally, `<leader>uF` toggles it for the current buffer only. Very useful when you open a legacy file you don't want to reformat entirely.
 
----
-
 ## Diagnostics and Trouble
 
 | Key          | Action                                           |
@@ -350,8 +334,6 @@ This is the part that replaces most of what you used VS Code for. `<leader>cl` s
 | `<leader>ud` | Toggle diagnostics on/off                        |
 | `[q` / `]q`  | Previous / next quickfix item (works everywhere) |
 
----
-
 ## Completion and snippets
 
 LazyVim uses `blink.cmp` (newer) or `nvim-cmp` (older). Bindings are close to identical.
@@ -367,8 +349,6 @@ LazyVim uses `blink.cmp` (newer) or `nvim-cmp` (older). Bindings are close to id
 | `<C-b>` / `<C-f>`                      | Scroll the documentation window            |
 
 Native Vim completion still works and is sometimes faster: `<C-x><C-f>` for file paths, `<C-x><C-l>` for whole lines, `<C-n>` for buffer words.
-
----
 
 ## Git
 
@@ -401,8 +381,6 @@ Native Vim completion still works and is sometimes faster: `<C-x><C-f>` for file
 | `<leader>ghd` | Diff this file                                             |
 | `ih`          | Text object: **i**nside **h**unk — use `dih`, `vih`, `yih` |
 
----
-
 ## Terminal
 
 | Key                | Action                                           |
@@ -415,8 +393,6 @@ Native Vim completion still works and is sometimes faster: `<C-x><C-f>` for file
 | `i` / `a`          | Re-enter terminal insert mode                    |
 
 > **In a Herd session specifically:** you may want to _skip_ the built-in terminal entirely and let the multiplexer own your panes — one pane for Neovim, one for the shell, one for an agent. If you go that route, be aware `<C-/>`, `<C-h/j/k/l>`, and `<S-h>`/`<S-l>` are the bindings most likely to collide with a multiplexer prefix. Check for conflicts early; remapping the multiplexer prefix is usually easier than remapping LazyVim.
-
----
 
 ## Motion: flash.nvim
 
@@ -433,8 +409,6 @@ This is the biggest genuinely-new motion capability versus stock Vim. It replace
 `s` and `S` work as operator targets: `ds<char><label>` deletes to that point. Very fast once it's muscle memory.
 
 > Note: `s` in stock Vim is "substitute character" (= `cl`). LazyVim rebinds it. Use `cl` if you miss it.
-
----
 
 ## Surround, comments, and text objects
 
@@ -498,8 +472,6 @@ Combine as usual: `daf` deletes a function, `vic` selects a class body, `cia` ch
 - `an` / `in` + object — the **next** occurrence (`cin(` changes inside the next parens)
 - `al` / `il` + object — the **last** occurrence
 
----
-
 ## Toggles
 
 Everything under `<leader>u` toggles a UI or behavior setting. Press `<leader>u` and read the which-key menu.
@@ -526,8 +498,6 @@ Everything under `<leader>u` toggles a UI or behavior setting. Press `<leader>u`
 | `<leader>un` | Dismiss all notifications                 |
 | `<leader>up` | Toggle profiler                           |
 
----
-
 ## Sessions and project management
 
 | Key          | Action                                    |
@@ -540,8 +510,6 @@ Everything under `<leader>u` toggles a UI or behavior setting. Press `<leader>u`
 | `<leader>qS` | Select session                            |
 
 Sessions restore your open buffers and window layout per directory. Combined with the projects picker, this is your equivalent of VS Code workspaces.
-
----
 
 ## Plugin and tooling management
 
@@ -562,8 +530,6 @@ Inside Lazy: `I` install, `U` update, `X` clean, `S` sync, `L` log, `?` help, `q
 Inside Mason: `i` install, `X` uninstall, `U` update, `/` filter, `g?` help.
 
 > `:LazyExtras` is the single most useful command for a returning user. Rather than hand-configuring an LSP, enable `lang.php`, `lang.typescript`, `lang.tailwind`, `lang.json`, `lang.yaml`, etc., and LazyVim wires up the server, formatter, linter, and Treesitter parser for you.
-
----
 
 ## Debugging and testing
 
@@ -597,8 +563,6 @@ Requires the `dap.core` and `test.core` extras (`:LazyExtras`).
 | `<leader>tO` | Toggle output panel       |
 | `<leader>tS` | Stop tests                |
 
----
-
 ## Neovim features Vim doesn't have
 
 Worth knowing these exist, since they're the reason the ecosystem works the way it does.
@@ -618,8 +582,6 @@ Worth knowing these exist, since they're the reason the ecosystem works the way 
 
 Useful Ex commands: `:LspInfo`, `:LspRestart`, `:ConformInfo` (formatters), `:TSInstallInfo`, `:messages`, `:Inspect`, `:InspectTree`.
 
----
-
 ## Web dev specifics
 
 Relevant to PHP/WordPress and modern JS work:
@@ -631,8 +593,6 @@ Relevant to PHP/WordPress and modern JS work:
 - **`ts_ls` / `vtsls`** for TypeScript, with `<leader>co` for organize imports and `<leader>cM` for missing imports.
 - **Auto tag closing** and **matchup** (`%` on HTML tags, `if`/`endif`, `foreach`/`endforeach`) come from Treesitter extras.
 - **`gx`** opens the URL under the cursor in your browser.
-
----
 
 ## Config layout
 
@@ -678,8 +638,6 @@ return {
 return { "folke/flash.nvim", enabled = false }
 ```
 
----
-
 ## Troubleshooting
 
 | Symptom                            | Check                                                                                 |
@@ -692,8 +650,6 @@ return { "folke/flash.nvim", enabled = false }
 | Something broke after an update    | `:Lazy` → `L` for the log; lazy.nvim supports lockfile restore                        |
 | Clipboard doesn't reach the system | `:checkhealth` → look at the clipboard provider section                               |
 | Key conflicts inside a multiplexer | Test `<C-h>`, `<C-/>`, `<S-h>`, `<S-l>`, `<C-s>` first — these are the usual suspects |
-
----
 
 ## Getting back up to speed
 

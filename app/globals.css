@@ -57,6 +57,8 @@
     max-width: 100%;
     margin: 0 0 1.25rem;
     overflow-x: auto;
+    overflow-y: hidden;
+    border-radius: var(--radius-sm);
     border-collapse: collapse;
   }
 
@@ -68,11 +70,12 @@
   }
 
   th {
-    background-color: var(--color-shadow);
+    background-color: color-mix(in srgb, var(--color-shadow-light) 15%, transparent);
+    font-weight: 700;
   }
 
   tbody tr:nth-child(even) {
-    background-color: var(--color-shadow);
+    background-color: color-mix(in srgb, var(--color-shadow-light) 15%, transparent);
   }
 
   hr {
