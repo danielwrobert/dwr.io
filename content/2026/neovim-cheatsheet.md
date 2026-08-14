@@ -392,7 +392,7 @@ Native Vim completion still works and is sometimes faster: `<C-x><C-f>` for file
 | `<C-/>`            | Hide the terminal from inside it                 |
 | `i` / `a`          | Re-enter terminal insert mode                    |
 
-> **In a Herd session specifically:** you may want to _skip_ the built-in terminal entirely and let the multiplexer own your panes — one pane for Neovim, one for the shell, one for an agent. If you go that route, be aware `<C-/>`, `<C-h/j/k/l>`, and `<S-h>`/`<S-l>` are the bindings most likely to collide with a multiplexer prefix. Check for conflicts early; remapping the multiplexer prefix is usually easier than remapping LazyVim.
+> **In a multiplexer session specifically:** you may want to _skip_ the built-in terminal entirely and let the multiplexer own your panes — one pane for Neovim, one for the shell, one for an agent. If you go that route, be aware `<C-/>`, `<C-h/j/k/l>`, and `<S-h>`/`<S-l>` are the bindings most likely to collide with a multiplexer prefix. Check for conflicts early; remapping the multiplexer prefix is usually easier than remapping LazyVim.
 
 ## Motion: flash.nvim
 
