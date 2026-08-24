@@ -7,9 +7,13 @@ category: 'PHP'
 tags: ['composer', 'dependency-management', 'workflow']
 ---
 
-I use Composer constantly, but I realized I was mostly going on muscle memory for a few of its commands rather than actually understanding what they do differently. So I sat down and worked through the caret operator, the differences between `install` and the various flavors of `update`, and a `composer require` gotcha that had bitten me before. Cleaning those notes up into something reusable felt worth sharing.
+I use Composer very regularly in my day-to-day, however, prior to my current role I only used it occasionally. For a while, I found myself constantly needing to look up which was the best command for managing dependencies in any given scenario.
 
-## Semver and the caret (`^`) operator
+While not an in-depth guide, by any means (I’ll mainly only be covering differences between `install` and the various flavors of `update`, and `composer require`), cleaning those notes up into something reusable felt worth sharing.
+
+But before we get into the aforementioned Composer commands, a prerequisite is to have a basic understanding of semantic versioning - more commonly referred to by its short name, “semver”. That is a topic worth it’s own article but I’ll give a quick overview, focusing predominantly on the caret operator and keeping within a desired version range.
+
+## Semver and the caret operator
 
 The caret (`^`) operator means "compatible with," based on semantic versioning. The leftmost non-zero digit acts as the upper bound, and Composer will never cross it.
 
@@ -19,14 +23,14 @@ The caret (`^`) operator means "compatible with," based on semantic versioning. 
 
 The floor is locked at `1.22.4`. Composer won't install anything below that, but it will accept any newer minor or patch release within the `1.x` line.
 
-| Version | Allowed? |
-| --- | --- |
-| `1.22.3` | ❌ Below floor |
-| `1.22.4` | ✅ Exact floor |
-| `1.22.9` | ✅ Higher patch |
-| `1.23.0` | ✅ Higher minor |
-| `1.99.99` | ✅ Still within 1.x |
-| `2.0.0` | ❌ Breaks upper bound |
+| Version   | Allowed?              |
+| --------- | --------------------- |
+| `1.22.3`  | ❌ Below floor        |
+| `1.22.4`  | ✅ Exact floor        |
+| `1.22.9`  | ✅ Higher patch       |
+| `1.23.0`  | ✅ Higher minor       |
+| `1.99.99` | ✅ Still within 1.x   |
+| `2.0.0`   | ❌ Breaks upper bound |
 
 ### `^1.22`
 
@@ -34,13 +38,13 @@ The floor is locked at `1.22.4`. Composer won't install anything below that, but
 
 With no patch version specified, the floor drops to `1.22.0`. The upper bound behaves the same as above.
 
-| Version | Allowed? |
-| --- | --- |
-| `1.21.9` | ❌ Below floor |
-| `1.22.0` | ✅ Exact floor |
-| `1.22.3` | ✅ Higher patch |
-| `1.23.0` | ✅ Higher minor |
-| `2.0.0` | ❌ Breaks upper bound |
+| Version  | Allowed?              |
+| -------- | --------------------- |
+| `1.21.9` | ❌ Below floor        |
+| `1.22.0` | ✅ Exact floor        |
+| `1.22.3` | ✅ Higher patch       |
+| `1.23.0` | ✅ Higher minor       |
+| `2.0.0`  | ❌ Breaks upper bound |
 
 So the only practical difference between the two is the minimum version floor:
 
@@ -49,9 +53,9 @@ So the only practical difference between the two is the minimum version floor:
 
 Worth remembering: `composer.lock` freezes the exact resolved version regardless of what the constraint says. The constraint only comes into play when resolving a fresh install or running `composer update`.
 
-## `composer install` vs `composer update` vs `composer update vendor/package`
+## The `composer install`, `update`, and `update vendor/package` commands
 
-These three get used somewhat interchangeably if you're not paying attention, but they do meaningfully different things.
+These three commands can get used somewhat interchangeably if you're not paying attention, but they do meaningfully different things.
 
 ### `composer install`
 
@@ -81,11 +85,11 @@ composer update monolog/monolog guzzlehttp/guzzle
 
 A few flags worth knowing:
 
-| Flag | Effect |
-| --- | --- |
-| `--dry-run` | Shows what would change without applying it, good for sanity-checking |
-| `--with-dependencies` | Also updates the dependencies of the target package |
-| `--no-dev` | Excludes `require-dev` packages, useful for production |
+| Flag                  | Effect                                                                |
+| --------------------- | --------------------------------------------------------------------- |
+| `--dry-run`           | Shows what would change without applying it, good for sanity-checking |
+| `--with-dependencies` | Also updates the dependencies of the target package                   |
+| `--no-dev`            | Excludes `require-dev` packages, useful for production                |
 
 My safe workflow when I'm editing a constraint by hand looks like this:
 
@@ -101,15 +105,15 @@ composer update vendor/package-name
 
 The way I keep these straight:
 
-| Command | What it means |
-| --- | --- |
-| `composer install` | "Give me exactly what the lock file says." |
+| Command                      | What it means                                    |
+| ---------------------------- | ------------------------------------------------ |
+| `composer install`           | "Give me exactly what the lock file says."       |
 | `composer update vendor/pkg` | "Re-resolve this package against my constraint." |
-| `composer update` | "Re-resolve everything." (use with caution) |
+| `composer update`            | "Re-resolve everything." (use with caution)      |
 
 And always commit both `composer.json` and `composer.lock`, so the team and the deploy pipeline get deterministic installs via `composer install`.
 
-## `composer require`
+## The `composer require` command
 
 `composer require` adds or changes a package declaration and installs it in one step. It edits `composer.json` for you, then resolves and installs.
 
@@ -133,9 +137,9 @@ composer require monolog/monolog:^2.0
 
 The real difference between the two comes down to who edits `composer.json`:
 
-| Command | Who edits `composer.json`? | What it does |
-| --- | --- | --- |
-| `composer require` | Composer does it for you | Adds/changes the constraint and installs |
+| Command                      | Who edits `composer.json`? | What it does                              |
+| ---------------------------- | -------------------------- | ----------------------------------------- |
+| `composer require`           | Composer does it for you   | Adds/changes the constraint and installs  |
 | `composer update vendor/pkg` | You edit it manually first | Resolves the constraint you already wrote |
 
 Use `composer require` when you're adding a brand new package and want Composer to figure out a sensible constraint for you. Reach for `composer update vendor/package` when you've already edited the constraint by hand and want finer control over what ends up written in `composer.json`.
@@ -149,7 +153,9 @@ composer require monolog/monolog:^3.0
 
 That's functionally equivalent to manually editing `composer.json` and running `composer update monolog/monolog`, just condensed into one command. I still lean toward the manual edit plus `update` approach in most cases, since it's more explicit and easier to review in a pull request diff.
 
-## The gotcha: `composer require` can silently overwrite a constraint you set by hand
+## Things to look out for
+
+The main "gottcha" to be aware of is that `composer require` can silently overwrite a constraint you set by hand
 
 This one has caught me before, so it's worth calling out on its own. If you manually add a package and constraint to `composer.json`, then later run `composer require vendor/package` without specifying a constraint, Composer will overwrite what you wrote with its own resolved version. Silently.
 
@@ -185,4 +191,6 @@ Or specify the constraint explicitly when you require it, which tells Composer e
 composer require monolog/monolog:^1.22.4
 ```
 
-Bottom line: once you've manually edited `composer.json`, use `composer update vendor/package` to action that change. Running `composer require` without a constraint on a package that's already there is essentially telling Composer "forget what I wrote, pick a version for me."
+## Key takeaways
+
+That’s all for today. The main thing to keep in mind from here is, once you've manually edited `composer.json`, use `composer update vendor/package` to action that change. Running `composer require` without a constraint on a package that's already there is essentially telling Composer "forget what I wrote, pick a version for me."
