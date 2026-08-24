@@ -1,17 +1,17 @@
 ---
 title: 'Managing PHP Packages with Composer'
-date: '2026-08-23'
+date: '2026-08-24'
 slug: composer-package-management
 excerpt: "My notes on Composer's caret version constraints, the actual differences between install, update, and update vendor/package, and a gotcha where composer require can quietly overwrite a constraint you set by hand..."
 category: 'PHP'
 tags: ['composer', 'dependency-management', 'workflow']
 ---
 
-I use Composer very regularly in my day-to-day, however, prior to my current role I only used it occasionally. For a while, I found myself constantly needing to look up which was the best command for managing dependencies in any given scenario.
+I use Composer very regularly in my day-to-day, however, prior to my current role I only used it occasionally. Earlier on, when it came to dependency management (between the `install`, `update`, `update vendor/package`, and `require` commands), I often found myself needing to look up which was the best option for any given scenario.
 
-While not an in-depth guide, by any means (I’ll mainly only be covering differences between `install` and the various flavors of `update`, and `composer require`), cleaning those notes up into something reusable felt worth sharing.
+While not an in-depth guide by any means (I’ll mainly only be covering differences between `install` and the various flavors of `update`, and `composer require`), cleaning my notes up into something reusable felt worth sharing.
 
-But before we get into the aforementioned Composer commands, a prerequisite is to have a basic understanding of semantic versioning - more commonly referred to by its short name, “semver”. That is a topic worth it’s own article but I’ll give a quick overview, focusing predominantly on the caret operator and keeping within a desired version range.
+Before we get into the aforementioned Composer commands, we’ll need to have a basic understanding of semantic versioning - more commonly referred to by its short name, “semver”. That is a topic worth it’s own article but I’ll give a quick overview, focusing predominantly on the caret operator and keeping within a desired version range.
 
 ## Semver and the caret operator
 
@@ -155,7 +155,7 @@ That's functionally equivalent to manually editing `composer.json` and running `
 
 ## Things to look out for
 
-The main "gottcha" to be aware of is that `composer require` can silently overwrite a constraint you set by hand
+The main gottcha to be aware of is that `composer require` can silently overwrite a constraint you set by hand
 
 This one has caught me before, so it's worth calling out on its own. If you manually add a package and constraint to `composer.json`, then later run `composer require vendor/package` without specifying a constraint, Composer will overwrite what you wrote with its own resolved version. Silently.
 
@@ -191,6 +191,6 @@ Or specify the constraint explicitly when you require it, which tells Composer e
 composer require monolog/monolog:^1.22.4
 ```
 
-## Key takeaways
+## Wrapping up
 
-That’s all for today. The main thing to keep in mind from here is, once you've manually edited `composer.json`, use `composer update vendor/package` to action that change. Running `composer require` without a constraint on a package that's already there is essentially telling Composer "forget what I wrote, pick a version for me."
+That’s all for today. The main takeaway from here is, once you've manually edited `composer.json`, use `composer update vendor/package` to action that change. Running `composer require` without a constraint on a package that's already there is essentially telling Composer "forget what I wrote, pick a version for me."
