@@ -1,6 +1,6 @@
 ---
 title: 'Managing PHP Packages with Composer'
-date: '2026-08-24'
+date: '2026-08-25'
 slug: composer-package-management
 excerpt: "My notes on Composer's caret version constraints, the actual differences between install, update, and update vendor/package, and a gotcha where composer require can quietly overwrite a constraint you set by hand..."
 category: 'PHP'
