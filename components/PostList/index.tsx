@@ -6,6 +6,7 @@ import { format, parseISO } from 'date-fns';
 import NoteCard from '@/components/NoteCard';
 import Heading from '@/components/Heading';
 import Button from '@/components/Button';
+import BackToTop from '@/components/BackToTop';
 
 const PAGE_SIZE = 5;
 
@@ -24,6 +25,7 @@ export default function PostList({ posts }: PostListProps) {
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const visiblePosts = posts.slice(0, visibleCount);
   const hasMore = visibleCount < posts.length;
+  const hasLoadedMore = visibleCount > PAGE_SIZE;
 
   return (
     <>
@@ -45,6 +47,7 @@ export default function PostList({ posts }: PostListProps) {
       >
         {hasMore ? 'Load more' : 'All caught up'}
       </Button>
+      {hasLoadedMore && <BackToTop />}
     </>
   );
 }
